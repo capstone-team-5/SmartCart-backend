@@ -16,7 +16,7 @@ app.get("/" , (req, res) => {
     res.send("Welcome to $mrtCART");
 });
 
-app.use("/products",productControllers);
+// app.use("/products",productControllers);
 
 app.get("*", (req, res) => {
     res.status(404).send("Page Not Found");

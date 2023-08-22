@@ -6,7 +6,7 @@ CREATE DATABASE cart_dev;
 
 CREATE TABLE product(
     product_id SERIAL PRIMARY KEY,
-    store_id INTEGER NOT NULL REFERENCES stores,
+    -- store_id INTEGER NOT NULL REFERENCES stores,
     product_name TEXT NOT NULL, 
     product_image TEXT NOT NULL, 
     product_description TEXT,
@@ -19,7 +19,7 @@ CREATE TABLE product(
     product_special_diet TEXT,
     product_health_label TEXT,
     product_certification TEXT,
-    product_discount DECIMAL(4,2) DEFAULT 0 CHECK (product_discount >= 0)
+    product_discount DECIMAL(4,2) DEFAULT 0 CHECK (product_discount >= 0),
     product_is_fresh BOOLEAN DEFAULT false,
     product_is_frozen BOOLEAN DEFAULT false,
     product_is_halal BOOLEAN DEFAULT false,
@@ -28,5 +28,5 @@ CREATE TABLE product(
     product_is_organic BOOLEAN DEFAULT false, 
     product_is_vegetarian BOOLEAN DEFAULT false, 
     product_is_stock BOOLEAN DEFAULT true,
-    product_is_seafood BOOLEAN DEFAULT false,  // CHECK CHECK CHECK
+    product_is_seafood BOOLEAN DEFAULT false  -- CHECK CHECK CHECK
 );
