@@ -1,8 +1,10 @@
 DROP DATABASE IF EXISTS cart_dev;
 
 CREATE DATABASE cart_dev;
- \c cart_dev;
-  CREATE TABLE store (
+
+\c cart_dev;
+
+CREATE TABLE store (
     store_id SERIAL PRIMARY KEY,
     store_name TEXT NOT NULL,
     store_address TEXT NOT NULL,
@@ -12,15 +14,7 @@ CREATE DATABASE cart_dev;
     store_hours TEXT NOT NULL,
     store_EBT BOOLEAN,
     store_phone_number INTEGER
-
-
-  );
-
-  
-
-  
-
-
+);
 
 CREATE TABLE product(
     product_id SERIAL PRIMARY KEY,
