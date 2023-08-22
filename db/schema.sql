@@ -48,3 +48,15 @@ CREATE TABLE product(
     product_is_stock BOOLEAN DEFAULT true,
     product_is_seafood BOOLEAN DEFAULT false  -- CHECK CHECK CHECK
 );
+
+CREATE TABLE reviews (
+    id SERIAL PRIMARY KEY,
+    reviewer TEXT NOT NULL,
+    review_title TEXT NOT NULL,
+    review_rating NUMERIC,CHECK (rating >= 0 rating <= 5)
+    review_content TEXT NOT NULL,
+    review_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,--sets the default value for the column as the current timestamp if one is not provided explicitly.
+    product_id INTEGER NOT NULL REFERENCES product(id)
+    ON DELETE CASCADE
+    -- on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted 
+);
