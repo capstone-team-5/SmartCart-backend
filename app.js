@@ -1,24 +1,25 @@
-// dependencies
+// Dependencies
 const express = require('express');
 const cors = require('cors');
+const productControllers = require("./controllers/productController");
 
-//configurations
+//Configurations
 const app = express();
-//middleware
-const cors = require('cors');
 
-app.use(cors())
+//Middleware
+app.use(cors());
 
 app.use(express.json());
 
-//routes
+//Routes
 app.get("/" , (req, res) => {
-    res.send("$mrtCart");
+    res.send("Welcome to $mrtCART");
 });
 
+// app.use("/products",productControllers);
+
 app.get("*", (req, res) => {
-    res.status(404).send("404, Page not found");
+    res.status(404).send("Page Not Found");
 });
 
 module.exports = app;
-
