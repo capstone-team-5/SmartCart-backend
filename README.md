@@ -24,18 +24,18 @@ Team Members :
 
 - Vandhana Mohan
 
-
 To learn more about our team, please refer to the GitHub and LinkedIn links provided in the table below.
 
-| Dev Team |   Role           | GitHub | LinkedIn |
-| :--------------: | :-------: | :-------: | :-------: |
-| **Diandre Miller**  |  Technical Lead |     [GitHub](https://github.com/DiandreMiller) | [LinkedIn](https://www.linkedin.com/in/diandre-miller/) 
-| **Ryan Fodera**  |  Project Manager |     [GitHub](https://github.com/ryanfodera) | [LinkedIn](https://www.linkedin.com/in/ryan-fodera/) 
-| **Tafari Excell**  |  Demo Lead |     [GitHub](https://github.com/Tafarigit) | [LinkedIn](https://www.linkedin.com/in/tafari-e-7a5554110/) 
-| **Touhami Ben**  |  Scrum Master |     [GitHub](https://github.com/touhami-ben) | [LinkedIn](https://www.linkedin.com/in/touhami-benmessaoud-aaa072259/) 
-| **Vandhana Mohan**  |  Design Lead |     [GitHub](https://github.com/Vandhana-Mohan) | [LinkedIn](https://www.linkedin.com/in/vandhanamohan/) 
+|      Dev Team      |      Role       |                   GitHub                    |                                LinkedIn                                |
+| :----------------: | :-------------: | :-----------------------------------------: | :--------------------------------------------------------------------: |
+| **Diandre Miller** | Technical Lead  | [GitHub](https://github.com/DiandreMiller)  |        [LinkedIn](https://www.linkedin.com/in/diandre-miller/)         |
+|  **Ryan Fodera**   | Project Manager |   [GitHub](https://github.com/ryanfodera)   |          [LinkedIn](https://www.linkedin.com/in/ryan-fodera/)          |
+| **Tafari Excell**  |    Demo Lead    |   [GitHub](https://github.com/Tafarigit)    |      [LinkedIn](https://www.linkedin.com/in/tafari-e-7a5554110/)       |
+|  **Touhami Ben**   |  Scrum Master   |  [GitHub](https://github.com/touhami-ben)   | [LinkedIn](https://www.linkedin.com/in/touhami-benmessaoud-aaa072259/) |
+| **Vandhana Mohan** |   Design Lead   | [GitHub](https://github.com/Vandhana-Mohan) |         [LinkedIn](https://www.linkedin.com/in/vandhanamohan/)         |
 
 ---
+
 ## Installation
 
 Getting Started
