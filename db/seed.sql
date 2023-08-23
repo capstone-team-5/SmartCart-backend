@@ -1,4 +1,4 @@
-\c cart_dev;
+lear\c cart_dev;
 
 INSERT INTO store (store_name, store_address, store_city, store_state, store_zipCode, store_image, store_hours, store_accepts_EBT, store_phone_number)
 VALUES
@@ -40,17 +40,17 @@ VALUES
     (4, 'Pasta', 'pasta.jpg', 'Classic pasta noodles', 'Pasta', 1, 1.29, 0, 'box', 'CarbCraze', 'Contains wheat', 'None', 'None', false, false, true, true, true, true, true, true, false, false, false),
     (1, 'Kiwi', 'kiwi.jpg', 'Fresh, tangy kiwi', 'Fruits', 0.2, 0.89, 0, 'each', 'Tropical Delights', 'None', 'None', 'None', true, false, false, false, true, true, true, true, false, false, false),
     (6, 'Lobster', 'lobster.jpg', 'Fresh lobster tail', 'Seafood', 0.3, 19.99, 0, 'lb', 'SeaLuxury', 'None', 'None', 'None', false, true, true, false, true, true, false, true, false, false, true),
-    (2, 'Yogurt', 'yogurt.jpg', 'Creamy yogurt', 'Dairy', 0.5, 2.49, 0, 'cup', 'DairyDelight', 'None', 'None', 'None', true, true, false, false,false, false, true, true, true, false),
-    (1,'Organic Apples', 1, 2.99, 1.5, 'lbs', true, 'Fruits', 'Nature's Best', 'Fresh organic apples from local orchards.', 'apple.jpg', true, false, true, true, true, 'None', true, false, 'Gluten-Free', 'Low Calorie', 'USDA Organic', 0.10),
-    (2, 'Frozen Pizza', 2, 5.99, 0.75, 'lbs', false, 'Frozen Foods', 'Quick Bites', 'Classic pepperoni frozen pizza.', 'pizza.jpg', false, true, false, false, true, 'Contains Dairy', false, true, 'None', 'High Protein', 'N/A', 0.20),
-    (1, 'Organic Spinach', 3, 3.49, 0.25, 'lbs', true, 'Vegetables', 'Organic Greens', 'Fresh organic spinach leaves for salads and cooking.', 'spinach.jpg', true, false, true, true, true, 'None', true, false, 'Vegan', 'Low Carb', 'USDA Organic', 0.15),
-    (2, 'Cereal Bars', 4, 4.50, 0.5, 'lbs', false, 'Snacks', 'Morning Delights', 'Assorted cereal bars for a quick breakfast or snack.', 'cereal_bars.jpg', true, false, true, false, true, 'Contains Nuts', false, false, 'None', 'Fiber-Rich', 'N/A', 0.25),
-    (1, 'Fresh Salmon', 5, 9.99, 0.8, 'lbs', false, 'Seafood', 'Sea Harvest', 'Premium fresh salmon fillet for delicious meals.', 'salmon.jpg', false, false, true, true, true, 'Contains Fish', false, true, 'Pescatarian', 'Omega-3 Rich', 'Sustainably Sourced', 0.10),
-    (1, 'Sliced Bread', 6, 2.29, 1.0, 'lbs', false, 'Bakery', 'Baker's Choice', 'Freshly baked sliced bread for sandwiches and toasts.', 'bread.jpg', true, false, true, true, true, 'Contains Gluten', false, false, 'None', 'Whole Grain', 'N/A', 0.15),
-    (1, 'Greek Yogurt', 7, 3.25, 0.6, 'lbs', false, 'Dairy', 'Yogurt Delight', 'Creamy Greek yogurt with assorted fruit flavors.', 'yogurt.jpg', true, false, true, true, true, 'Contains Dairy', false, false, 'Vegetarian', 'Probiotic', 'N/A', 0.10),
-    (2, 'Frozen Mixed Vegetables', 8, 2.99, 1.0, 'lbs', false, 'Frozen Foods', 'Frosty Harvest', 'Assortment of frozen mixed vegetables for easy meal preparation.', 'frozen_vegetables.jpg', true, true, false, true, true, 'None', false, false, 'Vegan', 'High Fiber', 'N/A', 0.15),
-    (3, 'Peanut Butter', 9, 3.79, 0.5, 'lbs', false, 'Condiments', 'Nutty Spread', 'Smooth peanut butter made from high-quality peanuts.', 'peanut_butter.jpg', true, false, true, true, true, 'Contains Nuts', true, false, 'Vegetarian', 'Rich in Protein', 'Non-GMO', 0.10),
-    (4, 'Fresh Oranges', 10, 4.99, 2.0, 'lbs', false, 'Fruits', 'Citrus Grove', 'Juicy and refreshing fresh oranges.', 'oranges.jpg', true, false, true, true, true, 'None', false, false, 'Vegan', 'Vitamin C-Rich', 'N/A', 0.10);
+    (2, 'Yogurt', 'yogurt.jpg', 'Creamy yogurt', 'Dairy', 0.5, 2.49, 0, 'cup', 'DairyDelight', 'None', 'None', 'None', true, true, false, false,false, false, true, true, true, false);
+    -- (1, 'Organic Apples', 1, 2.99, 1.5, 'lbs', true, 1, 'Natures Best', 'Fresh organic apples from local orchards.', 'apple.jpg', true, false, true, true, true, 'None', true, false, 'Gluten-Free', 'Low Calorie', 'USDA Organic', 0.10),
+    -- (2, 'Frozen Pizza', 2, 5.99, 0.75, 'lbs', false, 2, 'Quick Bites', 'Classic pepperoni frozen pizza.', 'pizza.jpg', false, true, false, false, true, 'Contains Dairy', false, true, 'None', 'High Protein', 'N/A', 0.20),
+    -- (10, 'Organic Spinach', 3, 3.49, 0.25, 'lbs', true, 3, 'Organic Greens', 'Fresh organic spinach leaves for salads and cooking.', 'spinach.jpg', true, false, true, true, true, 'None', true, false, 'Vegan', 'Low Carb', 'USDA Organic', 0.15),
+    -- (2, 'Cereal Bars', 4, 4.50, 0.5, 'lbs', false, 4, 'Morning Delights', 'Assorted cereal bars for a quick breakfast or snack.', 'cereal_bars.jpg', true, false, true, false, true, 'Contains Nuts', false, false, 'None', 'Fiber-Rich', 'N/A', 0.25),
+    -- (10, 'Fresh Salmon', 5, 9.99, 0.8, 'lbs', false, 5, 'Sea Harvest', 'Premium fresh salmon fillet for delicious meals.', 'salmon.jpg', false, false, true, true, true, 'Contains Fish', false, true, 'Pescatarian', 'Omega-3 Rich', 'Sustainably Sourced', 0.10);
+    --(8, 'Sliced Bread', 'bread.jpg', '', 'Bread', 2.29, 1.0, 'lbs', false, 6, 'Baker\'s Choice', 'Freshly baked sliced bread for sandwiches and toasts.', 'bread.jpg', true, false, true, true, true, 'Contains Gluten', false, false, 'None', 'Whole Grain', 'N/A', 0.15),
+    -- (1, 'Greek Yogurt', 7, 3.25, 0.6, 'lbs', false, 7, 'Yogurt Delight', 'Creamy Greek yogurt with assorted fruit flavors.', 'yogurt.jpg', true, false, true, true, true, 'Contains Dairy', false, false, 'Vegetarian', 'Probiotic', 'N/A', 0.10),
+    -- (2, 'Frozen Mixed Vegetables', 8, 2.99, 1.0, 'lbs', false, 8, 'Frosty Harvest', 'Assortment of frozen mixed vegetables for easy meal preparation.', 'frozen_vegetables.jpg', true, true, false, true, true, 'None', false, false, 'Vegan', 'High Fiber', 'N/A', 0.15),
+    -- (3, 'Peanut Butter', 9, 3.79, 0.5, 'lbs', false, 9, 'Nutty Spread', 'Smooth peanut butter made from high-quality peanuts.', 'peanut_butter.jpg', true, false, true, true, true, 'Contains Nuts', true, false, 'Vegetarian', 'Rich in Protein', 'Non-GMO', 0.10),
+    -- (4, 'Fresh Oranges', 10, 4.99, 2.0, 'lbs', false, 10, 'Citrus Grove', 'Juicy and refreshing fresh oranges.', 'oranges.jpg', true, false, true, true, true, 'None', false, false, 'Vegan', 'Vitamin C-Rich', 'N/A', 0.10);
 
 
 INSERT INTO review (product_id, review_rating, review_comment, review_timestamp)
