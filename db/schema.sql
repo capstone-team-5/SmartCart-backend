@@ -18,7 +18,7 @@ CREATE TABLE store (
 
 CREATE TABLE product(
     product_id SERIAL PRIMARY KEY,
-    store_id INTEGER NOT NULL REFERENCES store, -- Foreign Key
+    store_id INTEGER NOT NULL REFERENCES store ON DELETE CASCADE, -- Foreign Key
     product_name TEXT NOT NULL, 
     product_image TEXT NOT NULL, 
     product_description TEXT,
