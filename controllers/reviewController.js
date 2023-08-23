@@ -67,7 +67,7 @@ review.delete("/reviews/:id", async (request, response) => {
   if (error) {
     response.status(404).json({ error: "Review Not Found" });
   } else {
-    response.status(201).json(result);
+    response.status(200).json(result);
   }
 });
 
