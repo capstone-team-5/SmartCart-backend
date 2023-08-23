@@ -16,7 +16,7 @@ product.get("/products", async (req, res) => {
 // Show one image by id
 
 product.get("/products/:id", async (req, res) => {
-  const { id } = req.params();
+  const { id } = req.params;
   const { error, result } = await getOneProduct(id);
   if (error?.code === 0) {
     res.status(404).json({ error: "Product Not Found" });

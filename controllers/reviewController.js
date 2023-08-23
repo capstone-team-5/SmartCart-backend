@@ -1,76 +1,74 @@
-const express = require('express');
-const reviews = express.Router();
+const express = require("express");
+const review = express.Router();
 
-const validateReviews = require('../validations/reviewerValidator');
+const validateReviews = require("../validations/validateReviews.js");
 
 const {
-    getAllReviews,
-    getOneReview,
-    createAReview,
-    updateReview,
-    deleteAReview
-} = require('../queries/reviews');
+  getAllReviews,
+  getOneReview,
+  addOneReview,
+  updateOneReview,
+  deleteOneReview,
+} = require("../queries/reviewQuery.js");
 
-//index
+// INDEX - show all reviews
 
-reviews.get('/', async (request, response) => {
-    const { error, result } = await getAllReviews();
-    if (error) {
-        response.status(500).json({ error: 'Server Error' })
-    } else {
-        response.status(200).json(result)
-    }
+review.get("/reviews", async (request, response) => {
+  const allReviews = await getAllReviews();
+  if (allReviews[0]) {
+    response.status(200).json(allReviews);
+  } else {
+    response.status(500).json({ error: "Server Error" });
+  }
 });
 
-//show
+// Show one review by id
 
-reviews.get('/:id', async (request, response) => {
-    const { error, result } = await getOneReview();
-    if (error?.code === 0) {
-        response.status(404).json({ error: 'Review Not Found' })
-    } else if (error) {
-        response.status(500).json({ error: 'Server Error' })
-    } else {
-        response.status(200).json(result)
-    }
+review.get("/reviews/:id", async (request, response) => {
+  const { id } = request.params;
+  const { error, result } = await getOneReview(id);
+  if (error?.code === 0) {
+    response.status(404).json({ error: "Review Not Found" });
+  } else if (error) {
+    response.status(500).json({ error: "Server Error" });
+  } else {
+    response.status(200).json(result);
+  }
 });
 
-//create
+// Add one review
 
-reviews.post('/', validateReviews, async (request, response) => {
-    const { error, newUser } = await createAReview(request.body);
-    if (error) {
-        response.status(500).json({ error: 'Server Error' })
-    } else {
-        response.status(201).json(newUser)
-    }
+review.post("/reviews", validateReviews, async (request, response) => {
+  const { error, result } = await addOneReview(request.body);
+  if (error) {
+    response.status(500).json({ error: "Server Error" });
+  } else {
+    response.status(201).json(result);
+  }
 });
 
-//update
+// Update one review
 
-reviews.put('/:id', validateReviews, async (request, response) => {
-    const { id } = request.params
-    const { error, updatedReview } = await updateReview(id, request.body)
-    if (error) {
-        response.status(500).json({ error: 'Server Error' })
-    } else {
-        response.status(200).json({ updatedReview })
-    }
+review.put("/reviews/:id", validateReviews, async (request, response) => {
+  const { id } = request.params;
+  const { error, result } = await updateOneReview(id, request.body);
+  if (error) {
+    response.status(500).json({ error: "Server Error - Could not update" });
+  } else {
+    response.status(200).json({ result });
+  }
 });
 
-//delete
+// Delete one review
 
-reviews.delete('/:id', async (request, response) => {
-    const { id } = request.params
-    const { error, deleteReview } = await deleteAReview(id)
-    if (error) {
-        response.status(404).json({ error: 'Review Not Found' })
-    } else {
-        response.status(200).json(deleteReview)
-    }
+review.delete("/reviews/:id", async (request, response) => {
+  const { id } = request.params;
+  const { error, result } = await deleteOneReview(id);
+  if (error) {
+    response.status(404).json({ error: "Review Not Found" });
+  } else {
+    response.status(201).json(result);
+  }
 });
 
-module.exports = reviews
-
-
-
+module.exports = review;
