@@ -1,7 +1,9 @@
 // Dependencies
 const express = require("express");
 const cors = require("cors");
-const productControllers = require("./controllers/productController");
+const productController = require("./controllers/productController");
+const reviewController = require("./controllers/reviewController");
+const storeController = require("./controllers/storeController");
 
 //Configurations
 const app = express();
@@ -16,7 +18,9 @@ app.get("/", (req, res) => {
   res.send("Welcome to $mrtCART");
 });
 
-// app.use("/products",productControllers);
+app.use("/products", productController);
+app.use("/reviews", reviewController);
+app.use("/stores", storeController);
 
 app.get("*", (req, res) => {
   res.status(404).send("Page Not Found");
