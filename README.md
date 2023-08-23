@@ -92,6 +92,9 @@ Explore the following endpoints to interact with the $mrtCART backend:
 |  PUT   | /reviews/:id  |    Update a user review    |
 | DELETE | /reviews/:id  | Delete review from product |
 
-Feel free to explore these endpoints to manage products, stores, and reviews for an enhanced shopping experience! 🛒🛍
+
+
+
+   🍓🛒🛍🍓 Feel free to explore these endpoints to manage products, stores, and reviews for an enhanced shopping experience! 🍓🛒🛍🍓
 
 ---
