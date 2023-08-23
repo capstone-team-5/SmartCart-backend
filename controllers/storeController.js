@@ -1,37 +1,32 @@
-const express = require('express');
-const stores = express.Router();
+const express = require("express");
+const store = express.Router();
 
-const validateStore = require('../validations/storeValidator');
+const { getAllStores, getOneStore } = require("../queries/storeQuery.js");
 
-const {
-    getAllStores,
-    getOneStore
-} = require('../queries/stores');
+// INDEX - show all stores
 
-//index
-
-stores.get('/', async (request, response) => {
-    const { error, result } = await getAllStores();
-    if (error) {
-        response.status(500).json({ error: 'Server Error' });
-    } else {
-        response.status(200).json(result)
-    }
+store.get("/stores", async (request, response) => {
+  const allStores = await getAllStores();
+  if (allStores[0]) {
+    response.status(200).json(allStores);
+  } else {
+    response.status(500).json({ error: "Server Error" });
+  }
 });
 
-//show
+// Show one store by id
 
-stores.get('/:id', async (request, response) => {
-    const { id } = request.params;
-    const { error, result } = await getOneStore(id);
+store.get("/stores/:id", async (request, response) => {
+  const { id } = request.params;
+  const { error, result } = await getOneStore(id);
 
-    if (error?.code === 0) {
-        response.status(404).json({ error: 'Store does not exist' })
-    } else if (error) {
-        response.status(500).json({ error: 'Server Error' });
-    } else {
-        response.status(200).json(result);
-    }
+  if (error?.code === 0) {
+    response.status(404).json({ error: "Store Not Found" });
+  } else if (error) {
+    response.status(500).json({ error: "Server Error" });
+  } else {
+    response.status(200).json(result);
+  }
 });
 
-module.exports = stores;
+module.exports = store;
