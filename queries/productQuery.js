@@ -1,4 +1,3 @@
-// productQuery.js
 const db = require("../db/dbConfig.js");
 
 // get all Products
