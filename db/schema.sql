@@ -40,6 +40,6 @@ CREATE TABLE product(
     product_is_organic BOOLEAN DEFAULT false, 
     product_is_vegetarian BOOLEAN DEFAULT false, 
     product_is_stock BOOLEAN DEFAULT true,
-    product_is_vegan BOOLEAN DEFAULT false,   -- CHECK CHECK CHECK
-    product_is_seafood BOOLEAN DEFAULT false  -- CHECK CHECK CHECK
+    product_is_vegan BOOLEAN DEFAULT false, 
+    product_is_seafood BOOLEAN DEFAULT false
 );
