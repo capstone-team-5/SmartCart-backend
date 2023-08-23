@@ -9,6 +9,7 @@ CREATE TABLE store (
     store_name TEXT NOT NULL,
     store_address TEXT NOT NULL,
     store_city TEXT NOT NULL,
+    store_state TEXT NOT NULL,
     store_zipCode INTEGER NOT NULL,
     store_image TEXT,
     store_hours TEXT NOT NULL,
