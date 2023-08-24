@@ -1,4 +1,4 @@
-lear\c cart_dev;
+\c cart_dev;
 
 INSERT INTO store (store_name, store_address, store_city, store_state, store_zipCode, store_image, store_hours, store_accepts_EBT, store_phone_number)
 VALUES
