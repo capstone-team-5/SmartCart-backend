@@ -7,6 +7,20 @@ const getAllProducts = async () => {
     const allProducts = await db.any(
       "SELECT * FROM product ORDER BY product_id"
     );
+
+    // controllers/userController.js.js
+
+    // INDEX
+    // users.get()
+
+    // CREATE
+    // users.post("/", (req, res) =>{
+    //  req.body.user
+    // req.body = {user: {uuid: "bhdscagd82"}}
+    // })
+
+    // queries/users.js
+    // INSERT INTO users (..,...,firebase_uuid) VALUES ($1, $2, $3)
     return allProducts;
   } catch (error) {
     throw error;
