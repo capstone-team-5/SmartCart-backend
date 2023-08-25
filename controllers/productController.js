@@ -4,7 +4,7 @@ const { getAllProducts, getOneProduct } = require("../queries/productQuery.js");
 
 // INDEX - show all products
 
-product.get("/products", async (req, res) => {
+product.get("/", async (req, res) => {
   console.log("Received request for /products");
   const allProducts = await getAllProducts();
   if (allProducts[0]) {
@@ -16,7 +16,7 @@ product.get("/products", async (req, res) => {
 
 // Show one image by id
 
-product.get("/products/:id", async (req, res) => {
+product.get("/:id", async (req, res) => {
   console.log("Received request for /products/:id");
   const { id } = req.params;
   const { error, result } = await getOneProduct(id);

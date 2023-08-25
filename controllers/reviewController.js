@@ -13,7 +13,7 @@ const {
 
 // INDEX - show all reviews
 
-review.get("/reviews", async (request, response) => {
+review.get("/", async (request, response) => {
   const allReviews = await getAllReviews();
   if (allReviews[0]) {
     response.status(200).json(allReviews);
@@ -24,7 +24,7 @@ review.get("/reviews", async (request, response) => {
 
 // Show one review by id
 
-review.get("/reviews/:id", async (request, response) => {
+review.get("/:id", async (request, response) => {
   const { id } = request.params;
   const { error, result } = await getOneReview(id);
   if (error?.code === 0) {
@@ -38,7 +38,7 @@ review.get("/reviews/:id", async (request, response) => {
 
 // Add one review
 
-review.post("/reviews", validateReviews, async (request, response) => {
+review.post("/", validateReviews, async (request, response) => {
   const { error, result } = await addOneReview(request.body);
   if (error) {
     response.status(500).json({ error: "Server Error" });
@@ -49,7 +49,7 @@ review.post("/reviews", validateReviews, async (request, response) => {
 
 // Update one review
 
-review.put("/reviews/:id", validateReviews, async (request, response) => {
+review.put("/:id", validateReviews, async (request, response) => {
   const { id } = request.params;
   const { error, result } = await updateOneReview(id, request.body);
   if (error) {
@@ -61,13 +61,13 @@ review.put("/reviews/:id", validateReviews, async (request, response) => {
 
 // Delete one review
 
-review.delete("/reviews/:id", async (request, response) => {
+review.delete("/:id", async (request, response) => {
   const { id } = request.params;
   const { error, result } = await deleteOneReview(id);
   if (error) {
     response.status(404).json({ error: "Review Not Found" });
   } else {
-    response.status(201).json(result);
+    response.status(200).json(result);
   }
 });
 
