@@ -41,7 +41,12 @@ VALUES
     (1, 'Kiwi', 'kiwi.jpg', 'Fresh, tangy kiwi', 'Fruits', 0.2, 0.89, 0, 'each', 'Tropical Delights', 'None', 'None', 'None', true, false, false, false, true, true, true, true, false, false),
     (6, 'Lobster', 'lobster.jpg', 'Fresh lobster tail', 'Seafood', 0.3, 19.99, 0, 'lb', 'SeaLuxury', 'None', 'None', 'None', false, true, true, false, true, true, false, true, false, true),
     (2, 'Yogurt', 'yogurt.jpg', 'Creamy yogurt', 'Dairy', 0.5, 2.49, 0, 'cup', 'DairyDelight', 'None', 'None', 'None', true, true, false, false,false, false, true, true, true, false);
-    
+
+INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
+VALUES
+    ('temp-uid-1', 'tempuser1@example.com', 'Temp', 'User 1', 'profile1.jpg', 'https://www.instagram.com/tempuser1/', 'https://www.facebook.com/tempuser1/', ARRAY['Vegetarian', 'Gluten-Free']),
+    ('temp-uid-2', 'tempuser2@example.com', 'Temp', 'User 2', 'profile2.jpg', 'https://www.instagram.com/tempuser2/', 'https://www.facebook.com/tempuser2/', ARRAY['Vegan', 'Keto']);
+
 INSERT INTO review (product_id, review_rating, review_comment, review_timestamp)
 VALUES
     (1, 4.5, 'Great quality apples', '2023-08-23 10:00:00'),

@@ -5,7 +5,7 @@ const getOneShopper = async (id) => {
   try {
     const oneShopper = await db.oneOrNone(
       "SELECT * FROM shopper WHERE shopper_firebase_uid = $1",
-      id
+      [id]
     );
     return { result: oneShopper };
   } catch (error) {

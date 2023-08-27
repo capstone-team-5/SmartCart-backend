@@ -22,9 +22,8 @@ app.get("/", (req, res) => {
 
 app.use("/stores", storeController);
 app.use("/products", productController);
-app.use("/reviews", reviewController);
-
 app.use("/shoppers", shopperController);
+app.use("/reviews", reviewController);
 // app.use("/favorites", favoriteController);
 
 app.get("*", (req, res) => {
