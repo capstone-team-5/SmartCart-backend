@@ -44,8 +44,8 @@ VALUES
 
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES
-    ('temp-uid-1', 'tempuser1@example.com', 'Temp', 'User 1', 'profile1.jpg', 'https://www.instagram.com/tempuser1/', 'https://www.facebook.com/tempuser1/', ARRAY['Vegetarian', 'Gluten-Free']),
-    ('temp-uid-2', 'tempuser2@example.com', 'Temp', 'User 2', 'profile2.jpg', 'https://www.instagram.com/tempuser2/', 'https://www.facebook.com/tempuser2/', ARRAY['Vegan', 'Keto']);
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 'tempuser1@example.com', 'Temp', 'User 1', 'profile1.jpg', 'https://www.instagram.com/tempuser1/', 'https://www.facebook.com/tempuser1/', ARRAY['Vegetarian', 'Gluten-Free']),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 'tempuser2@example.com', 'Temp', 'User 2', 'profile2.jpg', 'https://www.instagram.com/tempuser2/', 'https://www.facebook.com/tempuser2/', ARRAY['Vegan', 'Keto']);
 
 INSERT INTO review (product_id, review_rating, review_comment, review_timestamp)
 VALUES
