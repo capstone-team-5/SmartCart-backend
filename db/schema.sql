@@ -46,20 +46,20 @@ CREATE TABLE product(
 );
 
 CREATE TABLE user (
-  user_id_firebase TEXT PRIMARY KEY UNIQUE NOT NULL,
+  user_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
   user_email VARCHAR(255) UNIQUE NOT NULL,
   user_first_name VARCHAR(255) NOT NULL,
   user_last_name VARCHAR(255) NOT NULL,
   user_profile_pic TEXT,
   user_instagram_link TEXT,
   user_facebook_link TEXT,
-  user_dietary_preferences TEXT[],
+  user_dietary_preferences TEXT[]
 );
 
 CREATE TABLE review (
     review_id SERIAL PRIMARY KEY,
     user_firebase_uid TEXT NOT NULL REFERENCES user ON DELETE CASCADE,
-    product_id INTEGER NOT NULL REFERENCES product ON DELETE CASCADE, -- on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted 
+    store_id INTEGER NOT NULL REFERENCES store ON DELETE CASCADE, -- on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted 
     review_rating NUMERIC NOT NULL CHECK (review_rating >= 1 AND review_rating <= 5),
     review_comment TEXT,
     review_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP --sets the default value for the column as the current timestamp if one is not provided explicitly.
@@ -69,8 +69,4 @@ CREATE TABLE favorite (
     user_firebase_uid TEXT NOT NULL REFERENCES user,
     product_id INTEGER NOT NULL REFERENCES product,
     PRIMARY KEY (user_firebase_uid, product_id)
-);   
-
-    
-   
-    
+); 
