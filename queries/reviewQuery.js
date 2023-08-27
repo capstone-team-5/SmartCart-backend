@@ -24,12 +24,14 @@ const getOneReview = async (id) => {
 };
 
 // add new review
+
 const addOneReview = async (review) => {
   try {
     const newReview = await db.one(
-      "INSERT INTO review (product_id, review_rating, review_comment, review_timestamp) VALUES ($1, $2, $3, $4) RETURNING *",
+      "INSERT INTO review (shopper_firebase_uid, store_id, review_rating, review_comment, review_timestamp) VALUES ($1, $2, $3, $4, $5) RETURNING *",
       [
-        review.product_id,
+        review.shopper_firebase_uid,
+        review.store_id,
         review.review_rating,
         review.review_comment,
         review.review_timestamp,
@@ -38,17 +40,18 @@ const addOneReview = async (review) => {
 
     return { result: newReview };
   } catch (error) {
-    throw { error };
+    throw error;
   }
 };
 
-// update new review
+// update review
 const updateOneReview = async (id, review) => {
   try {
     const updateReview = await db.one(
-      "UPDATE review SET product_id=$1, review_rating=$2, review_comment=$3, review_timestamp=$4 WHERE review_id=$5 RETURNING *",
+      "UPDATE review SET shopper_firebase_uid=$1, store_id=$2, review_rating=$3, review_comment=$4, review_timestamp=$5 WHERE review_id=$6 RETURNING *",
       [
-        review.product_id,
+        review.shopper_firebase_uid,
+        review.store_id,
         review.review_rating,
         review.review_comment,
         review.review_timestamp,
@@ -57,7 +60,7 @@ const updateOneReview = async (id, review) => {
     );
     return { result: updateReview };
   } catch (error) {
-    throw { error };
+    throw error;
   }
 };
 
