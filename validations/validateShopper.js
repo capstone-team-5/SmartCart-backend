@@ -1,14 +1,15 @@
 const Joi = require("joi");
 const createValidator = require("./createValidator");
 
-const UserSchema = Joi.object({
-  user_firebase_uid: Joi.string().required(),
-  user_email: Joi.string().required(),
-  user_first_name: Joi.string().required(),
-  user_last_name: Joi.string().required(),
-  user_instagram_link: Joi.string().allow("").optional(),
-  user_facebook_link: Joi.string().allow("").optional(),
-  user_dietary_preferences: Joi.array().items(Joi.string()).optional(),
+const ShopperSchema = Joi.object({
+  shopper_firebase_uid: Joi.string().required(),
+  shopper_email: Joi.string().required(),
+  shopper_first_name: Joi.string().required(),
+  shopper_last_name: Joi.string().required(),
+  shopper_profile_pic: Joi.string().allow("").optional(),
+  shopper_instagram_link: Joi.string().allow("").optional(),
+  shopper_facebook_link: Joi.string().allow("").optional(),
+  shopper_dietary_preferences: Joi.array().items(Joi.string()).optional(),
 });
 
-module.exports = createValidator(UserSchema);
+module.exports = createValidator(ShopperSchema);

@@ -41,14 +41,20 @@ VALUES
     (1, 'Kiwi', 'kiwi.jpg', 'Fresh, tangy kiwi', 'Fruits', 0.2, 0.89, 0, 'each', 'Tropical Delights', 'None', 'None', 'None', true, false, false, false, true, true, true, true, false, false),
     (6, 'Lobster', 'lobster.jpg', 'Fresh lobster tail', 'Seafood', 0.3, 19.99, 0, 'lb', 'SeaLuxury', 'None', 'None', 'None', false, true, true, false, true, true, false, true, false, true),
     (2, 'Yogurt', 'yogurt.jpg', 'Creamy yogurt', 'Dairy', 0.5, 2.49, 0, 'cup', 'DairyDelight', 'None', 'None', 'None', true, true, false, false,false, false, true, true, true, false);
-    
-INSERT INTO review (product_id, review_rating, review_comment, review_timestamp)
+
+INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES
-    (1, 4.5, 'Great quality apples', '2023-08-23 10:00:00'),
-    (2, 3.8, 'Good bananas', '2023-08-23 12:30:00'),
-    (3, 5.0, 'Oily chips!', '2023-08-23 14:45:00'),
-    (4, 4.2, 'Really enjoyed these oranges', '2023-08-23 15:30:00'),
-    (6, 4.8, 'Delicious and sweet grapes', '2023-08-23 18:00:00'),
-    (3, 3.5, 'Average potato chips', '2023-08-24 10:15:00'),
-    (2, 4.0, 'Fresh and tasty strawberries', '2023-08-24 13:45:00'),
-    (5, 3.7, 'Milk was slightly sour', '2023-08-25 09:30:00');
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 'tempuser1@example.com', 'Temp', 'User 1', 'profile1.jpg', 'https://www.instagram.com/tempuser1/', 'https://www.facebook.com/tempuser1/', ARRAY['Vegetarian', 'Gluten-Free']),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 'tempuser2@example.com', 'Temp', 'User 2', 'profile2.jpg', 'https://www.instagram.com/tempuser2/', 'https://www.facebook.com/tempuser2/', ARRAY['Vegan', 'Keto']);
+
+INSERT INTO review (shopper_firebase_uid, store_id, review_rating, review_comment, review_timestamp)
+VALUES
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 1, 4, 'Great store!', '2023-08-23 10:00:00'),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 2, 2, 'Not a good store.', '2023-08-23 12:30:00'),
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 3, 5, 'Excellent products.', '2023-08-23 14:45:00'),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 4, 4, 'Nice place.', '2023-08-23 15:30:00'),
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 5, 4, 'Loved the selection.', '2023-08-23 18:00:00'),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 6, 3, 'Average experience.', '2023-08-24 10:15:00'),
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 7, 4, 'Friendly staff.', '2023-08-24 13:45:00'),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 8, 1, 'Could be better.', '2023-08-25 09:30:00');
+
