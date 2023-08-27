@@ -65,8 +65,12 @@ CREATE TABLE review (
     review_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP --sets the default value for the column as the current timestamp if one is not provided explicitly.
 );
 
+CREATE TABLE favorite (
+    user_firebase_uid TEXT NOT NULL REFERENCES user,
+    product_id INTEGER NOT NULL REFERENCES product,
+    PRIMARY KEY (user_firebase_uid, product_id)
+);   
 
-    
     
    
     
