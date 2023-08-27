@@ -2,7 +2,6 @@ const db = require("../db/dbConfig.js");
 
 // get one shopper
 const getOneShopper = async (id) => {
-  console.log("Query ID:", id);
   try {
     const oneShopper = await db.oneOrNone(
       "SELECT * FROM shopper WHERE shopper_firebase_uid = $/id/",

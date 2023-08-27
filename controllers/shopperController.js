@@ -14,10 +14,7 @@ const {
 
 shopper.get("/:id", async (request, response) => {
   const { id } = request.params;
-  console.log("Controller ID:", id);
   const { error, result } = await getOneShopper(id);
-  console.log("Error:", error);
-  console.log("Result:", result);
   if (error?.code === 0) {
     response.status(404).json({ error: "Shopper Not Found" });
   } else if (error) {
