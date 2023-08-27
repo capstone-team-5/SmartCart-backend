@@ -45,28 +45,30 @@ CREATE TABLE product(
     product_is_seafood BOOLEAN DEFAULT false
 );
 
-CREATE TABLE user (
-  user_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
-  user_email VARCHAR(255) UNIQUE NOT NULL,
-  user_first_name VARCHAR(255) NOT NULL,
-  user_last_name VARCHAR(255) NOT NULL,
-  user_profile_pic TEXT,
-  user_instagram_link TEXT,
-  user_facebook_link TEXT,
-  user_dietary_preferences TEXT[]
+CREATE TABLE shopper (
+  shopper_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
+  shopper_email VARCHAR(255) UNIQUE NOT NULL,
+  shopper_first_name VARCHAR(255) NOT NULL,
+  shopper_last_name VARCHAR(255) NOT NULL,
+  shopper_profile_pic TEXT,
+  shopper_instagram_link TEXT,
+  shopper_facebook_link TEXT,
+  shopper_dietary_preferences TEXT[]
 );
 
 CREATE TABLE review (
     review_id SERIAL PRIMARY KEY,
-    user_firebase_uid TEXT NOT NULL REFERENCES user ON DELETE CASCADE,
-    store_id INTEGER NOT NULL REFERENCES store ON DELETE CASCADE, -- on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted 
+    shopper_firebase_uid TEXT NOT NULL REFERENCES shopper ON DELETE CASCADE,
+    store_id INTEGER NOT NULL REFERENCES store ON DELETE CASCADE, 
     review_rating NUMERIC NOT NULL CHECK (review_rating >= 1 AND review_rating <= 5),
     review_comment TEXT,
-    review_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP --sets the default value for the column as the current timestamp if one is not provided explicitly.
+    review_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP 
 );
 
--- CREATE TABLE favorite (
---     user_firebase_uid TEXT NOT NULL REFERENCES user,
---     product_id INTEGER NOT NULL REFERENCES product,
---     PRIMARY KEY (user_firebase_uid, product_id)
--- ); 
+CREATE TABLE favorite (
+    shopper_firebase_uid TEXT NOT NULL REFERENCES shopper,
+    product_id INTEGER NOT NULL REFERENCES product,
+    PRIMARY KEY (shopper_firebase_uid, product_id)
+); 
+
+-- on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
