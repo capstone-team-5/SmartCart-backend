@@ -38,10 +38,8 @@ const addOneShopper = async (shopper) => {
 const updateOneShopper = async (id, shopper) => {
   try {
     const updateShopper = await db.one(
-      "UPDATE shopper SET shopper_firebase_uid=$1, shopper_email=$2, shopper_first_name=$3, shopper_last_name=$4, shopper_instagram_link=$5, shopper_facebook_link=$6, shopper_dietary_preferences=$7 WHERE shopper_firebase_uid=$8 RETURNING *",
+      "UPDATE shopper SET shopper_first_name=$1, shopper_last_name=$2, shopper_instagram_link=$3, shopper_facebook_link=$4, shopper_dietary_preferences=$5 WHERE shopper_firebase_uid=$6 RETURNING *",
       [
-        shopper.shopper_firebase_uid,
-        shopper.shopper_email,
         shopper.shopper_first_name,
         shopper.shopper_last_name,
         shopper.shopper_instagram_link,
