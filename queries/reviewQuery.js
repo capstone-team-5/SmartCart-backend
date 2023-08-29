@@ -48,15 +48,8 @@ const addOneReview = async (review) => {
 const updateOneReview = async (id, review) => {
   try {
     const updateReview = await db.one(
-      "UPDATE review SET shopper_firebase_uid=$1, store_id=$2, review_rating=$3, review_comment=$4, review_timestamp=$5 WHERE review_id=$6 RETURNING *",
-      [
-        review.shopper_firebase_uid,
-        review.store_id,
-        review.review_rating,
-        review.review_comment,
-        review.review_timestamp,
-        id,
-      ]
+      "UPDATE review SET review_rating=$1, review_comment=$2 WHERE review_id=$3 RETURNING *",
+      [review.review_rating, review.review_comment, id]
     );
     return { result: updateReview };
   } catch (error) {
