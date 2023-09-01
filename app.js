@@ -7,6 +7,7 @@ const productController = require("./controllers/productController");
 const shopperController = require("./controllers/shopperController");
 const reviewController = require("./controllers/reviewController");
 // const favoriteController = require("./controllers/favoriteController");
+const comparisonController = require("./controllers/product_storeController");
 
 //Configurations
 const app = express();
@@ -24,6 +25,7 @@ app.use("/stores", storeController);
 app.use("/products", productController);
 app.use("/shoppers", shopperController);
 app.use("/reviews", reviewController);
+app.use("/compare-prices", comparisonController);
 // app.use("/favorites", favoriteController);
 
 app.get("*", (req, res) => {
