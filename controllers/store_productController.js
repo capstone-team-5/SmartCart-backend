@@ -6,14 +6,30 @@ const { getComparisonResults } = require("../queries/store_productQuery");
 
 comparePrices.get("/", async (req, res) => {
   const { productIds } = req.query;
-  const product = productIds.split(",");
+  const productArray = productIds.split(",");
+  const stores = {}; // This object will store the results by store
 
-  const comparisonResults = await getComparisonResults(product);
+  try {
+    for (const productId of productArray) {
+      const results = await getComparisonResults(productId);
+      for (const result of results) {
+        const { store_id, product_price } = result;
+        if (!stores[store_id]) {
+          stores[store_id] = {};
+        }
+        stores[store_id][`product${productId}`] = product_price;
+      }
+    }
 
-  if (comparisonResults.length > 0) {
-    res.status(200).json({ comparisonResults });
-  } else {
-    res.status(404).json({ error: "No results found" });
+    // Calculate the total for each store
+    for (const storeId in stores) {
+      const store = stores[storeId];
+      store.total = Object.values(store).reduce((acc, price) => acc + price, 0);
+    }
+
+    res.status(200).json({ stores });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 

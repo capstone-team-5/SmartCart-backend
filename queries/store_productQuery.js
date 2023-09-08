@@ -7,6 +7,7 @@ const getComparisonResults = async (productId) => {
       "SELECT store_id, product_price FROM store_product WHERE product_id = $1",
       productId
     );
+
     return results;
   } catch (error) {
     throw error;
