@@ -3,9 +3,7 @@ const db = require("../db/dbConfig.js");
 // get all Stores
 const getAllStores = async () => {
   try {
-    const allStores = await db.any(
-      "SELECT * FROM store ORDER BY store_id LIMIT 5"
-    );
+    const allStores = await db.any("SELECT * FROM store ORDER BY store_id");
     return allStores;
   } catch (error) {
     throw error;

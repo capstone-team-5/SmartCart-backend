@@ -7,7 +7,7 @@ const productController = require("./controllers/productController");
 const shopperController = require("./controllers/shopperController");
 const reviewController = require("./controllers/reviewController");
 // const favoriteController = require("./controllers/favoriteController");
-const comparisonController = require("./controllers/product_storeController");
+const comparisonController = require("./controllers/store_productController");
 
 //Configurations
 const app = express();
