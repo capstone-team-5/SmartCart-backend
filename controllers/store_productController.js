@@ -30,7 +30,19 @@ comparePrices.get("/", async (req, res) => {
       const store = stores[storeId];
       store.total = Object.values(store).reduce((acc, price) => acc + price, 0);
     }
-    res.status(200).json({ stores });
+
+    // Convert stores object to an array and sort by total price (low to high)
+    const sortedStores = Object.entries(stores).sort(
+      ([storeIdA, storeA], [storeIdB, storeB]) => storeA.total - storeB.total
+    );
+
+    // Construct a new object with sorted stores
+    const sortedStoresObject = {};
+    sortedStores.forEach(([storeId, store]) => {
+      sortedStoresObject[storeId] = store;
+    });
+
+    res.status(200).json({ stores: sortedStoresObject });
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
