@@ -13,7 +13,7 @@ product.get("/", async (req, res) => {
   }
 });
 
-// Show one image by id
+// Show one product by id
 
 product.get("/:id", async (req, res) => {
   const { id } = req.params;

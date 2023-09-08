@@ -46,7 +46,13 @@ CREATE TABLE product(
     product_is_gluten BOOLEAN DEFAULT false
 );
 
-CREATE TABLE cart()
+CREATE TABLE store_product (
+    store_product_id SERIAL PRIMARY KEY,
+    product_id INTEGER NOT NULL REFERENCES product ON DELETE CASCADE,
+    store_id INTEGER NOT NULL REFERENCES store ON DELETE CASCADE,
+    product_price DECIMAL(6,2) NOT NULL DEFAULT 0 CHECK (product_price >= 0)
+);
+
 CREATE TABLE shopper (
   shopper_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
   shopper_email VARCHAR(255) UNIQUE NOT NULL,
