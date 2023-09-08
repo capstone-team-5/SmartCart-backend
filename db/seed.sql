@@ -42,6 +42,18 @@ VALUES
     (6, 'Lobster', 'https://img.freepik.com/premium-photo/red-lobster-isolated-white-background-full-depth-field_88281-5805.jpg?w=2000', 'Fresh lobster tail', 'Seafood', 0.3, 19.99, 0, 'lb', 'SeaLuxury', 'None', 'None', 'None', false, true, true, false, true, true, false, true, false, true),
     (2, 'Yogurt', 'https://media.istockphoto.com/id/840644316/photo/yogurt-with-raspberries-and-blueberries-over-white.jpg?s=612x612&w=0&k=20&c=pmlLz6RDiv4Hemyq-dRJXR7qeExEE3IdQxAZCtX5Ogk=', 'Creamy yogurt', 'Dairy', 0.5, 2.49, 0, 'cup', 'DairyDelight', 'None', 'None', 'None', true, true, false, false,false, false, true, true, true, false);
 
+INSERT INTO store_product (product_id, store_id, product_price)
+VALUES
+    (1, 1, 2.99),
+    (1, 2, 1.99), 
+    (1, 3, 4.99),
+    (2, 1, 1.99), 
+    (2, 2, 0.99),
+    (2, 3, 1.79),
+    (3, 1, 5.99), 
+    (3, 2, 2.99),
+    (3, 3, 4.79);
+
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES
     ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 'tempuser1@example.com', 'Temp', 'User 1', 'profile1.jpg', 'https://www.instagram.com/tempuser1/', 'https://www.facebook.com/tempuser1/', ARRAY['Vegetarian', 'Gluten-Free']),
