@@ -46,6 +46,7 @@ CREATE TABLE product(
     product_is_gluten BOOLEAN DEFAULT false
 );
 
+CREATE TABLE cart()
 CREATE TABLE shopper (
   shopper_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
   shopper_email VARCHAR(255) UNIQUE NOT NULL,

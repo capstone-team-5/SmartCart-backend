@@ -57,4 +57,3 @@ VALUES
     ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 6, 3, 'Average experience.', '2023-08-24 10:15:00'),
     ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 7, 4, 'Friendly staff.', '2023-08-24 13:45:00'),
     ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 8, 1, 'Could be better.', '2023-08-25 09:30:00');
-
