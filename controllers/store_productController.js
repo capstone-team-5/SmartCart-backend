@@ -10,7 +10,7 @@ comparePrices.get("/", async (req, res) => {
   const stores = {}; // This object will store the results by store
 
   try {
-    // Fetch results for all products in a single query
+    // Fetch results for all products in a single query - optimized code
     const results = await getComparisonResults(productArray);
 
     for (const result of results) {
