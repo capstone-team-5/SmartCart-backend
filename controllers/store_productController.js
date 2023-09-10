@@ -28,7 +28,12 @@ comparePrices.get("/", async (req, res) => {
     // Calculate the total for each store
     for (const storeId in stores) {
       const store = stores[storeId];
-      store.total = Object.values(store).reduce((acc, price) => acc + price, 0);
+      store.total = Object.values(store).reduce(
+        (acc, price) => acc + Number(price),
+        0
+      );
+      // Round the total to 2 decimal places
+      store.total = store.total.toFixed(2);
     }
 
     // Convert stores object to an array and sort by total price (low to high)

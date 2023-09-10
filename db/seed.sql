@@ -44,15 +44,15 @@ VALUES
 
 INSERT INTO store_product (product_id, store_id, product_price)
 VALUES
-    (53, 1, 2.99),
-    (53, 2, 1.99), 
-    (53, 3, 4.99),
-    (54, 1, 1.99), 
-    (54, 2, 0.99),
-    (54, 3, 1.79),
-    (57, 1, 5.99), 
-    (57, 2, 2.99),
-    (57, 3, 4.79);
+    (1, 1, 2.99),
+    (1, 2, 1.99), 
+    (1, 3, 4.99),
+    (2, 1, 1.99), 
+    (2, 2, 0.99),
+    (2, 3, 1.79),
+    (3, 1, 5.99), 
+    (3, 2, 2.99),
+    (3, 3, 4.79);
 
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES
