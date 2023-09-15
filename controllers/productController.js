@@ -1,6 +1,10 @@
 const express = require("express");
 const product = express.Router();
-const { getAllProducts, getOneProduct } = require("../queries/productQuery.js");
+const {
+  getAllProducts,
+  getAllCategories,
+  getOneProduct,
+} = require("../queries/productQuery.js");
 
 // INDEX - show all products
 
@@ -8,6 +12,17 @@ product.get("/", async (req, res) => {
   const allProducts = await getAllProducts();
   if (allProducts[0]) {
     res.status(200).json(allProducts);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all products
+
+product.get("/categories", async (req, res) => {
+  const allCategories = await getAllCategories();
+  if (allCategories[0]) {
+    res.status(200).json(allCategories);
   } else {
     res.status(500).json({ error: "Server Error" });
   }
