@@ -4,6 +4,7 @@ const {
   getAllProducts,
   getAllCategories,
   getOneProduct,
+  getAllProductsOneCategory,
 } = require("../queries/productQuery.js");
 
 // INDEX - show all products
@@ -17,13 +18,32 @@ product.get("/", async (req, res) => {
   }
 });
 
-// INDEX - show all products
+// INDEX - show all categories
 
 product.get("/categories", async (req, res) => {
   const allCategories = await getAllCategories();
   if (allCategories[0]) {
     res.status(200).json(allCategories);
   } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all products for one selected category
+
+product.get("/categories/:category", async (req, res) => {
+  const category = req.params.category;
+
+  try {
+    const allProductsOneCategory = await getAllProductsOneCategory(category);
+    if (allProductsOneCategory.length > 0) {
+      res.status(200).json(allProductsOneCategory);
+    } else {
+      res
+        .status(404)
+        .json({ error: "No products found for the given category" });
+    }
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
