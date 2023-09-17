@@ -1,4 +1,5 @@
 const db = require("../db/dbConfig.js");
+
 // get all Products
 const getAllProducts = async () => {
   try {
