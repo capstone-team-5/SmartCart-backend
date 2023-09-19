@@ -5,6 +5,7 @@ const {
   getAllCategories,
   getOneProduct,
   getAllProductsOneCategory,
+  // getFilteredProducts,
 } = require("../queries/productQuery.js");
 
 // INDEX - show all products
@@ -61,5 +62,50 @@ product.get("/:id", async (req, res) => {
     res.status(200).json(result);
   }
 });
+
+// Filter - Filter based on user selected options
+
+// product.get("/filter", async (req, res) => {
+//   const filters = req.query;
+//   const query = buildQuery(filters);
+//   try {
+//     const filteredProducts = await getFilteredProducts(query);
+
+//     if (filteredProducts.length > 0) {
+//       res.status(200).json(filteredProducts);
+//     } else {
+//       res
+//         .status(404)
+//         .json({ error: "No products found for the given category" });
+//     }
+//   } catch (error) {
+//     res.status(500).json({ error: "Server Error" });
+//   }
+// });
+
+// const buildQuery = (filters) => {
+//   const query = {};
+
+//   Object.keys(filters).forEach((category) => {
+//     filters[category].forEach((filter) => {
+//       if (filter.checked) {
+//         const backendField = mapToFrontendToBackend(filter.name); // Helper function to map frontend to backend Use the filter name to map to the backend
+//         query[backendField] = true; // Set the backend field to true for checked filters
+//       }
+//     });
+//   });
+
+//   return query;
+// };
+
+// const mapToFrontendToBackend = (key) => {
+//   const mapping = {
+//     Vegan: "product_is_vegan",
+//     Vegetarian: "product_is_vegetarian",
+//     // Add other mappings as needed
+//   };
+
+//   return mapping[key] || key; // Default to key if not found in mapping
+// };
 
 module.exports = product;
