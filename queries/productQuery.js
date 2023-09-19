@@ -50,9 +50,35 @@ const getOneProduct = async (id) => {
   }
 };
 
+// // filter
+
+// const getFilteredProducts = async (filters) => {
+//   const queryParams = [];
+//   const conditions = [];
+
+//   // Construct the WHERE clause based on the filters
+//   Object.keys(filters).forEach((key) => {
+//     if (filters[key]) {
+//       conditions.push(`${key} = $${queryParams.length + 1}`);
+//       queryParams.push(filters[key]);
+//     }
+//   });
+
+//   // Construct the SQL query
+//   const query = `SELECT * FROM product WHERE ${conditions.join(" AND ")}`;
+
+//   try {
+//     const result = await db.any(query, queryParams);
+//     return result;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
 module.exports = {
   getAllProducts,
   getAllCategories,
   getOneProduct,
   getAllProductsOneCategory,
+  // getFilteredProducts,
 };
