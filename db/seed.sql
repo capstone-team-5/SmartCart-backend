@@ -57,6 +57,7 @@ VALUES
     (1, 'Large White Eggs', 'https://images.heb.com/is/image/HEBGrocery/000325137-2', 'Farm-fresh large white eggs', 'Dairy', '12 eggs', 'Dozen', 2.49, 0, 'Generic', False, False, True, False, False, False, False, False, True, False, False, False, False, False, False, False, False, False, False, False, False, False),
     (1, 'Large Brown Eggs', 'https://images.heb.com/is/image/HEBGrocery/000313771-3?jpegSize=150&hei=1400&fit=constrain&qlt=75', 'Farm-fresh large brown eggs', 'Dairy', '12 eggs', 'Dozen', 2.79, 5, 'Generic', False, False, True, False, False, False, False, False, True, False, False, False, False, False, False, False, False, False, False, False, False, False),
     (1, 'Horizon Organic Whole Milk', 'https://target.scene7.com/is/image/Target/GUEST_2a359408-3f61-45df-95b1-0859e68867c3?wid=1200&hei=1200&qlt=80&fmt=webp', 'Rich and creamy organic whole milk', 'Dairy', '64 fl oz', 'Carton', 4.49, 0, 'Horizon', False, False, True, False, False, False, False, False, True, False, False, False, False, False, False, False, False, False, False, False, False, False)
+
 INSERT INTO store_product (product_id, store_id, product_price)
 VALUES
     (1, 1, 2.99),
