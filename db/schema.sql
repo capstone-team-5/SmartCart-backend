@@ -15,6 +15,12 @@ CREATE TABLE store (
     store_hours TEXT NOT NULL,
     store_accepts_EBT BOOLEAN DEFAULT true,
     store_phone_number TEXT NOT NULL
+    store_longitude 44 
+    store_latitude 454
+--     User inputs zip + distance
+-- React converts zip to long lat
+-- React queries all stores
+-- React goes through every store and compares distance, filters for all stores that are < dist away
 );
 
 CREATE TABLE product(
