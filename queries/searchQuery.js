@@ -1,12 +1,12 @@
 const db = require("../db/dbConfig.js");
 
 // search all Products
-const searchAllProducts = async (query) => {
+const searchAllProducts = async (category, searchTerm) => {
   try {
-    let sqlQuery = "SELECT * FROM product ORDER BY product_id";
+    let baseQuery = "SELECT * FROM product";
 
-    if (query) {
-      sqlQuery = "SELECT * FROM product WHERE product_name ILIKE $1";
+    if (searchTerm) {
+      baseQuery += "WHERE category ILIKE %" + searchTerm + "%";
     }
 
     const allProducts = await db.any(sqlQuery, query ? [`%${query}%`] : []);
@@ -16,35 +16,6 @@ const searchAllProducts = async (query) => {
   }
 };
 
-// Search products by name
-const searchByName = async (query) => {
-  try {
-    const result = await db.any(
-      "SELECT * FROM product WHERE product_name ILIKE $1",
-      [`%${query}%`]
-    );
-    return result;
-  } catch (error) {``
-    throw error;
-  }
-};
-
-// Search products by category
-const searchByCategory = async (query) => {
-  try {
-    const result = await db.any(
-      "SELECT * FROM product WHERE product_category ILIKE $1",
-      [`%${query}%`]
-    );
-    return result;
-  } catch (error) {
-    throw error;
-  }
-};
-
 module.exports = {
   searchAllProducts,
-  searchByName,
-  searchByCategory,
-  // Add other search functions here
 };

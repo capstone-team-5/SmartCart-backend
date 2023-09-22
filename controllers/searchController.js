@@ -2,9 +2,10 @@ const express = require("express");
 const search = express.Router();
 const { searchAllProducts } = require("../queries/productQuery.js");
 
-// INDEX - show all products
-
+// Search By 
+// search?category=food&searchTerm=apple
 search.get("/", async (req, res) => {
+  const { category, searchTerm } = req.query;
   const allProducts = await searchAllProducts();
   if (allProducts[0]) {
     res.status(200).json(allProducts);

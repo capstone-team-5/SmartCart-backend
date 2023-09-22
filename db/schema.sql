@@ -15,12 +15,6 @@ CREATE TABLE store (
     store_hours TEXT NOT NULL,
     store_accepts_EBT BOOLEAN DEFAULT true,
     store_phone_number TEXT NOT NULL
-    store_longitude 44 
-    store_latitude 454
---     User inputs zip + distance
--- React converts zip to long lat
--- React queries all stores
--- React goes through every store and compares distance, filters for all stores that are < dist away
 );
 
 CREATE TABLE product(
@@ -86,3 +80,44 @@ CREATE TABLE favorite (
 ); 
 
 -- on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
+
+-- User inputs zip + distance
+-- React converts zip to long lat
+-- React queries all stores
+-- React goes through every store and compares distance, filters for all stores that are < dist away
+
+-- CREATE TABLE product (
+--     product_id SERIAL PRIMARY KEY,
+--     store_id INTEGER NOT NULL REFERENCES store ON DELETE CASCADE,
+--     product_name TEXT NOT NULL,
+--     product_image TEXT NOT NULL,
+--     product_description TEXT,
+--     product_category TEXT NOT NULL,
+--     product_weight DECIMAL(6,2) DEFAULT 0 CHECK (product_weight >= 0),
+--     product_price DECIMAL(6,2) NOT NULL DEFAULT 0 CHECK (product_price >= 0),
+--     product_discount DECIMAL(4,2) DEFAULT 0 CHECK (product_discount >= 0),
+--     product_unit TEXT,
+--     product_brand TEXT,
+--     product_is_tree_nuts_free BOOLEAN DEFAULT false,
+--     product_is_egg_free BOOLEAN DEFAULT false,
+--     product_is_fresh BOOLEAN DEFAULT false,
+--     product_is_frozen BOOLEAN DEFAULT false,
+--     product_is_halal BOOLEAN DEFAULT false,
+--     product_is_kosher BOOLEAN DEFAULT false,
+--     product_is_non_processed BOOLEAN DEFAULT false,
+--     product_is_organic BOOLEAN DEFAULT false,
+--     product_is_vegetarian BOOLEAN DEFAULT false,
+--     product_is_stock BOOLEAN DEFAULT true,
+--     product_is_vegan_friendly BOOLEAN DEFAULT false,
+--     product_is_seafood BOOLEAN DEFAULT false,
+--     product_is_peanut_free BOOLEAN DEFAULT false,
+--     product_is_caffeine BOOLEAN DEFAULT false,
+--     product_is_dairy_free BOOLEAN DEFAULT false ,
+--     product_is_no_preservatives BOOLEAN DEFAULT false,
+--     product_is_no_added_sugar BOOLEAN DEFAULT false,
+--     product_is_nuts_free BOOLEAN DEFAULT false,
+--     product_is_keto_friendly BOOLEAN DEFAULT false,
+--     product_is_low_carb_diet BOOLEAN DEFAULT false,
+--     product_is_gluten_free BOOLEAN DEFAULT false,
+--     product_is_international BOOLEAN DEFAULT false
+-- );
