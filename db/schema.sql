@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS cart_dev;
+ DROP DATABASE IF EXISTS cart_dev;
 
-CREATE DATABASE cart_dev;
+ CREATE DATABASE cart_dev;
 
-\c cart_dev;
+ \c cart_dev;
 
 CREATE TABLE store (
     store_id SERIAL PRIMARY KEY,
@@ -84,4 +84,4 @@ CREATE TABLE favorite (
     PRIMARY KEY (shopper_firebase_uid, product_id)
 ); 
 
--- on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
+ on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
