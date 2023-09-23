@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS cart_dev;
+ DROP DATABASE IF EXISTS cart_dev;
 
-CREATE DATABASE cart_dev;
+ CREATE DATABASE cart_dev;
 
-\c cart_dev;
+ \c cart_dev;
 
 CREATE TABLE store (
     store_id SERIAL PRIMARY KEY,
@@ -17,35 +17,40 @@ CREATE TABLE store (
     store_phone_number TEXT NOT NULL
 );
 
-CREATE TABLE product(
-    product_id SERIAL PRIMARY KEY,
-    store_id INTEGER NOT NULL REFERENCES store ON DELETE CASCADE, -- Foreign Key
-    product_name TEXT NOT NULL, 
-    product_image TEXT NOT NULL, 
+CREATE TABLE product (
+    store_id INTEGER NOT NULL REFERENCES store ON DELETE CASCADE,
+    product_name TEXT NOT NULL,
+    product_image TEXT NOT NULL,
     product_description TEXT,
-    product_category TEXT NOT NULL, 
+    product_category TEXT NOT NULL,
     product_weight DECIMAL(6,2) DEFAULT 0 CHECK (product_weight >= 0),
+    product_unit TEXT,
     product_price DECIMAL(6,2) NOT NULL DEFAULT 0 CHECK (product_price >= 0),
     product_discount DECIMAL(4,2) DEFAULT 0 CHECK (product_discount >= 0),
-    product_unit TEXT,
     product_brand TEXT,
-    product_allergens TEXT,
-    product_special_diet TEXT,
-    product_health_label TEXT,
-    product_certification TEXT,
+    product_is_tree_nuts_free BOOLEAN DEFAULT false,
+    product_is_egg_free BOOLEAN DEFAULT false,
     product_is_fresh BOOLEAN DEFAULT false,
     product_is_frozen BOOLEAN DEFAULT false,
     product_is_halal BOOLEAN DEFAULT false,
     product_is_kosher BOOLEAN DEFAULT false,
-    product_is_non_processed BOOLEAN DEFAULT false, 
-    product_is_organic BOOLEAN DEFAULT false, 
-    product_is_vegetarian BOOLEAN DEFAULT false, 
+    product_is_non_processed BOOLEAN DEFAULT false,
+    product_is_organic BOOLEAN DEFAULT false,
+    product_is_vegetarian BOOLEAN DEFAULT false,
     product_is_stock BOOLEAN DEFAULT true,
-    product_is_vegan BOOLEAN DEFAULT false, 
+    product_is_vegan_friendly BOOLEAN DEFAULT false,
     product_is_seafood BOOLEAN DEFAULT false,
-    product_is_gluten BOOLEAN DEFAULT false
+    product_is_peanut_free BOOLEAN DEFAULT false,
+    product_is_caffeine BOOLEAN DEFAULT false,
+    product_is_dairy_free BOOLEAN DEFAULT false ,
+    product_is_no_preservatives BOOLEAN DEFAULT false,
+    product_is_no_added_sugar BOOLEAN DEFAULT false,
+    product_is_nuts_free BOOLEAN DEFAULT false,
+    product_is_keto_friendly BOOLEAN DEFAULT false,
+    product_is_low_carb_diet BOOLEAN DEFAULT false,
+    product_is_gluten_free BOOLEAN DEFAULT false,
+    product_is_international BOOLEAN DEFAULT false
 );
-
 CREATE TABLE store_product (
     store_product_id SERIAL PRIMARY KEY,
     product_id INTEGER NOT NULL REFERENCES product ON DELETE CASCADE,
@@ -79,4 +84,4 @@ CREATE TABLE favorite (
     PRIMARY KEY (shopper_firebase_uid, product_id)
 ); 
 
--- on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
+ on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
