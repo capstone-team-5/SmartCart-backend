@@ -87,4 +87,3 @@ CREATE TABLE favorite (
 ); 
 
 --  on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
-
