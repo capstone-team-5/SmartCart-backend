@@ -196,15 +196,15 @@ VALUES
 
 INSERT INTO store_product (product_id, store_id, product_price, product_discount)
 VALUES
-    (1, 1, 2.99,0.1),
-    (1, 2, 1.99,0.2), 
-    (1, 3, 4.99,0.3),
-    (2, 1, 1.99,0.3), 
-    (2, 2, 0.99,0.3),
-    (2, 3, 1.79,0.3),
-    (3, 1, 5.99,0.3), 
-    (3, 2, 2.99,0.3),
-    (3, 3, 4.79,0.3);
+    (1, 1, 2.99, 0.1),
+    (1, 2, 1.99, 0.2), 
+    (1, 3, 4.99, 0.3),
+    (2, 1, 1.99, 0.3), 
+    (2, 2, 0.99, 0.3),
+    (2, 3, 1.79, 0.3),
+    (3, 1, 5.99, 0.3), 
+    (3, 2, 2.99, 0.3),
+    (3, 3, 4.79, 0.3);
 
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES

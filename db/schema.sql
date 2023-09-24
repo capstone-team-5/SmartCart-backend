@@ -86,4 +86,13 @@ CREATE TABLE favorite (
     PRIMARY KEY (shopper_firebase_uid, product_id)
 ); 
 
+CREATE TABLE saving (
+    saving_id SERIAL PRIMARY KEY,
+    shopper_firebase_uid TEXT NOT NULL REFERENCES shopper ON DELETE CASCADE,
+    saving_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    store_name TEXT NOT NULL, 
+    saving_per_trip DECIMAL(6,2) NOT NULL DEFAULT 0 CHECK (saving_per_trip >= 0),
+    saving_total DECIMAL(10,2) DEFAULT 0 CHECK (saving_total >= 0)
+); 
+
 --  on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
