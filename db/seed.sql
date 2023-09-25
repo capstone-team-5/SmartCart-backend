@@ -194,7 +194,7 @@ VALUES
     ( 'Motts Unsweetened Applesauce', 'https://i5.walmartimages.com/seo/Mott-s-No-Sugar-Added-Applesauce-24-oz-Jar_3a3326bc-5eae-46bb-95f9-a7e1030f5bb1.745e8acd634097e7f9c7e9d836ef3aca.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF', 'Naturally sweet and unsweetened apple sauce', 'Canned Goods', '24', 'Jar',  'Motts', FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
     ( 'Knorr Beef Bouillon', 'https://i5.walmartimages.com/seo/Knorr-Shelf-Stable-Granulated-Beef-Flavor-Bouillon-7-9-oz_57629e51-63d2-4a93-8dfb-00ce6924c725.f9bed411c93e557a57d87ee4e3807a6e.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF', 'Rich and flavorful beef bouillon cubes', 'Canned Goods', '7.9', 'Package',  'Knorr', FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE);
 
-INSERT INTO store_product (product_id, store_id, product_price, product_discount)
+INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
 VALUES
     (1, 1, 2.99, 0.1),
     (1, 2, 1.99, 0.2), 
