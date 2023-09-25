@@ -8,6 +8,8 @@ At the heart of $mrtCART lies a simple yet powerful idea: making price compariso
 
 ## Table of Contents
 
+- [Trello Board](https://)
+- [WireFrame](https://)
 - [Deployed Backend URL](https://)
 - [Deployed Frontend URL](https://)
 - Meet Team Members
@@ -24,17 +26,17 @@ Meet the fantastic minds behind $mrtCART:
   - [GitHub](https://github.com/DiandreMiller)
   - [LinkedIn](https://www.linkedin.com/in/diandre-miller/)
 
-- **Ryan Fodera**
+- **Ryan Fodera**: Project Manager
 
   - [GitHub](https://github.com/ryanfodera)
   - [LinkedIn](https://www.linkedin.com/in/ryan-fodera/)
 
-- **Tafari Excell**
+- **Tafari Excell**: Demo Lead
 
   - [GitHub](https://github.com/Tafarigit)
   - [LinkedIn](https://www.linkedin.com/in/tafari-e-7a5554110/)
 
-- **Touhami Benmessaoud**
+- **Touhami Benmessaoud**: Scrum Master
 
   - [GitHub](https://github.com/touhami-ben)
   - [LinkedIn](https://www.linkedin.com/in/touhami-benmessaoud-aaa072259/)
@@ -90,6 +92,9 @@ Explore the following endpoints to interact with the $mrtCART backend:
 |  PUT   | /reviews/:id  |    Update a user review    |
 | DELETE | /reviews/:id  | Delete review from product |
 
-🍓🛒🛍🍓 Feel free to explore these endpoints to manage products, stores, and reviews for an enhanced shopping experience! 🍓🛒🛍🍓
+
+
+
+   🍓🛒🛍🍓 Feel free to explore these endpoints to manage products, stores, and reviews for an enhanced shopping experience! 🍓🛒🛍🍓
 
 ---
