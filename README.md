@@ -8,8 +8,8 @@ At the heart of $mrtCART lies a simple yet powerful idea: making price compariso
 
 ## Table of Contents
 
-- [Trello Board](https://)
-- [WireFrame](https://)
+- [Trello Board](https://trello.com/b/PG58P1v8/93-capstone-team-5)
+- [WireFrame](https://www.figma.com/file/O2GvnaIrPFRSURlMLNeX9w/Capstone---Team-5?type=design&node-id=0-1&mode=design&t=ZhrulM6i0d83wAcF-0)
 - [Deployed Backend URL](https://)
 - [Deployed Frontend URL](https://)
 - Meet Team Members
@@ -54,7 +54,7 @@ Getting started with the $mrtCART backend is a breeze:
 1. Fork and Clone the repository using the following command:
 
    ```
-   git clone <repository-url>
+   git clone <https://github.com/capstone-team-5/SmartCart-backend>
    ```
 
 2. Navigate to the project directory and install the dependencies using the following command:
@@ -67,13 +67,13 @@ Getting started with the $mrtCART backend is a breeze:
 3. Create a `.env` file in the root directory and add the following environment variables:
 
    ```
-   PORT=<port-number>
+   PORT=<4444>
    ```
 
 4. Start the server using the following command
 
    ```
-   npm start
+   npm run dev
    ```
 
 ## Available Endpoints
