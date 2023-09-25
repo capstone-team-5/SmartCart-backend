@@ -41,7 +41,7 @@ VALUES
   ('Watermelon', 'https://getfreshswansea.co.uk/wp-content/uploads/2020/07/watermelon.jpg', 'Refreshing and hydrating watermelon.', 'Fruit', 0.8, 'lbs', 'Watermelon Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
   ('Nectarines', 'https://familytreefarms.com/wp-content/uploads/2021/04/NectarineYellow.jpg', 'Sweet and juicy nectarines.', 'Fruit', 0.25, 'lbs', 'Nectarine Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
   ('Blood oranges', 'https://www.melissas.com/cdn/shop/products/image-of-blood-oranges-fruit-28657870143532_600x600.jpg?v=1628015991', 'Rich and tangy blood oranges.', 'Fruit', 0.3, 'lbs', 'Citrus Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
-  ('Clementines', 'https://galafruit.net/wp-content/uploads/galafruit_clementine.jpg', 'Small and sweet clementines.', 'Fruit', 0.15, 'lbs', 'Citrus Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
+  ('Clementines', 'https://www.jaimefruitsetlegumes.ca/wp-content/uploads/2019/09/Clementine-700x700.png', 'Small and sweet clementines.', 'Fruit', 0.15, 'lbs', 'Citrus Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
   ('Mangoes', 'https://getfreshswansea.co.uk/wp-content/uploads/2020/07/mango.jpg', 'Tropical and juicy mangoes.', 'Fruit', 0.4, 'lbs', 'Mango Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
   ('Papayas', 'https://shawellness.com/shamagazine/wp-content/uploads/papaya.jpg', 'Sweet and tropical papayas.', 'Fruit', 0.55, 'lbs', 'Papaya Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
   ('Peaches', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVTsWprUXw04rz_OdYTfzqRK1LVp26DMrxENRSXz0l98Kz0ml1hKu5ifcPiNbM1ckxrjA&usqp=CAU', 'Juicy and aromatic peaches.', 'Fruit', 0.3, 'lbs', 'Peach Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
@@ -194,17 +194,17 @@ VALUES
     ( 'Motts Unsweetened Applesauce', 'https://i5.walmartimages.com/seo/Mott-s-No-Sugar-Added-Applesauce-24-oz-Jar_3a3326bc-5eae-46bb-95f9-a7e1030f5bb1.745e8acd634097e7f9c7e9d836ef3aca.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF', 'Naturally sweet and unsweetened apple sauce', 'Canned Goods', '24', 'Jar',  'Motts', FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
     ( 'Knorr Beef Bouillon', 'https://i5.walmartimages.com/seo/Knorr-Shelf-Stable-Granulated-Beef-Flavor-Bouillon-7-9-oz_57629e51-63d2-4a93-8dfb-00ce6924c725.f9bed411c93e557a57d87ee4e3807a6e.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF', 'Rich and flavorful beef bouillon cubes', 'Canned Goods', '7.9', 'Package',  'Knorr', FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE);
 
-INSERT INTO store_product (product_id, store_id, product_price, product_discount)
+INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
 VALUES
-    (1, 1, 2.99,0.1),
-    (1, 2, 1.99,0.2), 
-    (1, 3, 4.99,0.3),
-    (2, 1, 1.99,0.3), 
-    (2, 2, 0.99,0.3),
-    (2, 3, 1.79,0.3),
-    (3, 1, 5.99,0.3), 
-    (3, 2, 2.99,0.3),
-    (3, 3, 4.79,0.3);
+    (1, 1, 2.99, 0.1),
+    (1, 2, 1.99, 0.2), 
+    (1, 3, 4.99, 0.3),
+    (2, 1, 1.99, 0.3), 
+    (2, 2, 0.99, 0.3),
+    (2, 3, 1.79, 0.3),
+    (3, 1, 5.99, 0.3), 
+    (3, 2, 2.99, 0.3),
+    (3, 3, 4.79, 0.3);
 
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES
