@@ -97,10 +97,10 @@ CREATE TABLE saving (
 
 --  on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
 
--- favorite -> get one, create, delete
+
 -- savings -> get one, get all, create, update, delete
 
 
 -- search, filter, not now later 
--- get by unique category, get only 4 dairy, 4 greens , 4 orange,  get all fruits, get all vegetables, get all dairy  - done 
+-- get by unique category, get only 4 dairy, 4 greens , 4 orange,  get all fruits, get all vegetables, get all dairy, favorite -> get one, create, delete  - done 
 -- spinach image changed, spaghetti meat balls images changed, strawberry and carrot commented repeat 
