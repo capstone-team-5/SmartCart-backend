@@ -5,6 +5,12 @@ const {
   getAllCategories,
   getOneProduct,
   getAllProductsOneCategory,
+  getfourDairy,
+  getfourGreens,
+  getfourFruits,
+  getAllDairy,
+  getAllVegetables,
+  getAllFruits,
   // getFilteredProducts,
 } = require("../queries/productQuery.js");
 
@@ -25,6 +31,72 @@ product.get("/categories", async (req, res) => {
   const allCategories = await getAllCategories();
   if (allCategories[0]) {
     res.status(200).json(allCategories);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all fruits
+
+product.get("/fruits", async (req, res) => {
+  const allFruits = await getAllFruits();
+  if (allFruits[0]) {
+    res.status(200).json(allFruits);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all vegetables
+
+product.get("/vegetables", async (req, res) => {
+  const allVegetables = await getAllVegetables();
+  if (allVegetables[0]) {
+    res.status(200).json(allVegetables);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all dairy
+
+product.get("/dairy", async (req, res) => {
+  const allDairy = await getAllDairy();
+  if (allDairy[0]) {
+    res.status(200).json(allDairy);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show 4 fruits
+
+product.get("/fourFruits", async (req, res) => {
+  const fourFruits = await getfourFruits();
+  if (fourFruits[0]) {
+    res.status(200).json(fourFruits);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show 4 dairy
+
+product.get("/fourDairy", async (req, res) => {
+  const fourDairy = await getfourDairy();
+  if (fourDairy[0]) {
+    res.status(200).json(fourDairy);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show 4 Greens
+
+product.get("/fourGreens", async (req, res) => {
+  const fourGreens = await getfourGreens();
+  if (fourGreens[0]) {
+    res.status(200).json(fourGreens);
   } else {
     res.status(500).json({ error: "Server Error" });
   }
