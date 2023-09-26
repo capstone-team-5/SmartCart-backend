@@ -213,7 +213,8 @@ VALUES
     ('green split peas',	'https://storage.googleapis.com/images-fol-prd-83dd8b8.fol.prd.v8.commerce.mi9cloud.com/product-images/detail/4218740154.jpg',	'Dry Green Split Peas',	'legumes',	1,	'lb',	'Best Yet',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE),
     ('navy beans',	'https://m.media-amazon.com/images/I/71v2Czz-7lL.jpg',	'DRY navy beans',	'legumes',	4,	'lb',	'Aiva',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE),
     ('large lima beans',	'https://www.camelliabrand.com/static/wp-content/uploads/2020/07/1lb_508_large-limas-350x500.png',	'Dry large lima beans',	'legumes',	1,	'lb',	'camillia',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE),
-    ('blackeye beans',	'https://images-na.ssl-images-amazon.com/images/I/31sNLB5dAuL._AC_UL200_SR200,200_.jpg',	'dry blackeyes beans',	'legumes',	16,	'oz',	'GOYA',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE, FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE);
+    ('blackeye peas',	'https://images-na.ssl-images-amazon.com/images/I/31sNLB5dAuL._AC_UL200_SR200,200_.jpg',	'dry blackeye peas',	'legumes',	16,	'oz',	'GOYA',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE, FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE),
+    ('lentils',	'http://shop.goya.com/cdn/shop/products/Lentils.png?v=1659463377',	'dry lentils',	'legumes',	16,	'oz',	'GOYA',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE);
 INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
 VALUES
     (1, 1, 2.99, 0.1),
