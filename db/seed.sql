@@ -218,7 +218,8 @@ VALUES
     ('northern beans',	'https://gatherdmarket.com/cdn/shop/products/40783e57d18187bced778a3565b80a6f_x518.jpg?v=1678770293',	'Organic Low Sodium Great Northern Beans',	'legumes',	15.5,	'oz', 'Trader Joe-s',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE),
     ('sweet kernel corn',	'https://m.media-amazon.com/images/I/815IRnlGhGL.jpg',	'Golden Sweet Whole Kernel Corn',	'legumes',	15.25,	'0z',	'Delmonte',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE),
     ('baguette',	'https://static.specsonline.com/wp-content/uploads/2021/03/081330501549.jpg',	'take  and bake baguettes',	'breads & bakery',	14, 'oz/2ct',	'the essential baking',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE),
-    ('sliced sourdough bread',	'https://m.media-amazon.com/images/I/813tiyqwunL.jpg',	'Sliced Sourdough Bread',	'breads & bakery',	17,	'oz',	'Alma',	TRUE,	FALSE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE);
+    ('sliced sourdough bread',	'https://m.media-amazon.com/images/I/813tiyqwunL.jpg',	'Sliced Sourdough Bread',	'breads & bakery',	17,	'oz',	'Alma',	TRUE,	FALSE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE),
+    ('Ciabatta Bread',	'https://images.heb.com/is/image/HEBGrocery/001851333-1',	'Take And Bake Ciabatta Bread',	'breads & bakery',	14,	'oz',  'New frensh',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	FALSE,	FALSE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE);
 INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
 VALUES
     (1, 1, 2.99, 0.1),
