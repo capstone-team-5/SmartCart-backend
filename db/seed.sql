@@ -228,3 +228,14 @@ VALUES
     ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 2),
     ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 3),
     ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 2);
+
+INSERT INTO saving (shopper_firebase_uid, saving_timestamp, store_name, saving_per_trip, saving_total)
+VALUES
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', '2023-08-23 10:00:00', 'City Fresh Market', 23.45, 23.45),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', '2023-08-23 12:30:00', 'Buena Vista Deli & Grocery', 21.21, 21.21),
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', '2023-08-23 14:45:00', 'Mr. Lemon', 2.01, 2.01 ),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', '2023-08-23 15:30:00', 'bp', 2, 2),
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', '2023-08-23 18:00:00', 'Mr. Lemon', 3, 3),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', '2023-08-24 10:15:00', 'Buena Vista Deli & Grocery', 3.44, 3.44),
+    ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', '2023-08-24 13:45:00', 'EUROPE', 5.67, 5.67),
+    ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', '2023-08-25 09:30:00', 'Buena Vista Deli & Grocery', 120.90, 120.90);
