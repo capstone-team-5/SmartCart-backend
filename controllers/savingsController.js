@@ -1,6 +1,8 @@
 const express = require("express");
 const saving = express.Router();
 
+const validateSaving = require("../validations/validateSaving.js");
+
 const {
   getAllSavings,
   getSavingsByShopperId,
@@ -35,7 +37,7 @@ saving.get("/:shopperId", async (request, response) => {
 
 // Add one Saving
 
-saving.post("/", async (request, response) => {
+saving.post("/", validateSaving, async (request, response) => {
   const { error, result } = await addOneSaving(request.body);
   if (error) {
     response.status(500).json({ error: "Server Error" });
@@ -46,7 +48,7 @@ saving.post("/", async (request, response) => {
 
 // Update one Saving
 
-saving.put("/:id", async (request, response) => {
+saving.put("/:id", validateSaving, async (request, response) => {
   const { id } = request.params;
   const { error, result } = await updateOneSaving(id, request.body);
   if (error) {

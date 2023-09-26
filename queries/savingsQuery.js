@@ -47,7 +47,7 @@ const addOneSaving = async (saving) => {
 const updateOneSaving = async (id, saving) => {
   try {
     const updateSaving = await db.one(
-      "UPDATE saving SET store_name=$1, saving_per_trip=$2, saving_total=$3 WHERE saving_id=$3 RETURNING *",
+      "UPDATE saving SET store_name=$1, saving_per_trip=$2, saving_total=$3 WHERE saving_id=$4 RETURNING *",
       [saving.store_name, saving.saving_per_trip, saving.saving_total, id]
     );
     return { result: updateSaving };

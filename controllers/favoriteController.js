@@ -1,6 +1,8 @@
 const express = require("express");
 const favorite = express.Router();
 
+const validateFavorite = require("../validations/validateFavorite.js");
+
 const {
   getFavoritesByShopperId,
   addOneFavorite,
@@ -23,7 +25,7 @@ favorite.get("/:shopperId", async (request, response) => {
 
 // Add one favorite
 
-favorite.post("/", async (request, response) => {
+favorite.post("/", validateFavorite, async (request, response) => {
   const { error, result } = await addOneFavorite(request.body);
   if (error) {
     response.status(500).json({ error: "Server Error" });
