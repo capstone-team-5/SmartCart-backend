@@ -5,7 +5,7 @@ const {
   getFavoritesByShopperId,
   addOneFavorite,
   deleteOneFavorite,
-} = require("../queries/reviewQuery.js");
+} = require("../queries/favoriteQuery");
 
 // Show one favorite by id
 
