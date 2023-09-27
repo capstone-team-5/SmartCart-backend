@@ -4,6 +4,7 @@ const location = express.Router();
 const {
   getAllLocations,
   getLocationByZipCode,
+  getStoresWithinDistance,
 } = require("../queries/locationQuery.js");
 
 // INDEX - show all locations
@@ -29,6 +30,18 @@ location.get("/:zipCode", async (request, response) => {
     response.status(500).json({ error: "Server Error" });
   } else {
     response.status(200).json(result);
+  }
+});
+
+// get stores within user distance and zipcode
+
+location.get("/:zipCode/:distance", async (request, response) => {
+  const { zipCode, distance } = request.params;
+  try {
+    const stores = await getStoresWithinDistance(zipCode, distance);
+    response.json(stores);
+  } catch (error) {
+    response.status(500).json({ error: error.message });
   }
 });
 
