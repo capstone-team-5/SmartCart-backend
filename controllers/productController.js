@@ -6,6 +6,7 @@ const {
   getOneProduct,
   getAllProductsOneCategory,
   getfourCart,
+  getfourMRT,
   getfourGreens,
   getfourFruits,
   getAllDairy,
@@ -86,6 +87,17 @@ product.get("/fourCart", async (req, res) => {
   const fourCart = await getfourCart();
   if (fourCart[0]) {
     res.status(200).json(fourCart);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show CART in 4 images
+
+product.get("/fourMRT", async (req, res) => {
+  const fourMRT = await getfourMRT();
+  if (fourMRT[0]) {
+    res.status(200).json(fourMRT);
   } else {
     res.status(500).json({ error: "Server Error" });
   }

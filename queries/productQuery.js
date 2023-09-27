@@ -24,6 +24,18 @@ const getfourCart = async () => {
   }
 };
 
+// get 4 images to show $mrt
+const getfourMRT = async () => {
+  try {
+    const fourMRT = await db.any(
+      "select  * from product where product_name = 'Wheat Grains $' or product_name = 'Mixed Dairy m' or product_name = 'Mixed Snacks r' or product_name = 'Mixed Legumes t' ORDER BY product_id"
+    );
+    return fourMRT;
+  } catch (error) {
+    throw error;
+  }
+};
+
 // get all dairy
 const getAllDairy = async () => {
   try {
@@ -154,6 +166,7 @@ module.exports = {
   getOneProduct,
   getAllProductsOneCategory,
   getfourCart,
+  getfourMRT,
   getfourGreens,
   getfourFruits,
   getAllDairy,
