@@ -159,6 +159,5 @@ module.exports = {
   getAllDairy,
   getAllVegetables,
   getAllFruits,
-
   // getFilteredProducts,
 };

@@ -8,7 +8,8 @@ const shopperController = require("./controllers/shopperController");
 const reviewController = require("./controllers/reviewController");
 const favoriteController = require("./controllers/favoriteController");
 const comparisonController = require("./controllers/store_productController");
-const savingsController = require("./controllers/savingsController");
+const savingController = require("./controllers/savingsController");
+const locationController = require("./controllers/locationController");
 
 //Configurations
 const app = express();
@@ -28,7 +29,8 @@ app.use("/shoppers", shopperController);
 app.use("/reviews", reviewController);
 app.use("/compare-prices", comparisonController);
 app.use("/favorites", favoriteController);
-app.use("/savings", savingsController);
+app.use("/savings", savingController);
+app.use("/locations", locationController);
 
 app.get("*", (req, res) => {
   res.status(404).send("Page Not Found");
