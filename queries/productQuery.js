@@ -12,13 +12,13 @@ const getAllProducts = async () => {
   }
 };
 
-// get 4 dairy
-const getfourDairy = async () => {
+// get 4 images to show CART
+const getfourCart = async () => {
   try {
-    const fourDairy = await db.any(
-      "select * from product where product_category = 'Dairy' and product_name = 'Large White Eggs' or product_name = 'Horizon Organic Whole Milk' or product_name = 'Land OLakes Salted Butter' or product_name = 'Yoplait Original Strawberry Yogurt' ORDER BY product_id"
+    const fourCart = await db.any(
+      "select  * from product where product_name = 'Ginger Nuts C' or product_name = 'Mixed Nuts A' or product_name = 'Mixed Spices R' or product_name = 'Beef Cuts T' ORDER BY product_id"
     );
-    return fourDairy;
+    return fourCart;
   } catch (error) {
     throw error;
   }
@@ -40,7 +40,7 @@ const getAllDairy = async () => {
 const getfourFruits = async () => {
   try {
     const fourFruits = await db.any(
-      "select * from product where (product_category = 'Fruit'  or product_category = 'Fruits') and product_name = 'Pineapples' or product_name = 'Apricots' or product_name = 'Oranges' or product_name = 'Mangoes' ORDER BY product_id"
+      "select * from product where product_category = 'Fruit' and product_name = 'Pineapples' or product_name = 'Apricots' or product_name = 'Oranges' or product_name = 'Mangoes' ORDER BY product_id"
     );
     return fourFruits;
   } catch (error) {
@@ -52,7 +52,7 @@ const getfourFruits = async () => {
 const getAllFruits = async () => {
   try {
     const allFruits = await db.any(
-      "select * from product where product_category = 'Fruit'  or product_category = 'Fruits' ORDER BY product_id"
+      "select * from product where product_category = 'Fruit' ORDER BY product_id"
     );
     return allFruits;
   } catch (error) {
@@ -76,7 +76,7 @@ const getfourGreens = async () => {
 const getAllVegetables = async () => {
   try {
     const allVegetables = await db.any(
-      "select * from product where product_category = 'Vegetables'  or product_category = 'Vegetable' ORDER BY product_id"
+      "select * from product where product_category = 'Vegetable' ORDER BY product_id"
     );
     return allVegetables;
   } catch (error) {
@@ -153,7 +153,7 @@ module.exports = {
   getAllCategories,
   getOneProduct,
   getAllProductsOneCategory,
-  getfourDairy,
+  getfourCart,
   getfourGreens,
   getfourFruits,
   getAllDairy,
