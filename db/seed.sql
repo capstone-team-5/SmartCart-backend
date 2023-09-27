@@ -260,7 +260,8 @@ VALUES
     ('orange juice',	'https://m.media-amazon.com/images/I/61jL2GCuKLL._SX425_.jpg',	'100% orange juice vitamin C',	'baverage',	10,	'fl oz',	'TROPICANA',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	FALSE),
     ('tropical blend',	'https://m.media-amazon.com/images/I/61oLZ9sl4fL._SL1500_.jpg',	'V8 Splash Tropical Fruit Blend Juice Beverage',	'baverage',	64,	'fl oz', 	'V8 Splash',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	FALSE),
     ('sweet tea	', 'https://m.media-amazon.com/images/I/81BrEQTKnGL._SL1500_.jpg',	'Gold Peak Sweetened Black Iced Tea Drink',	'baverage',	16.9,	'fl oz',	'GOLD PEAK',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	FALSE,	TRUE,	TRUE,	FALSE),
-    ('pepsi mango',	'https://m.media-amazon.com/images/I/81xN0cutcIL._SL1500_.jpg',	'cold drink Pepsi Mango Regular',	'baverage',	20,	'fl oz',	'pepsi',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE);
+    ('pepsi mango',	'https://m.media-amazon.com/images/I/81xN0cutcIL._SL1500_.jpg',	'cold drink Pepsi Mango Regular',	'baverage',	20,	'fl oz',	'pepsi',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE),
+    ('coca cola',	'https://m.media-amazon.com/images/I/41SmIGGYuTL.jpg',	'cold coca soda bottle',	'baverage',	20,	'fl oz',	'COCACOLA',	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	TRUE,	TRUE,	TRUE,	FALSE,	FALSE,	TRUE,	FALSE,	FALSE,	TRUE,	TRUE);
 INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
 VALUES
     (1, 1, 2.99, 0.1),
