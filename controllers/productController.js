@@ -2,8 +2,8 @@ const express = require("express");
 const product = express.Router();
 const {
   getAllProducts,
-  getAllCategories,
   getOneProduct,
+  getAllCategories,
   getAllProductsOneCategory,
   getfourCart,
   getfourMRT,
@@ -12,6 +12,13 @@ const {
   getAllDairy,
   getAllVegetables,
   getAllFruits,
+  getAllNuts,
+  getAllSpices,
+  getAllLegumes,
+  getAllSnacks,
+  getAllGrains,
+  getAllBakery,
+  getAllMeat,
   // getFilteredProducts,
 } = require("../queries/productQuery.js");
 
@@ -32,6 +39,83 @@ product.get("/categories", async (req, res) => {
   const allCategories = await getAllCategories();
   if (allCategories[0]) {
     res.status(200).json(allCategories);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all meat, seafood, poultry
+
+product.get("/meat", async (req, res) => {
+  const allMeat = await getAllMeat();
+  if (allMeat[0]) {
+    res.status(200).json(allMeat);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all grains
+
+product.get("/grains", async (req, res) => {
+  const allGrains = await getAllGrains();
+  if (allGrains[0]) {
+    res.status(200).json(allGrains);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all bakery, bread
+
+product.get("/bakery", async (req, res) => {
+  const allBakery = await getAllBakery();
+  if (allBakery[0]) {
+    res.status(200).json(allBakery);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all snacks
+
+product.get("/snacks", async (req, res) => {
+  const allSnacks = await getAllSnacks();
+  if (allSnacks[0]) {
+    res.status(200).json(allSnacks);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all Legumes
+
+product.get("/legumes", async (req, res) => {
+  const allLegumes = await getAllLegumes();
+  if (allLegumes[0]) {
+    res.status(200).json(allLegumes);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all Spices
+
+product.get("/spices", async (req, res) => {
+  const allSpices = await getAllSpices();
+  if (allSpices[0]) {
+    res.status(200).json(allSpices);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all Nuts
+
+product.get("/nuts", async (req, res) => {
+  const allNuts = await getAllNuts();
+  if (allNuts[0]) {
+    res.status(200).json(allNuts);
   } else {
     res.status(500).json({ error: "Server Error" });
   }
@@ -92,7 +176,7 @@ product.get("/fourCart", async (req, res) => {
   }
 });
 
-// INDEX - show CART in 4 images
+// INDEX - show $mrt in 4 images
 
 product.get("/fourMRT", async (req, res) => {
   const fourMRT = await getfourMRT();
