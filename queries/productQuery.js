@@ -12,87 +12,16 @@ const getAllProducts = async () => {
   }
 };
 
-// get 4 images to show CART
-const getfourCart = async () => {
+// get one product
+const getOneProduct = async (id) => {
   try {
-    const fourCart = await db.any(
-      "select  * from product where product_name = 'Ginger Nuts C' or product_name = 'Mixed Nuts A' or product_name = 'Mixed Spices R' or product_name = 'Beef Cuts T' ORDER BY product_id"
+    const oneProduct = await db.oneOrNone(
+      "SELECT * FROM product WHERE product_id = $1",
+      id
     );
-    return fourCart;
+    return { result: oneProduct };
   } catch (error) {
-    throw error;
-  }
-};
-
-// get 4 images to show $mrt
-const getfourMRT = async () => {
-  try {
-    const fourMRT = await db.any(
-      "select  * from product where product_name = 'Wheat Grains $' or product_name = 'Mixed Dairy m' or product_name = 'Mixed Snacks r' or product_name = 'Mixed Legumes t' ORDER BY product_id"
-    );
-    return fourMRT;
-  } catch (error) {
-    throw error;
-  }
-};
-
-// get all dairy
-const getAllDairy = async () => {
-  try {
-    const allDairy = await db.any(
-      "select * from product where product_category = 'Dairy' ORDER BY product_id"
-    );
-    return allDairy;
-  } catch (error) {
-    throw error;
-  }
-};
-
-// get 4 orange fruits
-const getfourFruits = async () => {
-  try {
-    const fourFruits = await db.any(
-      "select * from product where product_category = 'Fruit' and product_name = 'Pineapples' or product_name = 'Apricots' or product_name = 'Oranges' or product_name = 'Mangoes' ORDER BY product_id"
-    );
-    return fourFruits;
-  } catch (error) {
-    throw error;
-  }
-};
-
-// get all fruits
-const getAllFruits = async () => {
-  try {
-    const allFruits = await db.any(
-      "select * from product where product_category = 'Fruit' ORDER BY product_id"
-    );
-    return allFruits;
-  } catch (error) {
-    throw error;
-  }
-};
-
-// get 4 green vegetables
-const getfourGreens = async () => {
-  try {
-    const fourGreens = await db.any(
-      "select * from product where product_category = 'Vegetable' and product_name = 'Celery' or product_name = 'Watercress' or product_name = 'Butter Lettuce' or product_name = 'Spinach' ORDER BY product_id"
-    );
-    return fourGreens;
-  } catch (error) {
-    throw error;
-  }
-};
-
-// get all vegetables
-const getAllVegetables = async () => {
-  try {
-    const allVegetables = await db.any(
-      "select * from product where product_category = 'Vegetable' ORDER BY product_id"
-    );
-    return allVegetables;
-  } catch (error) {
-    throw error;
+    throw { error };
   }
 };
 
@@ -122,16 +51,171 @@ const getAllProductsOneCategory = async (category) => {
   }
 };
 
-// get one product
-const getOneProduct = async (id) => {
+// get 4 images to show CART
+const getfourCart = async () => {
   try {
-    const oneProduct = await db.oneOrNone(
-      "SELECT * FROM product WHERE product_id = $1",
-      id
+    const fourCart = await db.any(
+      "select  * from product where product_name = 'Ginger Nuts C' or product_name = 'Mixed Nuts A' or product_name = 'Mixed Spices R' or product_name = 'Beef Cuts T' ORDER BY product_id"
     );
-    return { result: oneProduct };
+    return fourCart;
   } catch (error) {
-    throw { error };
+    throw error;
+  }
+};
+
+// get 4 images to show $mrt
+const getfourMRT = async () => {
+  try {
+    const fourMRT = await db.any(
+      "select  * from product where product_name = 'Wheat Grains $' or product_name = 'Mixed Dairy m' or product_name = 'Mixed Snacks r' or product_name = 'Mixed Legumes t' ORDER BY product_id"
+    );
+    return fourMRT;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get 4 orange fruits
+const getfourFruits = async () => {
+  try {
+    const fourFruits = await db.any(
+      "select * from product where product_category = 'Fruit' and product_name = 'Pineapples' or product_name = 'Apricots' or product_name = 'Oranges' or product_name = 'Mangoes' ORDER BY product_id"
+    );
+    return fourFruits;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get 4 green vegetables
+const getfourGreens = async () => {
+  try {
+    const fourGreens = await db.any(
+      "select * from product where product_category = 'Vegetable' and product_name = 'Celery' or product_name = 'Watercress' or product_name = 'Butter Lettuce' or product_name = 'Spinach' ORDER BY product_id"
+    );
+    return fourGreens;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all dairy
+const getAllDairy = async () => {
+  try {
+    const allDairy = await db.any(
+      "select * from product where product_category = 'Dairy' ORDER BY product_id"
+    );
+    return allDairy;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all nuts
+const getAllNuts = async () => {
+  try {
+    const allNuts = await db.any(
+      "select * from product where product_category = 'Nuts' ORDER BY product_id"
+    );
+    return allNuts;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all spices
+const getAllSpices = async () => {
+  try {
+    const allSpices = await db.any(
+      "select * from product where product_category = 'Spices' ORDER BY product_id"
+    );
+    return allSpices;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all legumes
+const getAllLegumes = async () => {
+  try {
+    const allLegumes = await db.any(
+      "select * from product where product_category = 'Legumes' ORDER BY product_id"
+    );
+    return allLegumes;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all snacks
+const getAllSnacks = async () => {
+  try {
+    const allSnacks = await db.any(
+      "select * from product where product_category = 'Snacks' ORDER BY product_id"
+    );
+    return allSnacks;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all grains
+const getAllGrains = async () => {
+  try {
+    const allGrains = await db.any(
+      "select * from product where product_category = 'Grains' ORDER BY product_id"
+    );
+    return allGrains;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all breads
+const getAllBakery = async () => {
+  try {
+    const allBakery = await db.any(
+      "select * from product where product_category = 'Bakery' ORDER BY product_id"
+    );
+    return allBakery;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all Meat and seafood and poultry
+const getAllMeat = async () => {
+  try {
+    const allMeat = await db.any(
+      "select * from product where product_category = 'Meat' or product_category = 'Poultry' or product_category = 'Seafood' ORDER BY product_id"
+    );
+    return allMeat;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all fruits
+const getAllFruits = async () => {
+  try {
+    const allFruits = await db.any(
+      "select * from product where product_category = 'Fruit' ORDER BY product_id"
+    );
+    return allFruits;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all vegetables
+const getAllVegetables = async () => {
+  try {
+    const allVegetables = await db.any(
+      "select * from product where product_category = 'Vegetable' ORDER BY product_id"
+    );
+    return allVegetables;
+  } catch (error) {
+    throw error;
   }
 };
 
@@ -162,8 +246,8 @@ const getOneProduct = async (id) => {
 
 module.exports = {
   getAllProducts,
-  getAllCategories,
   getOneProduct,
+  getAllCategories,
   getAllProductsOneCategory,
   getfourCart,
   getfourMRT,
@@ -172,5 +256,12 @@ module.exports = {
   getAllDairy,
   getAllVegetables,
   getAllFruits,
+  getAllNuts,
+  getAllSpices,
+  getAllLegumes,
+  getAllSnacks,
+  getAllGrains,
+  getAllBakery,
+  getAllMeat,
   // getFilteredProducts,
 };
