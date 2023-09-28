@@ -36,10 +36,11 @@ const getStoresWithinDistance = async (zipCode, distance) => {
                  cos(radians(s.store_longitude) - radians(l.location_longitude)) + sin(radians(l.location_latitude)) * 
                  sin(radians(s.store_latitude))) AS distance
           FROM store s
+          ORDER BY distance
           JOIN location l ON s.store_zipCode = l.location_zipCode
           WHERE l.location_zipCode = $1
       ) AS subquery
-      WHERE subquery.distance < $2;
+      WHERE subquery.distance <= $2;
     `;
 
   try {
