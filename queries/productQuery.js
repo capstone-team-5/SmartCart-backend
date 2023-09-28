@@ -99,6 +99,19 @@ const getfourGreens = async () => {
   }
 };
 
+// get All International
+
+const getAllInternational = async () => {
+  try {
+    const allInternational = await db.any(
+      "select * from product where product_is_international = True order by product_id"
+    );
+    return allInternational;
+  } catch (error) {
+    throw error;
+  }
+};
+
 // get all dairy
 const getAllDairy = async () => {
   try {
@@ -263,5 +276,6 @@ module.exports = {
   getAllGrains,
   getAllBakery,
   getAllMeat,
+  getAllInternational,
   // getFilteredProducts,
 };

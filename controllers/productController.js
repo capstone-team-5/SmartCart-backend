@@ -19,6 +19,7 @@ const {
   getAllGrains,
   getAllBakery,
   getAllMeat,
+  getAllInternational,
   // getFilteredProducts,
 } = require("../queries/productQuery.js");
 
@@ -121,6 +122,17 @@ product.get("/nuts", async (req, res) => {
   }
 });
 
+// INDEX - show all International
+
+product.get("/international", async (req, res) => {
+  const allInternational = await getAllInternational();
+  if (allInternational[0]) {
+    res.status(200).json(allInternational);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
 // INDEX - show all fruits
 
 product.get("/fruits", async (req, res) => {
@@ -154,7 +166,7 @@ product.get("/dairy", async (req, res) => {
   }
 });
 
-// INDEX - show 4 fruits 
+// INDEX - show 4 fruits
 
 product.get("/fourFruits", async (req, res) => {
   const fourFruits = await getfourFruits();
