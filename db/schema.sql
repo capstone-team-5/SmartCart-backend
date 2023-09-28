@@ -95,4 +95,11 @@ CREATE TABLE saving (
     saving_total DECIMAL(10,2) DEFAULT 0 CHECK (saving_total >= 0)
 ); 
 
+CREATE TABLE location (
+    location_id SERIAL PRIMARY KEY,
+    location_zipCode INTEGER NOT NULL,
+    location_latitude DOUBLE PRECISION NOT NULL,
+    location_longitude DOUBLE PRECISION NOT NULL
+);
+
 --  on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
