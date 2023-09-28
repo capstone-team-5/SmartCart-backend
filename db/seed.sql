@@ -330,8 +330,11 @@ VALUES
     ('Momofuku x A-Sha Soy & Scallion Noodles', 'https://target.scene7.com/is/image/Target/GUEST_c39748ee-e18b-4adf-8262-c2871b6966bb?wid=800&hei=800&qlt=80&fmt=webp', 'Noodles are air-dried and never fried so they’re as nutritious as they are delicious', 'Noodles', 16.93, 'oz', 'Momofuku', TRUE, TRUE, FALSE),
     ('Lotus Foods Pad Thai Rice Noodles Organic Gluten Free', 'https://target.scene7.com/is/image/Target/GUEST_3ccc853d-3a6e-4c24-96d0-26fb74f546de?wid=800&hei=800&qlt=80&fmt=webp', 'Naturally gluten-free and crafted from a single ingredient: certified organic white rice', 'Noodles', 8, 'oz', 'Lotus Foods', TRUE, TRUE, FALSE),
     ('Maruchan Chicken Ramen Noodle Soup Cup', 'https://target.scene7.com/is/image/Target/GUEST_b0467189-0fa4-41b9-92f7-31264d8159c0?wid=1200&hei=1200&qlt=80&fmt=webp', 'Chicken flavor ramen noodle instant lunch', 'Noodles', 2.25, 'oz', 'Maruchan', TRUE, TRUE, FALSE),
-    ('Nissin Foods Hot & Spicy Chicken Bowl Noodles', 'https://target.scene7.com/is/image/Target/GUEST_b9d1ecfb-3de1-420d-8730-a07680175d3e?wid=400&hei=400&qlt=80&fmt=webp', 'Microwavable instant ramen noodle soup', 'Noodles', 3.32, 1.59, 0, 'Nissin', TRUE, FALSE, FALSE),
-    ('Gluten Free Chickpea Cavatappi', 'https://target.scene7.com/is/image/Target/GUEST_e2b2a445-0029-4ac8-afc1-a99f97be7e9c?wid=600&hei=600&qlt=80&fmt=webp', 'Banza pasta is a fantastic source of plant-based protein, making vegetarian and vegan meals easy and chickpeas''y.', 'Pasta', 8, 4.19, 0, 'Banza', TRUE, TRUE, FALSE),
+    ('Nissin Foods Hot & Spicy Chicken Bowl Noodles', 'https://target.scene7.com/is/image/Target/GUEST_b9d1ecfb-3de1-420d-8730-a07680175d3e?wid=400&hei=400&qlt=80&fmt=webp', 'Microwavable instant ramen noodle soup', 'Noodles', 3.32, 'oz', 'Nissin', TRUE, FALSE, FALSE),
+    ('Gluten Free Chickpea Cavatappi', 'https://target.scene7.com/is/image/Target/GUEST_e2b2a445-0029-4ac8-afc1-a99f97be7e9c?wid=600&hei=600&qlt=80&fmt=webp', 'Banza pasta is a fantastic source of plant-based protein, making vegetarian and vegan meals easy and chickpeas''y.', 'Pasta', 8, 'oz', 'Banza', TRUE, TRUE, FALSE),
+    ('ProteinPLUS Multigrain Penne Pasta', 'https://target.scene7.com/is/image/Target/GUEST_96f47ebc-4860-4252-bc6c-258646a4b076?wid=600&hei=600&qlt=80&fmt=webp', 'BARILLA PROTEIN PLUS PASTA: Good source of plant-based protein with a classic pasta taste and texture', 'Pasta', 14.5, 'oz', 'Barilla', TRUE, FALSE, FALSE),
+    
+
 
 
 INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
