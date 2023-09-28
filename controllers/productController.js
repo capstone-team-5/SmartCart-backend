@@ -154,7 +154,7 @@ product.get("/dairy", async (req, res) => {
   }
 });
 
-// INDEX - show 4 fruits
+// INDEX - show 4 fruits 
 
 product.get("/fourFruits", async (req, res) => {
   const fourFruits = await getfourFruits();

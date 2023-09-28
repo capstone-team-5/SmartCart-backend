@@ -55,7 +55,7 @@ const getAllProductsOneCategory = async (category) => {
 const getfourCart = async () => {
   try {
     const fourCart = await db.any(
-      "select  * from product where product_name = 'Ginger Nuts C' or product_name = 'Mixed Nuts A' or product_name = 'Mixed Spices R' or product_name = 'Beef Cuts T' ORDER BY product_id"
+      "select  * from product where product_name = 'Ginger Snacks C' or product_name = 'Mixed Nuts A' or product_name = 'Mixed Spices R' or product_name = 'Beef Cuts T' ORDER BY product_id"
     );
     return fourCart;
   } catch (error) {
@@ -67,7 +67,7 @@ const getfourCart = async () => {
 const getfourMRT = async () => {
   try {
     const fourMRT = await db.any(
-      "select  * from product where product_name = 'Wheat Grains $' or product_name = 'Mixed Dairy m' or product_name = 'Mixed Snacks r' or product_name = 'Mixed Legumes t' ORDER BY product_id"
+      "select  * from product where product_name = 'Wheat Grains $' or product_name = 'Mixed Dairy m' or product_name = 'Mixed Bread r' or product_name = 'Mixed Legumes t' ORDER BY product_id"
     );
     return fourMRT;
   } catch (error) {
