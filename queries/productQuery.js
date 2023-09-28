@@ -55,7 +55,7 @@ const getAllProductsOneCategory = async (category) => {
 const getfourCart = async () => {
   try {
     const fourCart = await db.any(
-      "select  * from product where product_name = 'Ginger Nuts C' or product_name = 'Mixed Nuts A' or product_name = 'Mixed Spices R' or product_name = 'Beef Cuts T' ORDER BY product_id"
+      "select  * from product where product_name = 'Ginger Snacks C' or product_name = 'Mixed Nuts A' or product_name = 'Mixed Spices R' or product_name = 'Beef Cuts T' ORDER BY product_id"
     );
     return fourCart;
   } catch (error) {
@@ -67,7 +67,7 @@ const getfourCart = async () => {
 const getfourMRT = async () => {
   try {
     const fourMRT = await db.any(
-      "select  * from product where product_name = 'Wheat Grains $' or product_name = 'Mixed Dairy m' or product_name = 'Mixed Snacks r' or product_name = 'Mixed Legumes t' ORDER BY product_id"
+      "select  * from product where product_name = 'Wheat Grains $' or product_name = 'Mixed Dairy m' or product_name = 'Mixed Bread r' or product_name = 'Mixed Legumes t' ORDER BY product_id"
     );
     return fourMRT;
   } catch (error) {
@@ -94,6 +94,19 @@ const getfourGreens = async () => {
       "select * from product where product_category = 'Vegetable' and product_name = 'Celery' or product_name = 'Watercress' or product_name = 'Butter Lettuce' or product_name = 'Spinach' ORDER BY product_id"
     );
     return fourGreens;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get All International
+
+const getAllInternational = async () => {
+  try {
+    const allInternational = await db.any(
+      "select * from product where product_is_international = True order by product_id"
+    );
+    return allInternational;
   } catch (error) {
     throw error;
   }
@@ -263,5 +276,6 @@ module.exports = {
   getAllGrains,
   getAllBakery,
   getAllMeat,
+  getAllInternational,
   // getFilteredProducts,
 };
