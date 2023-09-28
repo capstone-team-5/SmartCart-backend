@@ -329,6 +329,7 @@ VALUES
     ('Perfect Portions Boneless Skinless All Natural Chicken Breasts', 'https://target.scene7.com/is/image/Target/GUEST_c478f2e7-2398-4ba4-a963-f807acf13e86?wid=600&hei=600&qlt=80&fmt=webp', 'Boneless Skinless Chicken Breasts', 'Poultry', 1.5, 'oz', 'Perdue', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE),
     ('Momofuku x A-Sha Soy & Scallion Noodles', 'https://target.scene7.com/is/image/Target/GUEST_c39748ee-e18b-4adf-8262-c2871b6966bb?wid=800&hei=800&qlt=80&fmt=webp', 'Noodles are air-dried and never fried so they’re as nutritious as they are delicious', 'Noodles', 16.93, 'oz', 'Momofuku', TRUE, TRUE, FALSE),
     ('Lotus Foods Pad Thai Rice Noodles Organic Gluten Free', 'https://target.scene7.com/is/image/Target/GUEST_3ccc853d-3a6e-4c24-96d0-26fb74f546de?wid=800&hei=800&qlt=80&fmt=webp', 'Naturally gluten-free and crafted from a single ingredient: certified organic white rice', 'Noodles', 8, 'oz', 'Lotus Foods', TRUE, TRUE, FALSE),
+    ('Maruchan Chicken Ramen Noodle Soup Cup', 'https://target.scene7.com/is/image/Target/GUEST_b0467189-0fa4-41b9-92f7-31264d8159c0?wid=1200&hei=1200&qlt=80&fmt=webp', 'Chicken flavor ramen noodle instant lunch', 'Noodles', 2.25, 'oz', 'Maruchan', TRUE, TRUE, FALSE),
 
 
 INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
