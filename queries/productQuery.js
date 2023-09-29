@@ -209,13 +209,18 @@ const getAllMeat = async () => {
 };
 
 // get all fruits
-const getAllFruits = async (page, pageSize) => {
+const getAllFruits = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
     const offset = (page - 1) * pageSize;
+
     const allFruits = await db.any(
       "SELECT * FROM product WHERE product_category = 'Fruit' ORDER BY product_id LIMIT $1 OFFSET $2",
       [pageSize, offset]
     );
+
     return allFruits;
   } catch (error) {
     throw error;
