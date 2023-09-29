@@ -48,10 +48,11 @@ product.get("/categories", async (req, res) => {
 // INDEX - show all meat, seafood, poultry
 
 product.get("/meat", async (req, res) => {
-  const allMeat = await getAllMeat();
-  if (allMeat[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allMeat = await getAllMeat(page);
     res.status(200).json(allMeat);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -59,10 +60,11 @@ product.get("/meat", async (req, res) => {
 // INDEX - show all grains
 
 product.get("/grains", async (req, res) => {
-  const allGrains = await getAllGrains();
-  if (allGrains[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allGrains = await getAllGrains(page);
     res.status(200).json(allGrains);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -70,10 +72,11 @@ product.get("/grains", async (req, res) => {
 // INDEX - show all bakery, bread
 
 product.get("/bakery", async (req, res) => {
-  const allBakery = await getAllBakery();
-  if (allBakery[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allBakery = await getAllBakery(page);
     res.status(200).json(allBakery);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -81,10 +84,11 @@ product.get("/bakery", async (req, res) => {
 // INDEX - show all snacks
 
 product.get("/snacks", async (req, res) => {
-  const allSnacks = await getAllSnacks();
-  if (allSnacks[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allSnacks = await getAllSnacks(page);
     res.status(200).json(allSnacks);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -92,10 +96,11 @@ product.get("/snacks", async (req, res) => {
 // INDEX - show all Legumes
 
 product.get("/legumes", async (req, res) => {
-  const allLegumes = await getAllLegumes();
-  if (allLegumes[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allLegumes = await getAllLegumes(page);
     res.status(200).json(allLegumes);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -103,10 +108,11 @@ product.get("/legumes", async (req, res) => {
 // INDEX - show all Spices
 
 product.get("/spices", async (req, res) => {
-  const allSpices = await getAllSpices();
-  if (allSpices[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allSpices = await getAllSpices(page);
     res.status(200).json(allSpices);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -114,10 +120,11 @@ product.get("/spices", async (req, res) => {
 // INDEX - show all Nuts
 
 product.get("/nuts", async (req, res) => {
-  const allNuts = await getAllNuts();
-  if (allNuts[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allNuts = await getAllNuts(page);
     res.status(200).json(allNuts);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -125,10 +132,11 @@ product.get("/nuts", async (req, res) => {
 // INDEX - show all International
 
 product.get("/international", async (req, res) => {
-  const allInternational = await getAllInternational();
-  if (allInternational[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allInternational = await getAllInternational(page);
     res.status(200).json(allInternational);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -137,7 +145,6 @@ product.get("/international", async (req, res) => {
 
 product.get("/fruits", async (req, res) => {
   const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
-
   try {
     const allFruits = await getAllFruits(page);
     res.status(200).json(allFruits);
@@ -149,10 +156,11 @@ product.get("/fruits", async (req, res) => {
 // INDEX - show all vegetables
 
 product.get("/vegetables", async (req, res) => {
-  const allVegetables = await getAllVegetables();
-  if (allVegetables[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allVegetables = await getAllVegetables(page);
     res.status(200).json(allVegetables);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -160,10 +168,11 @@ product.get("/vegetables", async (req, res) => {
 // INDEX - show all dairy
 
 product.get("/dairy", async (req, res) => {
-  const allDairy = await getAllDairy();
-  if (allDairy[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allDairy = await getAllDairy(page);
     res.status(200).json(allDairy);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
