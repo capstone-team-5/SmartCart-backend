@@ -352,6 +352,8 @@ VALUES
      ('Rotini Pasta', 'https://target.scene7.com/is/image/Target/GUEST_f58356dd-ae68-4fda-8e2c-128ca5355aaa?wid=600&hei=600&qlt=80&fmt=webp', 'Rotini (meaning "twists") are two-inch lengths of thick, screw-like pasta', 'Pasta', 16, 'oz', 'Barilla', TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE);
 
 
+jbjbj
+
 
 
 INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
