@@ -209,10 +209,12 @@ const getAllMeat = async () => {
 };
 
 // get all fruits
-const getAllFruits = async () => {
+const getAllFruits = async (page, pageSize) => {
   try {
+    const offset = (page - 1) * pageSize;
     const allFruits = await db.any(
-      "select * from product where product_category = 'Fruit' ORDER BY product_id"
+      "SELECT * FROM product WHERE product_category = 'Fruit' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allFruits;
   } catch (error) {

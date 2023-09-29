@@ -136,10 +136,14 @@ product.get("/international", async (req, res) => {
 // INDEX - show all fruits
 
 product.get("/fruits", async (req, res) => {
-  const allFruits = await getAllFruits();
-  if (allFruits[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  const pageSize = parseInt(req.query.pageSize) || 12; // Extract pageSize from query parameters or default to 12
+
+  try {
+    const allFruits = await getAllFruits(page, pageSize);
     res.status(200).json(allFruits);
-  } else {
+  } catch (error) {
+    console.error("Error fetching fruits:", error);
     res.status(500).json({ error: "Server Error" });
   }
 });
