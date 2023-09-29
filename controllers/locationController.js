@@ -5,6 +5,7 @@ const {
   getAllLocations,
   getLocationByZipCode,
   getStoresWithinDistance,
+  getStoresWithinDistanceByCoordinates,
 } = require("../queries/locationQuery.js");
 
 // INDEX - show all locations
@@ -44,5 +45,23 @@ location.get("/:zipCode/:distance", async (request, response) => {
     response.status(500).json({ error: error.message });
   }
 });
+
+// get stores within user distance based on latitude, longitude, and distance
+location.get(
+  "/stores/:latitude/:longitude/:distance",
+  async (request, response) => {
+    const { latitude, longitude, distance } = request.params;
+    try {
+      const stores = await getStoresWithinDistanceByCoordinates(
+        latitude,
+        longitude,
+        distance
+      );
+      response.json(stores);
+    } catch (error) {
+      response.status(500).json({ error: error.message });
+    }
+  }
+);
 
 module.exports = location;
