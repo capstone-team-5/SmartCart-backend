@@ -136,10 +136,12 @@ product.get("/international", async (req, res) => {
 // INDEX - show all fruits
 
 product.get("/fruits", async (req, res) => {
-  const allFruits = await getAllFruits();
-  if (allFruits[0]) {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+
+  try {
+    const allFruits = await getAllFruits(page);
     res.status(200).json(allFruits);
-  } else {
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
