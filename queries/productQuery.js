@@ -99,12 +99,32 @@ const getfourGreens = async () => {
   }
 };
 
-// get All International
+// get All International - with pagination do not delete
+
+// const getAllInternational = async (page) => {
+//   try {
+//     const pageSize = 15; // Set the page size to 15
+
+//     // Calculate the offset based on the page number
+//     const offset = (page - 1) * pageSize;
+
+//     const allInternational = await db.any(
+//       "select * from product where product_is_international = True order by product_id LIMIT $1 OFFSET $2",
+//       [pageSize, offset]
+//     );
+//     return allInternational;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
+// get All International - without pagination
+// "SELECT * FROM product WHERE product_is_international = TRUE ORDER BY RANDOM()"
 
 const getAllInternational = async () => {
   try {
     const allInternational = await db.any(
-      "select * from product where product_is_international = True order by product_id"
+      "select * from product where product_is_international = True"
     );
     return allInternational;
   } catch (error) {
@@ -113,10 +133,16 @@ const getAllInternational = async () => {
 };
 
 // get all dairy
-const getAllDairy = async () => {
+const getAllDairy = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allDairy = await db.any(
-      "select * from product where product_category = 'Dairy' ORDER BY product_id"
+      "select * from product where product_category = 'Dairy' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allDairy;
   } catch (error) {
@@ -125,10 +151,16 @@ const getAllDairy = async () => {
 };
 
 // get all nuts
-const getAllNuts = async () => {
+const getAllNuts = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allNuts = await db.any(
-      "select * from product where product_category = 'Nuts' ORDER BY product_id"
+      "select * from product where product_category = 'Nuts' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allNuts;
   } catch (error) {
@@ -137,10 +169,16 @@ const getAllNuts = async () => {
 };
 
 // get all spices
-const getAllSpices = async () => {
+const getAllSpices = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allSpices = await db.any(
-      "select * from product where product_category = 'Spices' ORDER BY product_id"
+      "select * from product where product_category = 'Spices' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allSpices;
   } catch (error) {
@@ -149,10 +187,16 @@ const getAllSpices = async () => {
 };
 
 // get all legumes
-const getAllLegumes = async () => {
+const getAllLegumes = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allLegumes = await db.any(
-      "select * from product where product_category = 'Legumes' ORDER BY product_id"
+      "select * from product where product_category = 'Legumes' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allLegumes;
   } catch (error) {
@@ -161,10 +205,16 @@ const getAllLegumes = async () => {
 };
 
 // get all snacks
-const getAllSnacks = async () => {
+const getAllSnacks = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allSnacks = await db.any(
-      "select * from product where product_category = 'Snacks' ORDER BY product_id"
+      "select * from product where product_category = 'Snacks' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allSnacks;
   } catch (error) {
@@ -173,10 +223,16 @@ const getAllSnacks = async () => {
 };
 
 // get all grains
-const getAllGrains = async () => {
+const getAllGrains = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allGrains = await db.any(
-      "select * from product where product_category = 'Grains' ORDER BY product_id"
+      "select * from product where product_category = 'Grains' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allGrains;
   } catch (error) {
@@ -185,10 +241,16 @@ const getAllGrains = async () => {
 };
 
 // get all breads
-const getAllBakery = async () => {
+const getAllBakery = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allBakery = await db.any(
-      "select * from product where product_category = 'Bakery' ORDER BY product_id"
+      "select * from product where product_category = 'Bakery' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allBakery;
   } catch (error) {
@@ -197,10 +259,16 @@ const getAllBakery = async () => {
 };
 
 // get all Meat and seafood and poultry
-const getAllMeat = async () => {
+const getAllMeat = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allMeat = await db.any(
-      "select * from product where product_category = 'Meat' or product_category = 'Poultry' or product_category = 'Seafood' ORDER BY product_id"
+      "select * from product where product_category = 'Meat' or product_category = 'Poultry' or product_category = 'Seafood' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allMeat;
   } catch (error) {
@@ -228,10 +296,16 @@ const getAllFruits = async (page) => {
 };
 
 // get all vegetables
-const getAllVegetables = async () => {
+const getAllVegetables = async (page) => {
   try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
     const allVegetables = await db.any(
-      "select * from product where product_category = 'Vegetable' ORDER BY product_id"
+      "select * from product where product_category = 'Vegetable' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
     );
     return allVegetables;
   } catch (error) {
