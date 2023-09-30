@@ -347,7 +347,7 @@ VALUES
     ('Nissin Foods Hot & Spicy Chicken Bowl Noodles', 'https://target.scene7.com/is/image/Target/GUEST_b9d1ecfb-3de1-420d-8730-a07680175d3e?wid=400&hei=400&qlt=80&fmt=webp', 'Microwavable instant ramen noodle soup', 'Noodles', 3.32, 'oz', 'Nissin', TRUE, FALSE, FALSE, FALSE,FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE),
     ('Gluten Free Chickpea Cavatappi', 'https://target.scene7.com/is/image/Target/GUEST_e2b2a445-0029-4ac8-afc1-a99f97be7e9c?wid=600&hei=600&qlt=80&fmt=webp', 'Banza pasta is a fantastic source of plant-based protein, making vegetarian and vegan meals easy and chickpeas''y.', 'Pasta', 8, 'oz', 'Banza', TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE),
     ('ProteinPLUS Multigrain Penne Pasta', 'https://target.scene7.com/is/image/Target/GUEST_96f47ebc-4860-4252-bc6c-258646a4b076?wid=600&hei=600&qlt=80&fmt=webp', 'BARILLA PROTEIN PLUS PASTA: Good source of plant-based protein with a classic pasta taste and texture', 'Pasta', 14.5, 'oz', 'Barilla', TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE),
-    ('Barilla Blue Box Spaghetti', 'https://target.scene7.com/is/image/Target/GUEST_3e6b4a7e-8960-4dbf-9116-ed69be15bc74?wid=475&hei=475&qlt=80&fmt=webp', 'Give BARILLA Blue Box Spaghetti a twirl! No doubt it\'s' the most fun pasta to eat and its delicious texture will please the whole family', 'Pasta', 16, 'oz', 'Barilla', TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE),
+    ('Barilla Blue Box Spaghetti', 'https://target.scene7.com/is/image/Target/GUEST_3e6b4a7e-8960-4dbf-9116-ed69be15bc74?wid=475&hei=475&qlt=80&fmt=webp', 'Give BARILLA Blue Box Spaghetti a twirl! No doubt its the most fun pasta to eat and its delicious texture will please the whole family', 'Pasta', 16, 'oz', 'Barilla', TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE),
      ('Rotini Pasta', 'https://target.scene7.com/is/image/Target/GUEST_f58356dd-ae68-4fda-8e2c-128ca5355aaa?wid=600&hei=600&qlt=80&fmt=webp', 'Rotini (meaning "twists") are two-inch lengths of thick, screw-like pasta', 'Pasta', 16, 'oz', 'Barilla', TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE);
 
 
@@ -363,7 +363,12 @@ VALUES
     (2, 3, 1.79, 0.3),
     (3, 1, 5.99, 0.3), 
     (3, 2, 2.99, 0.3),
-    (3, 3, 4.79, 0.3);
+    (3, 3, 4.79, 0.3),
+    ('original oatmeals', 'City Fresh Market', 3, 0),
+    ('original oatmeals', 'Mr. Lemon', 2.49, 0),
+    ('original oatmeals', 'bp', 3.25, 0),
+    
+
 
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES
