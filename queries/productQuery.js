@@ -99,18 +99,32 @@ const getfourGreens = async () => {
   }
 };
 
-// get All International
+// get All International - with pagination do not delete
 
-const getAllInternational = async (page) => {
+// const getAllInternational = async (page) => {
+//   try {
+//     const pageSize = 15; // Set the page size to 15
+
+//     // Calculate the offset based on the page number
+//     const offset = (page - 1) * pageSize;
+
+//     const allInternational = await db.any(
+//       "select * from product where product_is_international = True order by product_id LIMIT $1 OFFSET $2",
+//       [pageSize, offset]
+//     );
+//     return allInternational;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
+// get All International - without pagination
+// "SELECT * FROM product WHERE product_is_international = TRUE ORDER BY RANDOM()"
+
+const getAllInternational = async () => {
   try {
-    const pageSize = 15; // Set the page size to 15
-
-    // Calculate the offset based on the page number
-    const offset = (page - 1) * pageSize;
-
     const allInternational = await db.any(
-      "select * from product where product_is_international = True order by product_id LIMIT $1 OFFSET $2",
-      [pageSize, offset]
+      "select * from product where product_is_international = True"
     );
     return allInternational;
   } catch (error) {

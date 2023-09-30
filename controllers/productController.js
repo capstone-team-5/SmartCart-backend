@@ -129,14 +129,25 @@ product.get("/nuts", async (req, res) => {
   }
 });
 
-// INDEX - show all International
+// INDEX - show all International - with pagination - do not delete
+
+// product.get("/international", async (req, res) => {
+//   const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+//   try {
+//     const allInternational = await getAllInternational(page);
+//     res.status(200).json(allInternational);
+//   } catch (error) {
+//     res.status(500).json({ error: "Server Error" });
+//   }
+// });
+
+// INDEX - show all International - without pagination
 
 product.get("/international", async (req, res) => {
-  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
-  try {
-    const allInternational = await getAllInternational(page);
+  const allInternational = await getAllInternational();
+  if (allInternational[0]) {
     res.status(200).json(allInternational);
-  } catch (error) {
+  } else {
     res.status(500).json({ error: "Server Error" });
   }
 });
