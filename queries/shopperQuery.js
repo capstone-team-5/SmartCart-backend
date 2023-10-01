@@ -1,5 +1,17 @@
 const db = require("../db/dbConfig.js");
 
+// get all Shoppers
+const getAllShoppers = async () => {
+  try {
+    const allShoppers = await db.any(
+      "SELECT * FROM shopper ORDER BY shopper_firebase_uid"
+    );
+    return allShoppers;
+  } catch (error) {
+    throw error;
+  }
+};
+
 // get one shopper
 const getOneShopper = async (id) => {
   try {
@@ -87,6 +99,7 @@ const deleteOneShopper = async (id) => {
 };
 
 module.exports = {
+  getAllShoppers,
   getOneShopper,
   addOneShopper,
   updateOneShopper,
