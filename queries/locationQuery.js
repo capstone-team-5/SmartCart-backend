@@ -51,8 +51,40 @@ const getStoresWithinDistance = async (zipCode, distance) => {
   }
 };
 
+// get stores within user distance and latitude and longitude
+const getStoresWithinDistanceByCoordinates = async (
+  userLatitude,
+  userLongitude,
+  distance
+) => {
+  const query = `
+      SELECT subquery.*, 
+             subquery.distance
+      FROM (
+          SELECT s.*, 
+                 3959 * acos(cos(radians($1)) * cos(radians(s.store_latitude)) * 
+                 cos(radians(s.store_longitude) - radians($2)) + sin(radians($1)) * 
+                 sin(radians(s.store_latitude))) AS distance
+          FROM store s
+          ORDER BY distance
+      ) AS subquery
+      WHERE subquery.distance <= $3;
+    `;
+
+  try {
+    const result = await db.manyOrNone(query, [
+      userLatitude,
+      userLongitude,
+      distance,
+    ]);
+    return result;
+  } catch (error) {
+    throw new Error("Error fetching stores within distance: " + error.message);
+  }
+};
 module.exports = {
   getAllLocations,
   getLocationByZipCode,
   getStoresWithinDistance,
+  getStoresWithinDistanceByCoordinates,
 };
