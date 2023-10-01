@@ -352,7 +352,7 @@ VALUES
     ('Rotini Pasta', 'https://target.scene7.com/is/image/Target/GUEST_f58356dd-ae68-4fda-8e2c-128ca5355aaa?wid=600&hei=600&qlt=80&fmt=webp', 'Rotini (meaning "twists") are two-inch lengths of thick, screw-like pasta', 'Pasta & Noodles', 16, 'oz', 'Barilla', TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE);
     ('Gold Peak Peach Flavored Iced Tea Drink', 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTM7qXXeauV-7IPVzAlLRs1YJUjLFlXQM25KGIAiFLVNYOr5Fc6jIk9s5z_md5aPNfiQVVCJK8I7FaualnFLV0-N5OoYk4aFHWy2lHUmojatBbhMP1Gmr5b&usqp=CAE', 'Whether its a picnic in the park, watching the game, or a backyard barbeque, get that delicious fresh brewed flavor with every sip of Gold Peak Real Brewed Georgia Peach Tea. Gold Peak uses cane sugar and pure filtered water for a difference you can taste.', 'Beverages', 52 'oz', 'Gold Peak', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE),
     ('Starbucks Iced Coffee, Dark Roast, Unsweetend', 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQu19wkIFAtwPBZYpX57OE0V25arXy1s3qtgI7EY-9_-4VLxWEw7GqN2JgNJW9v3cpP4c67IBamxL05RydsqBjwjhNDFiUN1MSe7HD3FIHswKQJcSiHxGZL&usqp=CAE', 'Our Dark Roast is crafted with 100% Arabica beans to deliver a bold, robust flavor. Make it your way and enjoy every sip of the signature Starbucks taste you love.', 'Beverages', 48 'oz', 'Starbucks', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE),
-    ('Folgers Classic Roast Ground Coffee, 40.3-Ounce', 'https://i5.walmartimages.com/asr/5461d8e4-67f1-41b5-9d71-be3eeb720937.6beb695094d13dba38f954b2a490ee86.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF', 'No matter what morning brings, you know you can count on the red Folgers coffee canister for The Best Part of Wakin Up. Folgers Classic Roast ground coffee delivers rich, smooth flavor and a famously fresh aroma for a distinctive coffee experience every time. Its the quintessential Folgers medium roast coffee a modern morning essential that can help add a silver lining to even the most hectic of Mondays. And in its ground coffee form, its versatile enough to use in a wide range of home coffee makers. Stock up now and keep plenty on-hand to help make every day a little better', 'Beverages', 40.3 'oz', 'Folgers', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE),
+    ('Folgers Classic Roast Ground Coffee, 40.3-Ounce', 'https://i5.walmartimages.com/asr/5461d8e4-67f1-41b5-9d71-be3eeb720937.6beb695094d13dba38f954b2a490ee86.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF', 'No matter what morning brings, you know you can count on the red Folgers coffee canister for The Best Part of Wakin Up. Folgers Classic Roast ground coffee delivers rich, smooth flavor and a famously fresh aroma for a distinctive coffee experience every time. Its the quintessential Folgers medium roast coffee a modern morning essential that can help add a silver lining to even the most hectic of Mondays. And in its ground coffee form, its versatile enough to use in a wide range of home coffee makers. Stock up now and keep plenty on-hand to help make every day a little better', 'Beverages', 40.3 'oz', 'Folgers', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE);
     ('Lipton Yellow Label Tea 100bags', 'https://coltrades.com/60996-large_default/lipton-yellow-label-tea-bag-100-ct.jpg', 'Awaken your senses with the invigorating taste and aroma of this black tea. Each box includes 100 single-serve Rainforest Alliance certified tea bags, and the 55 milligrams of caffeine included in each 8-ounce serving make it a good alternative to coffee. These Lipton black tea bags come in a resealable box to provide a refreshing, easy-to-make hot or cold beverage throughout the workday.', 'Beverages', 200 'g', 'Lipton', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE);
 
 
@@ -367,6 +367,22 @@ VALUES
     (3, 1, 5.99, 0.3), 
     (3, 2, 2.99, 0.3),
     (3, 3, 4.79, 0.3);
+
+    ('Fuji Apples', 'Target', 1.85, 0),
+    ('Fuji Apples', 'Whole Foods', 1.88, 0),
+    ('Fuji Apples', 'Trader Joes', 1.81, 0),
+    ('Fuji Apples', '7-Eleven', 1.84, 0),
+    ('Fuji Apples', 'Morton Williams Supermarket', 1.83, 0),
+    ('Fuji Apples', 'CVS Pharmacy', 1.86, 0),
+    ('Fuji Apples', 'New Andys Deli', 1.80, 0),
+    ('Fuji Apples', 'Cafe Deli - Cious', 1.82, 0),
+    ('Fuji Apples', 'Salt & Pepper Gourment', 1.79, 0),
+    ('Fuji Apples', 'Fairway Market of Chelsea', 1.87, 0),
+    ('Fuji Apples', 'Westside Market NYC', 1.85, 0),
+    ('Fuji Apples', 'Garden of Eden', 1.84, 0),
+    ('Fuji Apples', 'Sunac Fancy Food', 1.83, 0),
+
+
 
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES
