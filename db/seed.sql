@@ -362,7 +362,31 @@ VALUES
     (2, 3, 1.79, 0.3),
     (3, 1, 5.99, 0.3), 
     (3, 2, 2.99, 0.3),
-    (3, 3, 4.79, 0.3);
+    (3, 3, 4.79, 0.3),
+    ('original oatmeals', 'City Fresh Market', 3, 0),
+    ('original oatmeals', 'Mr. Lemon', 2.49, 0),
+    ('original oatmeals', 'bp', 3.25, 0),
+    ('original oatmeals', 'Buena Vista Deli & Grocery', 4.24, 0),
+    ('original oatmeals', 'EUROPE', 2.75, 0),
+    ('original oatmeals', 'Atlantic', 3.59, 0),
+    ('original oatmeals', 'Valery Deli Grocery Store', 4.99, 0),
+    ('original oatmeals', 'Classico Grocery', 2.75, 0),
+    ('original oatmeals', 'To The World Farm', 4.20, 0),
+    ('original oatmeals', 'Williams Avenue Community Garden', 3.19, 0),
+    ('original oatmeals', 'New Andys Deli', 4.99, 0),
+    ('original oatmeals', 'Café Deli - Cious', 5.25, 0),
+    ('original oatmeals', 'Salt & Pepper Gourment', 5.35, 0),
+    ('original oatmeals','CVS Pharmacy', 4.75, 0),
+    ('original oatmeals','7-Eleven', 4.79, 0),
+    ('original oatmeals','Morton Williams Supermarket', 3.29, 0),
+    ('original oatmeals','Trader Joes', 5.75, 0),
+    ('original oatmeals','Fairway Market of Chelsea', 3.49, 0),
+    ('original oatmeals','Whole Foods', 5.15, 0),
+    ('original oatmeals','Westside Market NYC', 4.19, 0),
+    ('original oatmeals','Garden of Eden', 5.20, 0),
+    ('original oatmeals','Sunac Fancy Food', 3.99, 0),
+    ('original oatmeals','Target', 4.29, 0);
+
 
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
 VALUES
