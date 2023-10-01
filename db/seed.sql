@@ -385,7 +385,31 @@ VALUES
     ('original oatmeals','Westside Market NYC', 4.19, 0),
     ('original oatmeals','Garden of Eden', 5.20, 0),
     ('original oatmeals','Sunac Fancy Food', 3.99, 0),
-    ('original oatmeals','Target', 4.29, 0);
+    ('original oatmeals','Target', 4.29, 0),
+      ('banana nut crunch', 'City Fresh Market', 4.99, 0),
+    ('banana nut crunch', 'Mr. Lemon',4.5 , 0),
+    ('banana nut crunch', 'bp',5.25 , 0),
+    ('banana nut crunch', 'Buena Vista Deli & Grocery', 5.99, 0),
+    ('banana nut crunch', 'EUROPE', 4.29, 0),
+    ('banana nut crunch', 'Atlantic',5.29 , 0),
+    ('banana nut crunch', 'Valery Deli Grocery Store', 4.99, 0),
+    ('banana nut crunch', 'Classico Grocery', 3.75, 0),
+    ('banana nut crunch', 'To The World Farm', 5.89, 0),
+    ('banana nut crunch', 'Williams Avenue Community Garden',5.29 , 0),
+    ('banana nut crunch', 'New Andys Deli', 6.25, 0),
+    ('banana nut crunch', 'Café Deli - Cious', 3.49, 0),
+    ('banana nut crunch', 'Salt & Pepper Gourment', 5.35, 0),
+    ('banana nut crunch', 'CVS Pharmacy', 4.19, 0),
+    ('banana nut crunch', '7-Eleven', 4.79, 0),
+    ('banana nut crunch', 'Morton Williams Supermarket', 4.29, 0),
+    ('banana nut crunch', 'Trader Joes', 5.75, 0),
+    ('banana nut crunch', 'Fairway Market of Chelsea', 6.49, 0),
+    ('banana nut crunch', 'Whole Foods', 6.15, 0),
+    ('banana nut crunch', 'Westside Market NYC', 4.19, 0),
+    ('banana nut crunch', 'Garden of Eden', 5.10, 0),
+    ('banana nut crunch', 'Sunac Fancy Food', 2.99, 0),
+    ('banana nut crunch', 'Target', 4.20, 0);
+
 
 
 INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_profile_pic, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences)
