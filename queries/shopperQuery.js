@@ -1,17 +1,5 @@
 const db = require("../db/dbConfig.js");
 
-// get all Shoppers
-const getAllShoppers = async () => {
-  try {
-    const allShoppers = await db.any(
-      "SELECT * FROM shopper ORDER BY shopper_firebase_uid"
-    );
-    return allShoppers;
-  } catch (error) {
-    throw error;
-  }
-};
-
 // get one shopper
 const getOneShopper = async (id) => {
   try {
@@ -53,8 +41,8 @@ const addOneShopper = async (shopperData) => {
     const newShopper = await db.one(
       "INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name) VALUES ($1, $2, $3, $4) RETURNING *",
       [
-        shopperData.shopperFirebaseUid,
-        shopperData.shopperEmail,
+        shopperData.shopper_firebase_uid,
+        shopperData.shopper_email,
         shopperData.shopper_first_name,
         shopperData.shopper_last_name,
       ]
@@ -99,7 +87,6 @@ const deleteOneShopper = async (id) => {
 };
 
 module.exports = {
-  getAllShoppers,
   getOneShopper,
   addOneShopper,
   updateOneShopper,

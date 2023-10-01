@@ -4,23 +4,11 @@ const shopper = express.Router();
 // const validateShopper = require("../validations/validateShopper.js");
 
 const {
-  getAllShoppers,
   getOneShopper,
   addOneShopper,
   updateOneShopper,
   deleteOneShopper,
 } = require("../queries/shopperQuery.js");
-
-// INDEX - show all stores
-
-shopper.get("/", async (request, response) => {
-  const allShoppers = await getAllShoppers();
-  if (allShoppers[0]) {
-    response.status(200).json(allShoppers);
-  } else {
-    response.status(500).json({ error: "Server Error" });
-  }
-});
 
 // Show one shopper by id
 
