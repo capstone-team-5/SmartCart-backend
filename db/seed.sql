@@ -381,6 +381,23 @@ VALUES
     ('Fuji Apples', 'Westside Market NYC', 1.85, 0),
     ('Fuji Apples', 'Garden of Eden', 1.84, 0),
     ('Fuji Apples', 'Sunac Fancy Food', 1.83, 0),
+    ('Apricots', 'Target', 0.49, 0),
+    ('Apricots', 'Whole Foods', 0.52, 0),
+    ('Apricots', 'Trader Joes', 0.50, 0),
+    ('Apricots', '7-Eleven', 0.55, 0),
+    ('Apricots', 'Morton Williams Supermarket', 0.58, 0),
+    ('Apricots', 'CVS Pharmacy', 0.51, 0),
+    ('Apricots', 'New Andys Deli', 0.54, 0),
+    ('Apricots', 'Cafe Deli - Cious', 0.53, 0),
+    ('Apricots', 'Salt & Pepper Gourment', 0.56, 0),
+    ('Apricots', 'Fairway Market of Chelsea', 0.50, 0),
+    ('Apricots', 'Westside Market NYC', 0.52, 0),
+    ('Apricots', 'Garden of Eden', 0.49, 0),
+    ('Apricots', 'Sunac Fancy Food', 0.57, 0),
+    ('Apricots', 'Target', 0.55, 0),
+    ('Apricots', 'Target', 0.54, 0),
+    ('Apricots', 'Target', 0.53, 0);
+
 
 
 
