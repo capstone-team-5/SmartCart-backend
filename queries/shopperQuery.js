@@ -13,19 +13,38 @@ const getOneShopper = async (id) => {
   }
 };
 
+// // add new shopper - do not delete - future iteration for account settings
+
+// const addOneShopper = async (shopperFirebaseUid, shopperEmail, shopper) => {
+//   try {
+//     const newShopper = await db.one(
+//       "INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+//       [
+//         shopperFirebaseUid,
+//         shopperEmail,
+//         shopper.shopper_first_name,
+//         shopper.shopper_last_name,
+//         shopper.shopper_instagram_link,
+//         shopper.shopper_facebook_link,
+//         shopper.shopper_dietary_preferences,
+//       ]
+//     );
+//     return { result: newShopper };
+//   } catch (error) {
+//     throw { error };
+//   }
+// };
+
 // add new shopper
-const addOneShopper = async (shopperFirebaseUid, shopperEmail, shopper) => {
+const addOneShopper = async (shopperData) => {
   try {
     const newShopper = await db.one(
-      "INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name, shopper_instagram_link, shopper_facebook_link, shopper_dietary_preferences) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+      "INSERT INTO shopper (shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name) VALUES ($1, $2, $3, $4) RETURNING *",
       [
-        shopperFirebaseUid,
-        shopperEmail,
-        shopper.shopper_first_name,
-        shopper.shopper_last_name,
-        shopper.shopper_instagram_link,
-        shopper.shopper_facebook_link,
-        shopper.shopper_dietary_preferences,
+        shopperData.shopperFirebaseUid,
+        shopperData.shopperEmail,
+        shopperData.shopper_first_name,
+        shopperData.shopper_last_name,
       ]
     );
     return { result: newShopper };

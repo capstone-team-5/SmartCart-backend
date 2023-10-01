@@ -64,12 +64,19 @@ CREATE TABLE shopper (
   shopper_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
   shopper_email VARCHAR(255) UNIQUE NOT NULL,
   shopper_first_name VARCHAR(255) NOT NULL,
-  shopper_last_name VARCHAR(255) NOT NULL,
-  shopper_profile_pic TEXT,
-  shopper_instagram_link TEXT,
-  shopper_facebook_link TEXT,
-  shopper_dietary_preferences TEXT[]
+  shopper_last_name VARCHAR(255) NOT NULL
 );
+
+-- CREATE TABLE shopper ( do not delete - future iteration for account settings
+--   shopper_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
+--   shopper_email VARCHAR(255) UNIQUE NOT NULL,
+--   shopper_first_name VARCHAR(255) NOT NULL,
+--   shopper_last_name VARCHAR(255) NOT NULL,
+--   shopper_profile_pic TEXT,
+--   shopper_instagram_link TEXT,
+--   shopper_facebook_link TEXT,
+--   shopper_dietary_preferences TEXT[]
+-- );
 
 CREATE TABLE review (
     review_id SERIAL PRIMARY KEY,
