@@ -30,7 +30,7 @@ const getOneProduct = async (id) => {
 const getAllCategories = async () => {
   try {
     const allCategories = await db.any(
-      "SELECT Distinct(product_category) FROM product"
+      "SELECT Distinct(product_category) FROM product ORDER BY product_category"
     );
     return allCategories;
   } catch (error) {
