@@ -64,11 +64,7 @@ CREATE TABLE shopper (
   shopper_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
   shopper_email VARCHAR(255) UNIQUE NOT NULL,
   shopper_first_name VARCHAR(255) NOT NULL,
-  shopper_last_name VARCHAR(255) NOT NULL,
-  shopper_profile_pic TEXT,
-  shopper_instagram_link TEXT,
-  shopper_facebook_link TEXT,
-  shopper_dietary_preferences TEXT[]
+  shopper_last_name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE review (
@@ -99,7 +95,19 @@ CREATE TABLE location (
     location_id SERIAL PRIMARY KEY,
     location_zipCode INTEGER NOT NULL,
     location_latitude DOUBLE PRECISION NOT NULL,
-    location_longitude DOUBLE PRECISION NOT NULL
+    location_longitude DOUBLE PRECISION NOT NULL,
+    location_name TEXT NOT NULL
 );
 
 --  on delete cascade tells postgres to also delete the row in the child table ,if the corresponding row in products is deleted
+
+-- CREATE TABLE shopper ( do not delete - future iteration for account settings
+--   shopper_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
+--   shopper_email VARCHAR(255) UNIQUE NOT NULL,
+--   shopper_first_name VARCHAR(255) NOT NULL,
+--   shopper_last_name VARCHAR(255) NOT NULL,
+--   shopper_profile_pic TEXT,
+--   shopper_instagram_link TEXT,
+--   shopper_facebook_link TEXT,
+--   shopper_dietary_preferences TEXT[]
+-- );

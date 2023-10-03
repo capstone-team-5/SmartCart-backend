@@ -1,7 +1,7 @@
 const express = require("express");
 const shopper = express.Router();
 
-const validateShopper = require("../validations/validateShopper.js");
+// const validateShopper = require("../validations/validateShopper.js");
 
 const {
   getOneShopper,
@@ -26,7 +26,7 @@ shopper.get("/:id", async (request, response) => {
 
 // Add one Shopper
 
-shopper.post("/", validateShopper, async (request, response) => {
+shopper.post("/", async (request, response) => {
   const { error, result } = await addOneShopper(request.body);
   if (error) {
     response.status(500).json({ error: "Server Error" });
@@ -37,7 +37,7 @@ shopper.post("/", validateShopper, async (request, response) => {
 
 // Update one Shopper
 
-shopper.put("/:id", validateShopper, async (request, response) => {
+shopper.put("/:id", async (request, response) => {
   const { id } = request.params;
   const { error, result } = await updateOneShopper(id, request.body);
   if (error) {
