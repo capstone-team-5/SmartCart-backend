@@ -4,6 +4,7 @@ const location = express.Router();
 const {
   getAllLocations,
   getLocationByZipCode,
+  getLocationByCoordinates,
   getStoresWithinDistance,
   getStoresWithinDistanceByCoordinates,
 } = require("../queries/locationQuery.js");
@@ -24,6 +25,21 @@ location.get("/", async (request, response) => {
 location.get("/:zipCode", async (request, response) => {
   const { zipCode } = request.params;
   const { error, result } = await getLocationByZipCode(zipCode);
+
+  if (error?.code === 0) {
+    response.status(404).json({ error: "Location Not Found" });
+  } else if (error) {
+    response.status(500).json({ error: "Server Error" });
+  } else {
+    response.status(200).json(result);
+  }
+});
+
+// show name, zipcode by latitude and longitude
+
+location.get("/:latitude/:longitude", async (request, response) => {
+  const { latitude, longitude } = request.params;
+  const { error, result } = await getLocationByCoordinates(latitude, longitude);
 
   if (error?.code === 0) {
     response.status(404).json({ error: "Location Not Found" });

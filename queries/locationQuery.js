@@ -25,6 +25,19 @@ const getLocationByZipCode = async (zipCode) => {
   }
 };
 
+// get zipcode and name from latitude and longitude coordinates
+const getLocationByCoordinates = async (latitude, longitude) => {
+  try {
+    const location = await db.oneOrNone(
+      "SELECT location_zipCode, location_name FROM location WHERE location_latitude = $1 AND location_longitude = $2",
+      [latitude, longitude]
+    );
+    return { result: location };
+  } catch (error) {
+    throw { error };
+  }
+};
+
 // get stores within user distance and zipcode
 const getStoresWithinDistance = async (zipCode, distance) => {
   const query = `
@@ -85,6 +98,7 @@ const getStoresWithinDistanceByCoordinates = async (
 module.exports = {
   getAllLocations,
   getLocationByZipCode,
+  getLocationByCoordinates,
   getStoresWithinDistance,
   getStoresWithinDistanceByCoordinates,
 };
