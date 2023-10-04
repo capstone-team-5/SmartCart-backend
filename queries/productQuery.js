@@ -55,7 +55,7 @@ const getAllProductsOneCategory = async (category) => {
 const getfourCart = async () => {
   try {
     const fourCart = await db.any(
-      "select  * from product where product_name = 'Ginger Snacks C' or product_name = 'Mixed Nuts A' or product_name = 'Mixed Spices R' or product_name = 'Beef Cuts T' ORDER BY product_id"
+      "select  * from product where product_name = 'Orange Juice' or product_name = 'Bru Filter Coffee' or product_name = 'Bajan Pepper Sauce' or product_name = 'Seasoned Salt' ORDER BY product_id"
     );
     return fourCart;
   } catch (error) {
@@ -67,7 +67,7 @@ const getfourCart = async () => {
 const getfourMRT = async () => {
   try {
     const fourMRT = await db.any(
-      "select  * from product where product_name = 'Wheat Grains $' or product_name = 'Mixed Dairy m' or product_name = 'Mixed Bread r' or product_name = 'Mixed Legumes t' ORDER BY product_id"
+      "select  * from product where product_name = 'Salmon' or product_name = 'Jumbo Coconut Shrimp' or product_name = 'Family Size Chicken Nuggets' or product_name = 'Frozen Meatballs' ORDER BY product_id"
     );
     return fourMRT;
   } catch (error) {
@@ -79,7 +79,7 @@ const getfourMRT = async () => {
 const getfourFruits = async () => {
   try {
     const fourFruits = await db.any(
-      "select * from product where product_category = 'Fruit' and product_name = 'Pineapples' or product_name = 'Apricots' or product_name = 'Oranges' or product_name = 'Mangoes' ORDER BY product_id"
+      "select * from product where product_name = 'Dole Frozen Dark Sweet Cherries' or product_name = 'Beets' or product_name = 'Oranges' or product_name = 'Butter Lettuce' ORDER BY product_id"
     );
     return fourFruits;
   } catch (error) {
@@ -91,7 +91,7 @@ const getfourFruits = async () => {
 const getfourGreens = async () => {
   try {
     const fourGreens = await db.any(
-      "select * from product where product_category = 'Vegetable' and product_name = 'Celery' or product_name = 'Watercress' or product_name = 'Butter Lettuce' or product_name = 'Spinach' ORDER BY product_id"
+      "select * from product where product_name = 'Almonds' or product_name = 'Yoplait Original Strawberry Yogurt' or product_name = 'Dairy Milk Roast Almond' or product_name = 'Lays Blue Chips' ORDER BY product_id"
     );
     return fourGreens;
   } catch (error) {
@@ -285,7 +285,7 @@ const getAllFruits = async (page) => {
     const offset = (page - 1) * pageSize;
 
     const allFruits = await db.any(
-      "SELECT * FROM product WHERE product_category = 'Fruit' ORDER BY product_id LIMIT $1 OFFSET $2",
+      "SELECT * FROM product WHERE product_category = 'Fruits' ORDER BY product_id LIMIT $1 OFFSET $2",
       [pageSize, offset]
     );
 
@@ -304,7 +304,7 @@ const getAllVegetables = async (page) => {
     const offset = (page - 1) * pageSize;
 
     const allVegetables = await db.any(
-      "select * from product where product_category = 'Vegetable' ORDER BY product_id LIMIT $1 OFFSET $2",
+      "select * from product where product_category = 'Vegetables' ORDER BY product_id LIMIT $1 OFFSET $2",
       [pageSize, offset]
     );
     return allVegetables;

@@ -60,7 +60,7 @@ CREATE TABLE store_product (
     product_discount DECIMAL(4,2) DEFAULT 0 CHECK (product_discount >= 0)
 );
 
-CREATE TABLE shopper (
+CREATE TABLE shopper(
   shopper_firebase_uid TEXT PRIMARY KEY UNIQUE NOT NULL,
   shopper_email VARCHAR(255) UNIQUE NOT NULL,
   shopper_first_name VARCHAR(255) NOT NULL,
