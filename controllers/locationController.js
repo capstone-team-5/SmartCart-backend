@@ -46,7 +46,7 @@ location.get("/:latitude/:longitude", async (request, response) => {
   } else if (error) {
     response.status(500).json({ error: "Server Error" });
   } else {
-    response.status(200).json(result);
+    response.status(200).json(result[0]);
   }
 });
 

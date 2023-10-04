@@ -28,8 +28,8 @@ const getLocationByZipCode = async (zipCode) => {
 // get zipcode and name from latitude and longitude coordinates
 const getLocationByCoordinates = async (latitude, longitude) => {
   try {
-    const lat = parseFloat(latitude)
-    const long = parseFloat(longitude)
+    const lat = parseFloat(latitude);
+    const long = parseFloat(longitude);
     const query = pgp.as.format(
       "SELECT location_zipCode, location_name FROM location WHERE location_latitude - ($1::double precision) < 1 AND location_longitude - ($2::double precision) < 1",
       [lat, long]
@@ -38,7 +38,7 @@ const getLocationByCoordinates = async (latitude, longitude) => {
     const location = await db.any(query);
     return { result: location };
   } catch (error) {
-    console.log(error)
+    console.log(error);
     throw { error };
   }
 };
