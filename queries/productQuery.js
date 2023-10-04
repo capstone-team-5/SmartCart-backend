@@ -285,7 +285,7 @@ const getAllFruits = async (page) => {
     const offset = (page - 1) * pageSize;
 
     const allFruits = await db.any(
-      "SELECT * FROM product WHERE product_category = 'Fruit' ORDER BY product_id LIMIT $1 OFFSET $2",
+      "SELECT * FROM product WHERE product_category = 'Fruits' ORDER BY product_id LIMIT $1 OFFSET $2",
       [pageSize, offset]
     );
 
@@ -304,7 +304,7 @@ const getAllVegetables = async (page) => {
     const offset = (page - 1) * pageSize;
 
     const allVegetables = await db.any(
-      "select * from product where product_category = 'Vegetable' ORDER BY product_id LIMIT $1 OFFSET $2",
+      "select * from product where product_category = 'Vegetables' ORDER BY product_id LIMIT $1 OFFSET $2",
       [pageSize, offset]
     );
     return allVegetables;
