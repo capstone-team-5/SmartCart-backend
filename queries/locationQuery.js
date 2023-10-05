@@ -28,12 +28,15 @@ const getLocationByZipCode = async (zipCode) => {
 // get zipcode and name from latitude and longitude coordinates
 const getLocationByCoordinates = async (latitude, longitude) => {
   try {
-    const location = await db.oneOrNone(
-      "SELECT location_zipCode, location_name FROM location WHERE location_latitude = $1 AND location_longitude = $2",
-      [latitude, longitude]
+    const lat = parseFloat(latitude);
+    const long = parseFloat(longitude);
+    const location = await db.any(
+      "SELECT location_zipCode, location_name FROM location WHERE location_latitude - ($1::double precision) < 1 AND location_longitude - ($2::double precision) < 1",
+      [lat, long]
     );
     return { result: location };
   } catch (error) {
+    console.log(error);
     throw { error };
   }
 };
