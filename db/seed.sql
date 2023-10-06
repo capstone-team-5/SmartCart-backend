@@ -1331,7 +1331,6 @@ VALUES
     ('Sunac Fancy Food', '765 6th Ave', 'New York', 'NY', 10010, 40.74477904, -73.99175307, 'https://whereyoueat.com/r_gallery_images/rgallery-24319/Sunac_1.JPG', 'Mon - Friday 7am - 10pm, Sat 7am - 9pm, Sun 7am - 5pm', false, '(212) 229-0301'),
     ('Target', '112 W 34th St.', 'New York', 'NY', 10120, 40.74983531, -73.98871553, 'https://www.esrtreit.com/wp-content/uploads/112-Exterior-7-1-scaled.jpg', 'Mon - Sun 9am - 10pm', true, '(646) 968-4739');
 
-
 INSERT INTO product (product_name, product_image, product_description, product_category, product_weight, product_unit, product_brand, product_is_tree_nuts_free, product_is_egg_free, product_is_fresh, product_is_frozen, product_is_halal, product_is_kosher, product_is_non_processed, product_is_organic, product_is_vegetarian, product_is_stock, product_is_vegan_friendly, product_is_seafood, product_is_peanut_free, product_is_caffeine, product_is_dairy_free, product_is_no_preservatives, product_is_no_added_sugar, product_is_nuts_free, product_is_keto_friendly, product_is_low_carb_diet, product_is_gluten_free, product_is_international) 
 VALUES
     ('Fuji Apples', 'https://www.kroger.com/product/images/xlarge/front/0000000004131', 'Fresh and Crisp Fuji Apples.', 'Fruits', 0.5, 'lbs', 'Fuji Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
@@ -1862,6 +1861,7 @@ VALUES
     ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 2),
     ('XtXYbI7Gw1c2cm2oV2IDFn5SsBJ3', 3),
     ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 2);
+
 
 INSERT INTO saving (shopper_firebase_uid, saving_timestamp, store_name, saving_per_trip, saving_total)
 VALUES

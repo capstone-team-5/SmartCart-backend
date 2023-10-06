@@ -38,7 +38,7 @@ favorite.post("/", validateFavorite, async (request, response) => {
 
 favorite.delete("/:userId/:productId", async (request, response) => {
   const { userId, productId } = request.params;
-  const { error, result } = await deleteOneFavorite(userId, productId);
+  const { error, result } = await deleteOneFavorite(userId, Number(productId));
   if (error) {
     response.status(404).json({ error: "Favorite Not Found" });
   } else {
