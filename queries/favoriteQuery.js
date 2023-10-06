@@ -28,12 +28,16 @@ const addOneFavorite = async (favorite) => {
 };
 
 // delete Favorite
+
 const deleteOneFavorite = async (userId, productId) => {
   try {
+    const parsedProductId = parseInt(productId, 10); // Parse productId as an integer
+
     const deleteFavorite = await db.one(
       "DELETE FROM favorite WHERE shopper_firebase_uid = $1 AND product_id = $2 RETURNING *",
-      [userId, productId]
+      [userId, parsedProductId]
     );
+
     return deleteFavorite;
   } catch (error) {
     throw { error };
