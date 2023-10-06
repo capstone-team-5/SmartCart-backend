@@ -31,7 +31,7 @@ const getLocationByCoordinates = async (latitude, longitude) => {
     const lat = parseFloat(latitude);
     const long = parseFloat(longitude);
     const location = await db.any(
-      "SELECT location_zipCode, location_name FROM location WHERE location_latitude - ($1::double precision) < 1 AND location_longitude - ($2::double precision) < 1",
+      "SELECT location_zipCode, location_name FROM location WHERE location_latitude - ($1::double precision) < 0.000000001 AND location_longitude - ($2::double precision) < 0.000000001",
       [lat, long]
     );
     return { result: location };
