@@ -4,11 +4,19 @@ const db = require("../db/dbConfig.js");
 const getFavoritesByShopperId = async (shopperId) => {
   try {
     const favorites = await db.manyOrNone(
-      "SELECT * FROM favorite WHERE shopper_firebase_uid = $1",
+      // "SELECT * FROM favorite WHERE shopper_firebase_uid = $1",
+      // shopperId
+
+      "select product_name, favorite.product_id, product_image from product, favorite, shopper where \
+      favorite.product_id = product.product_id and \
+      shopper.shopper_firebase_uid = favorite.shopper_firebase_uid and shopper.shopper_firebase_uid = $1",
       shopperId
     );
+
+    console.log(favorites);
     return { result: favorites };
   } catch (error) {
+    console.log(error);
     throw { error };
   }
 };
@@ -21,8 +29,10 @@ const addOneFavorite = async (favorite) => {
       "INSERT INTO favorite (shopper_firebase_uid, product_id) VALUES ($1, $2) RETURNING *",
       [favorite.shopper_firebase_uid, favorite.product_id]
     );
+    console.log('newFavorite:', newFavorite)
     return { result: newFavorite };
   } catch (error) {
+    console.log('error',error)
     throw error;
   }
 };
@@ -31,11 +41,11 @@ const addOneFavorite = async (favorite) => {
 
 const deleteOneFavorite = async (userId, productId) => {
   try {
-    const parsedProductId = parseInt(productId, 10); // Parse productId as an integer
+    // const parsedProductId = parseInt(productId); // Parse productId as an integer
 
     const deleteFavorite = await db.one(
       "DELETE FROM favorite WHERE shopper_firebase_uid = $1 AND product_id = $2 RETURNING *",
-      [userId, parsedProductId]
+      [userId, productId]
     );
 
     return deleteFavorite;
