@@ -325,6 +325,17 @@ const getAllFrozen = async () => {
   }
 };
 
+// get all fall food
+const getAllFallFood = async () => {
+  try {
+    const allFallFood = await db.any(
+      "select * from product where product_name ilike '%pumpkin%' ORDER BY product_id"
+    );
+    return allFallFood;
+  } catch (error) {
+    throw error;
+  }
+};
 // // filter
 
 // const getFilteredProducts = async (filters) => {
@@ -371,5 +382,6 @@ module.exports = {
   getAllMeat,
   getAllInternational,
   getAllFrozen,
+  getAllFallFood,
   // getFilteredProducts,
 };

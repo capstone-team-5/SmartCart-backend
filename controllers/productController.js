@@ -21,6 +21,7 @@ const {
   getAllMeat,
   getAllInternational,
   getAllFrozen,
+  getAllFallFood,
   // getFilteredProducts,
 } = require("../queries/productQuery.js");
 
@@ -159,6 +160,17 @@ product.get("/frozen", async (req, res) => {
   const allFrozen = await getAllFrozen();
   if (allFrozen[0]) {
     res.status(200).json(allFrozen);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all Fall Food - without pagination
+
+product.get("/fall", async (req, res) => {
+  const allFallFood = await getAllFallFood();
+  if (allFallFood[0]) {
+    res.status(200).json(allFallFood);
   } else {
     res.status(500).json({ error: "Server Error" });
   }
