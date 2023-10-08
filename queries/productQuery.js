@@ -55,7 +55,7 @@ const getAllProductsOneCategory = async (category) => {
 const getfourCart = async () => {
   try {
     const fourCart = await db.any(
-      "select  * from product where product_name = 'Orange Juice' or product_name = 'Bru Filter Coffee' or product_name = 'Bajan Pepper Sauce' or product_name = 'Seasoned Salt' ORDER BY product_id"
+      "select  * from product where product_name = 'Tropicana Orange Juice' or product_name = 'Starbucks Pike Place Roast Ground Coffee' or product_name = 'Bigelow Premium Green Tea' or product_name = 'Gatorade Thirst Quencher' ORDER BY product_id"
     );
     return fourCart;
   } catch (error) {
@@ -67,7 +67,7 @@ const getfourCart = async () => {
 const getfourMRT = async () => {
   try {
     const fourMRT = await db.any(
-      "select  * from product where product_name = 'Salmon' or product_name = 'Jumbo Coconut Shrimp' or product_name = 'Family Size Chicken Nuggets' or product_name = 'Frozen Meatballs' ORDER BY product_id"
+      "select  * from product where product_name = 'Wild Salmon' or product_name = 'Lobster' or product_name = 'Laura Ground Beef' or product_name = 'Perdue Boneless Skinless All Natural Chicken Breasts' ORDER BY product_id"
     );
     return fourMRT;
   } catch (error) {
@@ -79,7 +79,7 @@ const getfourMRT = async () => {
 const getfourFruits = async () => {
   try {
     const fourFruits = await db.any(
-      "select * from product where product_name = 'Dole Frozen Dark Sweet Cherries' or product_name = 'Beets' or product_name = 'Oranges' or product_name = 'Butter Lettuce' ORDER BY product_id"
+      "select * from product where product_name = 'Oranges' or product_name = 'Green Peppers' or product_name = 'Cantaloupes' or product_name = 'Butter Lettuce' order by product_id"
     );
     return fourFruits;
   } catch (error) {
@@ -91,7 +91,7 @@ const getfourFruits = async () => {
 const getfourGreens = async () => {
   try {
     const fourGreens = await db.any(
-      "select * from product where product_name = 'Almonds' or product_name = 'Yoplait Original Strawberry Yogurt' or product_name = 'Dairy Milk Roast Almond' or product_name = 'Lays Blue Chips' ORDER BY product_id"
+      "select * from product where product_name = 'Lays American style cream and onion flavor' or product_name = 'Del Monte Mandarin Oranges Fruit Cup Snacks' or product_name = 'Food to Live Raw Almonds' or product_name = 'Chobani Whole Milk Greek Yogurt Orange Cream Blended' ORDER BY product_id"
     );
     return fourGreens;
   } catch (error) {
@@ -313,6 +313,29 @@ const getAllVegetables = async (page) => {
   }
 };
 
+// get all frozen
+const getAllFrozen = async () => {
+  try {
+    const allFrozen = await db.any(
+      "select * from product where product_is_frozen = True order by product_name asc"
+    );
+    return allFrozen;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get all fall food
+const getAllFallFood = async () => {
+  try {
+    const allFallFood = await db.any(
+      "select * from product where product_name ilike '%pumpkin%' ORDER BY product_id"
+    );
+    return allFallFood;
+  } catch (error) {
+    throw error;
+  }
+};
 // // filter
 
 // const getFilteredProducts = async (filters) => {
@@ -358,5 +381,7 @@ module.exports = {
   getAllBakery,
   getAllMeat,
   getAllInternational,
+  getAllFrozen,
+  getAllFallFood,
   // getFilteredProducts,
 };

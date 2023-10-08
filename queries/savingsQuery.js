@@ -14,8 +14,13 @@ const getAllSavings = async () => {
 const getSavingsByShopperId = async (shopperId) => {
   try {
     const savings = await db.manyOrNone(
-      "SELECT * FROM saving WHERE shopper_firebase_uid = $1",
+      // "SELECT * FROM saving WHERE shopper_firebase_uid = $1",
+      // shopperId
+      "select * from saving, shopper, store where \
+      store.store_id = product.product_id and \
+      shopper.shopper_firebase_uid = favorite.shopper_firebase_uid and shopper.shopper_firebase_uid = $1",
       shopperId
+
     );
     return { result: savings };
   } catch (error) {

@@ -20,6 +20,8 @@ const {
   getAllBakery,
   getAllMeat,
   getAllInternational,
+  getAllFrozen,
+  getAllFallFood,
   // getFilteredProducts,
 } = require("../queries/productQuery.js");
 
@@ -147,6 +149,28 @@ product.get("/international", async (req, res) => {
   const allInternational = await getAllInternational();
   if (allInternational[0]) {
     res.status(200).json(allInternational);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all Frozen - without pagination
+
+product.get("/frozen", async (req, res) => {
+  const allFrozen = await getAllFrozen();
+  if (allFrozen[0]) {
+    res.status(200).json(allFrozen);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all Fall Food - without pagination
+
+product.get("/fall", async (req, res) => {
+  const allFallFood = await getAllFallFood();
+  if (allFallFood[0]) {
+    res.status(200).json(allFallFood);
   } else {
     res.status(500).json({ error: "Server Error" });
   }
