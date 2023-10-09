@@ -833,7 +833,22 @@ VALUES
     (274, 10, 2.69, 0),
     (274, 11, 2.59, 0),
     (274, 12, 2.69, 0),
-    (274, 13, 2.49, 0);
+    (274, 13, 2.49, 0),
+    -- Rainier Cherries (product_id 23) for 13 stores
+    (23, 1, 4.99, 0),
+    (23, 2, 4.79, 0),
+    (23, 3, 5.09, 0),
+    (23, 4, 4.89, 0),
+    (23, 5, 4.95, 0),
+    (23, 6, 4.85, 0),
+    (23, 7, 4.75, 0),
+    (23, 8, 4.65, 0),
+    (23, 9, 5.65, 0), -- Store 9 with the highest price
+    (23, 10, 4.55, 0),
+    (23, 11, 4.75, 0),
+    (23, 12, 4.65, 0),
+    (23, 13, 4.55, 0);
+
    
 INSERT INTO shopper(shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name)
 VALUES
