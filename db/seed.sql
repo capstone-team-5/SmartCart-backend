@@ -835,9 +835,6 @@ VALUES
     (274, 12, 2.69, 0),
     (274, 13, 2.49, 0);
    
-
-
-
 INSERT INTO shopper(shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name)
 VALUES
     ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 'tempuser1@example.com', 'Temp1', 'User1'),
