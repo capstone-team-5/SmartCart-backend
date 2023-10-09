@@ -386,22 +386,22 @@ VALUES
 ('Honey Maid Graham crackers', 'https://m.media-amazon.com/images/I/81VZZExgmEL._AC_UL640_FMwebp_QL65_.jpg', 'Classic Honey Maid Graham crackers, perfect for smores or snacking.', 'Snacks', 14.0, 'oz', 'Honey Maid', true, true, true, false, false, false, true, true, true, true, false, false, true, false, true, false, false, true, true, false, false, false),
 ('Cilantro', 'https://target.scene7.com/is/image/Target/GUEST_c3e1d5ce-5e49-47a0-8179-4110d9286a21?wid=1200&hei=1200&qlt=80&fmt=webp', 'Fresh cilantro leaves to enhance the flavor of your dishes.', 'Herbs', 3.0, 'oz', 'Generic', true, true, true, false, false, false, true, true, true, true, false, false, true, false, true, false, false, true, true, false, false, false),
 ('Domino Powdered Sugar', 'https://i5.peapod.com/c/P5/P5OW7.png', 'Powdered sugar for baking and dusting desserts.', 'Baking', 16.0, 'oz', 'Domino', true, true, true, false, true, true, true, true, true, true, true, false, true, true, false, true, true, true, true, true, false, false),
-('Del Monte Mandarin Oranges Fruit Cup Snacks','https://target.scene7.com/is/image/Target/GUEST_58f4f5ff-21ca-4bd0-8ce1-f56c249c9998?wid=1200&hei=1200&qlt=80&fmt=webp', 'DEL MONTE Mandarin Oranges FRUIT CUP Snacks contain tasty, bite sized mandarin orange segments packed in naturally sweetened water.', 'Snacks', 1, 'lb', 'Del Monte', false, false, false, false, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
+('Del Monte Mandarin Oranges Fruit Cup','https://target.scene7.com/is/image/Target/GUEST_58f4f5ff-21ca-4bd0-8ce1-f56c249c9998?wid=1200&hei=1200&qlt=80&fmt=webp', 'DEL MONTE Mandarin Oranges FRUIT CUP Snacks contain tasty, bite sized mandarin orange segments packed in naturally sweetened water.', 'Snacks', 1, 'lb', 'Del Monte', false, false, false, false, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
 ('Gatorade Thirst Quencher', 'https://www.instacart.com/image-server/466x466/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/product-image/file/large_e8ac0505-a425-4231-9cf9-a05287b2f9a8.jpeg', 'A refreshing sports drink to replenish electrolytes and quench your thirst.', 'Beverages', 20.0, 'oz', 'Gatorade', true, true, true, false, false, false, true, false, true, true, false, true, false, true, true, false, false, true, true, false, true, false),
 ('Ginger', 'https://i.etsystatic.com/13808628/r/il/f1a92f/5271957201/il_794xN.5271957201_d3fl.jpg', 'Fresh root ginger', 'Vegetables', 0.5, 'lbs', 'Fresh Farms', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
 ('Pure Pumpkin', 'https://target.scene7.com/is/image/Target/GUEST_6b3227f6-cb70-42f9-a346-f91addb14fa0?wid=1200&hei=1200&qlt=80&fmt=webp', 'Pure pumpkin in a 15oz can.', 'Canned Goods', 15, 'oz', 'Good & Gather', true, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
-  ('Naturally Flavored Pumpkin Spice Light Roast Coffee', 'https://target.scene7.com/is/image/Target/GUEST_0bdb8cd7-6c8d-4f97-98f5-5fa9dcbfd0b1?wid=1200&hei=1200&qlt=80&fmt=webp', 'Light roast coffee with pumpkin spice flavor, comes in 16ct single serve pods.', 'Beverages', 16, 'ct', 'Brand B', false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
+  ('Naturally Flavored Pumpkin Spice Coffee', 'https://target.scene7.com/is/image/Target/GUEST_0bdb8cd7-6c8d-4f97-98f5-5fa9dcbfd0b1?wid=1200&hei=1200&qlt=80&fmt=webp', 'Light roast coffee with pumpkin spice flavor, comes in 16ct single serve pods.', 'Beverages', 16, 'ct', 'Brand B', false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
   ('Pumpkin Pie Date and Nut Bar', 'https://target.scene7.com/is/image/Target/GUEST_4ccdec6f-9fe2-4bea-9019-dc83f6be4788?wid=1200&hei=1200&qlt=80&fmt=webp', 'Nutrition bar with pumpkin pie flavor, comes in a pack of 5.', 'Snacks', 5, 'ct', 'Good & Gather', false, true, true, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
-  ('Pumpkin Spice Cheerios Family Size Cereal', 'https://target.scene7.com/is/image/Target/GUEST_82ba46e7-637c-4f78-b66c-59c65e2ef1c7?wid=1200&hei=1200&qlt=80&fmt=webp', 'Family size cereal with pumpkin spice flavor.', 'Breakfast', 18.5, 'oz', 'General Mills', false, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
-  ('Ghirardelli Pumpkin Premium Chocolate Squares Fall Assortment Bag', 'https://target.scene7.com/is/image/Target/GUEST_f82ac6b6-73d9-4ed9-8cf6-ca534c6a3963?wid=1200&hei=1200&qlt=80&fmt=webp', 'Assortment of premium chocolate squares for Halloween, comes in a 6.3oz bag.', 'Sweets', 6.3, 'oz', 'Ghirardelli', true, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false,  false),
-  ('Dunkin Donuts Pumpkin Spice Medium Roast Coffee', 'https://target.scene7.com/is/image/Target/GUEST_97290cbd-639d-406c-b71d-ef59976f41ca?wid=1200&hei=1200&qlt=80&fmt=webp', 'Medium roast coffee with pumpkin spice flavor, comes in 22ct Keurig K-Cup Pods.', 'Beverages', 22, 'ct', 'Dunkin Donuts', true, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
+  ('Pumpkin Spice Cheerios', 'https://target.scene7.com/is/image/Target/GUEST_82ba46e7-637c-4f78-b66c-59c65e2ef1c7?wid=1200&hei=1200&qlt=80&fmt=webp', 'Family size cereal with pumpkin spice flavor.', 'Breakfast', 18.5, 'oz', 'General Mills', false, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
+  ('Ghirardelli Pumpkin Premium Chocolate Squares Fall', 'https://target.scene7.com/is/image/Target/GUEST_f82ac6b6-73d9-4ed9-8cf6-ca534c6a3963?wid=1200&hei=1200&qlt=80&fmt=webp', 'Assortment of premium chocolate squares for Halloween, comes in a 6.3oz bag.', 'Sweets', 6.3, 'oz', 'Ghirardelli', true, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false,  false),
+  ('Dunkin Donuts Pumpkin Spice Coffee', 'https://target.scene7.com/is/image/Target/GUEST_97290cbd-639d-406c-b71d-ef59976f41ca?wid=1200&hei=1200&qlt=80&fmt=webp', 'Medium roast coffee with pumpkin spice flavor, comes in 22ct Keurig K-Cup Pods.', 'Beverages', 22, 'ct', 'Dunkin Donuts', true, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
 ('Ocean Spray Cranberry Juice Cocktail', 'https://m.media-amazon.com/images/I/7142lL7w3cL._AC_UL640_FMwebp_QL65_.jpg', 'Cranberry juice cocktail for a refreshing drink.', 'Beverages', 64, 'fl oz', 'Ocean Spray', TRUE, TRUE, false, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE);
 
 
 INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
 VALUES
 
--- Fuji Apples (product_id 1) for 23 stores
+-- Fuji Apples (product_id 1) for 13 stores
     (1, 1, 2.99, 0),
     (1, 2, 1.99, 0),
     (1, 3, 2.79, 0),
@@ -415,7 +415,7 @@ VALUES
     (1, 11, 1.80, 0),
     (1, 12, 1.82, 0),
     (1, 13, 1.79, 0),
-    -- Broccoli (product_id 43) for 23 stores
+    -- Broccoli (product_id 43) for 13 stores
     (43, 1, 1.99, 0),
     (43, 2, 1.79, 0),
     (43, 3, 2.09, 0),
@@ -429,7 +429,7 @@ VALUES
     (43, 11, 1.75, 0),
     (43, 12, 1.65, 0),
     (43, 13, 1.55, 0),
--- Milk (product_id 101) for 23 stores
+-- Milk (product_id 101) for 13 stores
     (101, 1, 3.99, 0),
     (101, 2, 4.19, 0),
     (101, 3, 4.29, 0),
@@ -443,7 +443,7 @@ VALUES
     (101, 11, 4.65, 0),
     (101, 12, 5.75, 0),
     (101, 13, 4.85, 0),
-    -- Salmon (product_id 110) for 23 stores
+    -- Salmon (product_id 110) for 13 stores
     (110, 1, 26.99, 0),
     (110, 2, 27.79, 0),
     (110, 3, 25.89, 0),
@@ -457,7 +457,7 @@ VALUES
     (110, 11, 37.15, 0),
     (110, 12, 29.05, 0),
     (110, 13, 31.95, 0),
-    -- Large White Eggs (product_id 133) for 23 stores
+    -- Large White Eggs (product_id 133) for 13 stores
     (133, 1, 2.99, 0),
     (133, 2, 2.79, 0),
     (133, 3, 2.89, 0),
@@ -471,7 +471,7 @@ VALUES
     (133, 11, 2.15, 0),
     (133, 12, 2.05, 0),
     (133, 13, 1.95, 0),
-    -- Butter (product_id 137) for 23 stores
+    -- Butter (product_id 137) for 13 stores
     (137, 1, 7.00, 0),
     (137, 2, 7.50, 0),
     (137, 3, 7.25, 0),
@@ -485,7 +485,7 @@ VALUES
     (137, 11, 7.70, 0),
     (137, 12, 7.30, 0),
     (137, 13, 7.45, 0),
-    -- Cheese (product_id 243) for 23 stores
+    -- Cheese (product_id 243) for 13 stores
     (243, 1, 4.99, 0),
     (243, 2, 4.79, 0),
     (243, 3, 4.89, 0),
@@ -499,7 +499,7 @@ VALUES
     (243, 11, 4.15, 0),
     (243, 12, 4.05, 0),
     (243, 13, 3.95, 0),
-    -- Black Pepper (product_id 264) for 23 stores
+    -- Black Pepper (product_id 264) for 13 stores
     (264, 1, 3.49, 0),
     (264, 2, 3.29, 0),
     (264, 3, 3.19, 0),
@@ -527,7 +527,7 @@ VALUES
     (295, 11, 11.99, 0),
     (295, 12, 12.29, 0),
     (295, 13, 12.59, 0),
-    -- Chicken Breast Skinless (product_id 302) for 23 stores
+    -- Chicken Breast Skinless (product_id 302) for 13 stores
     (302, 1, 11.99, 0),
     (302, 2, 9.79, 0),
     (302, 3, 10.89, 0),
@@ -541,8 +541,7 @@ VALUES
     (302, 11, 10.15, 0),
     (302, 12, 12.05, 0),
     (302, 13, 10.95, 0),
-
-    -- Garlic (product_id 58) for 23 stores
+    -- Garlic (product_id 58) for 13 stores
     (58, 1, 2.49, 0),
     (58, 2, 2.29, 0),
     (58, 3, 2.69, 0),
@@ -556,8 +555,7 @@ VALUES
     (58, 11, 2.59, 0),
     (58, 12, 2.69, 0),
     (58, 13, 2.49, 0),
-
--- Kikkoman Soy Sauce (product_id 222) for 23 stores
+    -- Kikkoman Soy Sauce (product_id 222) for 13 stores
     (222, 1, 4.29, 0),
     (222, 2, 4.19, 0),
     (222, 3, 4.59, 0),
@@ -571,8 +569,7 @@ VALUES
     (222, 11, 4.59, 0),
     (222, 12, 4.69, 0),
     (222, 13, 4.39, 0),
-
--- Strawberries (product_id 109) for 23 stores
+    -- Strawberries (product_id 109) for 13 stores
     (109, 1, 5.49, 0),
     (109, 2, 5.39, 0),
     (109, 3, 5.79, 0),
@@ -586,8 +583,7 @@ VALUES
     (109, 11, 5.79, 0),
     (109, 12, 5.89, 0),
     (109, 13, 5.59, 0),
-
--- Philadelphia Cream Cheese (product_id 138) for 23 stores
+    -- Philadelphia Cream Cheese (product_id 138) for 13 stores
     (138, 1, 3.49, 0),
     (138, 2, 3.39, 0),
     (138, 3, 3.79, 0),
@@ -601,8 +597,7 @@ VALUES
     (138, 11, 3.79, 0),
     (138, 12, 3.89, 0),
     (138, 13, 3.59, 0),
-
--- King Arthur Flour (product_id 313) for 23 stores
+    -- King Arthur Flour (product_id 313) for 13 stores
     (313, 1, 3.99, 0),
     (313, 2, 3.79, 0),
     (313, 3, 4.09, 0),
@@ -616,8 +611,7 @@ VALUES
     (313, 11, 3.75, 0),
     (313, 12, 3.65, 0),
     (313, 13, 3.55, 0),
-
--- Domino's Granulated Sugar (product_id 314) for 23 stores
+    -- Domino's Granulated Sugar (product_id 314) for 13 stores
     (314, 1, 2.99, 0),
     (314, 2, 2.79, 0),
     (314, 3, 3.09, 0),
@@ -631,8 +625,7 @@ VALUES
     (314, 11, 2.75, 0),
     (314, 12, 2.65, 0),
     (314, 13, 2.55, 0),
-
--- McCormick Vanilla Extract (product_id 324) for 23 stores
+    -- McCormick Vanilla Extract (product_id 324) for 13 stores
     (324, 1, 4.99, 0),
     (324, 2, 4.79, 0),
     (324, 3, 5.09, 0),
@@ -646,8 +639,7 @@ VALUES
     (324, 11, 4.75, 0),
     (324, 12, 4.65, 0),
     (324, 13, 4.55, 0),
-
--- Bertolli Extra Virgin Olive Oil (product_id 334) for 23 stores
+    -- Bertolli Extra Virgin Olive Oil (product_id 334) for 13 stores
     (334, 1, 7.99, 0),
     (334, 2, 7.79, 0),
     (334, 3, 8.09, 0),
@@ -660,7 +652,192 @@ VALUES
     (334, 10, 7.55, 0),
     (334, 11, 7.75, 0),
     (334, 12, 7.65, 0),
-    (334, 13, 7.55, 0);
+    (334, 13, 7.55, 0),
+    -- Morton Kosher Coarse Salt (product_id 275) for 13 stores
+    (275, 1, 3.49, 0),
+    (275, 2, 3.29, 0),
+    (275, 3, 3.69, 0),
+    (275, 4, 3.39, 0),
+    (275, 5, 3.59, 0),
+    (275, 6, 3.49, 0),
+    (275, 7, 3.59, 0),
+    (275, 8, 3.79, 0),
+    (275, 9, 4.79, 0), -- Store 9 with the highest price
+    (275, 10, 3.69, 0),
+    (275, 11, 3.59, 0),
+    (275, 12, 3.69, 0),
+    (275, 13, 3.49, 0),
+    -- Nature Nate Unfiltered Honey (product_id 320) for 13 stores
+    (320, 1, 6.99, 0),
+    (320, 2, 6.79, 0),
+    (320, 3, 7.09, 0),
+    (320, 4, 6.89, 0),
+    (320, 5, 6.95, 0),
+    (320, 6, 6.85, 0),
+    (320, 7, 6.75, 0),
+    (320, 8, 6.65, 0),
+    (320, 9, 7.65, 0), -- Store 9 with the highest price
+    (320, 10, 6.55, 0),
+    (320, 11, 6.75, 0),
+    (320, 12, 6.65, 0),
+    (320, 13, 6.55, 0),
+    -- Kadoya Sesame Oil (product_id 358) for 13 stores
+    (358, 1, 4.99, 0),
+    (358, 2, 4.79, 0),
+    (358, 3, 5.09, 0),
+    (358, 4, 4.89, 0),
+    (358, 5, 4.95, 0),
+    (358, 6, 4.85, 0),
+    (358, 7, 4.75, 0),
+    (358, 8, 4.65, 0),
+    (358, 9, 5.65, 0), -- Store 9 with the highest price
+    (358, 10, 4.55, 0),
+    (358, 11, 4.75, 0),
+    (358, 12, 4.65, 0),
+    (358, 13, 4.55, 0),
+    -- McCormick Red Pepper Flakes (product_id 359) for 13 stores
+    (359, 1, 3.99, 0),
+    (359, 2, 3.79, 0),
+    (359, 3, 4.09, 0),
+    (359, 4, 3.89, 0),
+    (359, 5, 3.95, 0),
+    (359, 6, 3.85, 0),
+    (359, 7, 3.75, 0),
+    (359, 8, 3.65, 0),
+    (359, 9, 4.65, 0), -- Store 9 with the highest price
+    (359, 10, 3.55, 0),
+    (359, 11, 3.75, 0),
+    (359, 12, 3.65, 0),
+    (359, 13, 3.55, 0),
+    -- Cilantro (product_id 366) for 13 stores
+    (366, 1, 1.99, 0),
+    (366, 2, 1.79, 0),
+    (366, 3, 2.09, 0),
+    (366, 4, 1.89, 0),
+    (366, 5, 1.95, 0),
+    (366, 6, 1.85, 0),
+    (366, 7, 1.75, 0),
+    (366, 8, 1.65, 0),
+    (366, 9, 2.65, 0), -- Store 9 with the highest price
+    (366, 10, 1.55, 0),
+    (366, 11, 1.75, 0),
+    (366, 12, 1.65, 0),
+    (366, 13, 1.55, 0),
+    -- Ginger (product_id 370) for 13 stores
+    (370, 1, 2.49, 0),
+    (370, 2, 2.29, 0),
+    (370, 3, 2.69, 0),
+    (370, 4, 2.39, 0),
+    (370, 5, 2.59, 0),
+    (370, 6, 2.49, 0),
+    (370, 7, 2.59, 0),
+    (370, 8, 2.79, 0),
+    (370, 9, 3.79, 0), -- Store 9 with the highest price
+    (370, 10, 2.69, 0),
+    (370, 11, 2.59, 0),
+    (370, 12, 2.69, 0),
+    (370, 13, 2.49, 0),
+    -- Grace Jamaican Jerk Chicken Seasoning (product_id 360) for 13 stores
+    (360, 1, 4.99, 0),
+    (360, 2, 4.79, 0),
+    (360, 3, 5.09, 0),
+    (360, 4, 4.89, 0),
+    (360, 5, 4.95, 0),
+    (360, 6, 4.85, 0),
+    (360, 7, 4.75, 0),
+    (360, 8, 4.65, 0),
+    (360, 9, 5.65, 0), -- Store 9 with the highest price
+    (360, 10, 4.55, 0),
+    (360, 11, 4.75, 0),
+    (360, 12, 4.65, 0),
+    (360, 13, 4.55, 0),
+    -- Domino's Dark Brown Sugar (product_id 362) for 13 stores
+    (362, 1, 2.99, 0),
+    (362, 2, 2.79, 0),
+    (362, 3, 3.09, 0),
+    (362, 4, 2.89, 0),
+    (362, 5, 2.95, 0),
+    (362, 6, 2.85, 0),
+    (362, 7, 2.75, 0),
+    (362, 8, 2.65, 0),
+    (362, 9, 3.65, 0), -- Store 9 with the highest price
+    (362, 10, 2.55, 0),
+    (362, 11, 2.75, 0),
+    (362, 12, 2.65, 0),
+    (362, 13, 2.55, 0),
+    -- RealLime Lime Juice (product_id 363) for 13 stores
+    (363, 1, 3.49, 0),
+    (363, 2, 3.29, 0),
+    (363, 3, 3.69, 0),
+    (363, 4, 3.39, 0),
+    (363, 5, 3.59, 0),
+    (363, 6, 3.49, 0),
+    (363, 7, 3.59, 0),
+    (363, 8, 3.79, 0),
+    (363, 9, 4.79, 0), -- Store 9 with the highest price
+    (363, 10, 3.69, 0),
+    (363, 11, 3.59, 0),
+    (363, 12, 3.69, 0),
+    (363, 13, 3.49, 0),
+    -- Thyme (product_id 364) for 13 stores
+    (364, 1, 2.49, 0),
+    (364, 2, 2.29, 0),
+    (364, 3, 2.69, 0),
+    (364, 4, 2.39, 0),
+    (364, 5, 2.59, 0),
+    (364, 6, 2.49, 0),
+    (364, 7, 2.59, 0),
+    (364, 8, 2.79, 0),
+    (364, 9, 3.79, 0), -- Store 9 with the highest price
+    (364, 10, 2.69, 0),
+    (364, 11, 2.59, 0),
+    (364, 12, 2.69, 0),
+    (364, 13, 2.49, 0),
+    -- Honey Maid Graham Crackers (product_id 365) for 13 stores
+    (365, 1, 3.99, 0),
+    (365, 2, 3.79, 0),
+    (365, 3, 4.09, 0),
+    (365, 4, 3.89, 0),
+    (365, 5, 3.95, 0),
+    (365, 6, 3.85, 0),
+    (365, 7, 3.75, 0),
+    (365, 8, 3.65, 0),
+    (365, 9, 4.65, 0), -- Store 9 with the highest price
+    (365, 10, 3.55, 0),
+    (365, 11, 3.75, 0),
+    (365, 12, 3.65, 0),
+    (365, 13, 3.55, 0),
+    -- Domino's Powdered Sugar (product_id 367) for 13 stores
+    (367, 1, 2.99, 0),
+    (367, 2, 2.79, 0),
+    (367, 3, 3.09, 0),
+    (367, 4, 2.89, 0),
+    (367, 5, 2.95, 0),
+    (367, 6, 2.85, 0),
+    (367, 7, 2.75, 0),
+    (367, 8, 2.65, 0),
+    (367, 9, 3.65, 0), -- Store 9 with the highest price
+    (367, 10, 2.55, 0),
+    (367, 11, 2.75, 0),
+    (367, 12, 2.65, 0),
+    (367, 13, 2.55, 0),
+    -- Iodized Salt (product_id 274) for 13 stores
+    (274, 1, 2.49, 0),
+    (274, 2, 2.29, 0),
+    (274, 3, 2.69, 0),
+    (274, 4, 2.39, 0),
+    (274, 5, 2.59, 0),
+    (274, 6, 2.49, 0),
+    (274, 7, 2.59, 0),
+    (274, 8, 2.79, 0),
+    (274, 9, 3.79, 0), -- Store 9 with the highest price
+    (274, 10, 2.69, 0),
+    (274, 11, 2.59, 0),
+    (274, 12, 2.69, 0),
+    (274, 13, 2.49, 0);
+   
+
+
 
 INSERT INTO shopper(shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name)
 VALUES
