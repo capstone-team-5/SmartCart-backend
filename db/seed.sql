@@ -367,7 +367,7 @@ VALUES
 ('Kraft Shredded Mozzarella', 'https://m.media-amazon.com/images/I/810waWLD1eL._AC_UL640_FMwebp_QL65_.jpg', 'Shredded mozzarella cheese for pizza and pasta.', 'Dairy', 8, 'oz', 'Kraft', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
 ('Tony Chachere Cajun Seasonings', 'https://i5.walmartimages.com/seo/Tony-Chachere-s-Seasoning-Cajun-Original-17-oz_9eefe6d3-49c2-4b4e-aecd-3df46b2eb053.417856d4f5ed70d8391fb53bbd414e01.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF', 'Cajun seasoning for adding flavor to your dishes.', 'Spices', 17, 'oz', 'Tony Chachere', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
 ('Lays Classic Potato Chips', 'https://m.media-amazon.com/images/I/81caOsUq7JL._AC_UL640_FMwebp_QL65_.jpg', 'Classic potato chips for snacking.', 'Snacks', 7.75, 'oz', 'Lays', TRUE, TRUE, false, false, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
-('Gatorade Thirst Quencher', 'https://m.media-amazon.com/images/I/61r7GnJNV3S._AC_UL640_FMwebp_QL65_.jpg', 'Sports drink to stay hydrated during physical activities.', 'Beverages', 32, 'fl oz', 'Gatorade', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
+('WXYZ', 'https://m.media-amazon.com/images/I/61r7GnJNV3S._AC_UL640_FMwebp_QL65_.jpg', 'WXYZ', 'Beverages', 32, 'fl oz', 'WXYZ', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
 ('Nabisco Oreo Chocolate Sandwich Cookies', 'https://m.media-amazon.com/images/I/71B5E8NbY-L._AC_UL640_FMwebp_QL65_.jpg', 'Chocolate sandwich cookies with a creamy filling.', 'Sweets', 14.3, 'oz', 'Nabisco', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
 ('Coca-Cola Classic', 'https://m.media-amazon.com/images/I/61jmD2Q1-9L._AC_UL640_FMwebp_QL65_.jpg', 'Classic Coca-Cola for a refreshing beverage.', 'Beverages', 12, 'fl oz', 'Coca-Cola', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
 ('Bigelow Premium Green Tea', 'https://bjs.scene7.com/is/image/bjs/253561?$bjs-Initial480$', 'Organic Premium Green tea bags for a comforting cup of tea.', 'Beverages', 100, 'ct', 'Lipton', TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
@@ -396,7 +396,6 @@ VALUES
   ('Ghirardelli Pumpkin Premium Chocolate Squares Fall', 'https://target.scene7.com/is/image/Target/GUEST_f82ac6b6-73d9-4ed9-8cf6-ca534c6a3963?wid=1200&hei=1200&qlt=80&fmt=webp', 'Assortment of premium chocolate squares for Halloween, comes in a 6.3oz bag.', 'Sweets', 6.3, 'oz', 'Ghirardelli', true, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false,  false),
   ('Dunkin Donuts Pumpkin Spice Coffee', 'https://target.scene7.com/is/image/Target/GUEST_97290cbd-639d-406c-b71d-ef59976f41ca?wid=1200&hei=1200&qlt=80&fmt=webp', 'Medium roast coffee with pumpkin spice flavor, comes in 22ct Keurig K-Cup Pods.', 'Beverages', 22, 'ct', 'Dunkin Donuts', true, false, false, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false),
 ('Ocean Spray Cranberry Juice Cocktail', 'https://m.media-amazon.com/images/I/7142lL7w3cL._AC_UL640_FMwebp_QL65_.jpg', 'Cranberry juice cocktail for a refreshing drink.', 'Beverages', 64, 'fl oz', 'Ocean Spray', TRUE, TRUE, false, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE);
-
 
 INSERT INTO store_product (product_id, store_id, product_price, product_discount) 
 VALUES
@@ -851,9 +850,6 @@ VALUES
     (23, 13, 4.55, 0);
 
    
-
-
-
 INSERT INTO shopper(shopper_firebase_uid, shopper_email, shopper_first_name, shopper_last_name)
 VALUES
     ('StSYbI8Gw1c2cm2oV2IDFn4WwAI2', 'tempuser1@example.com', 'Temp1', 'User1'),
