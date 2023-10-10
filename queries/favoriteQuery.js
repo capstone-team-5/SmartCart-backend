@@ -22,7 +22,6 @@ const getFavoritesByShopperId = async (shopperId) => {
 };
 
 // add new Favorite
-
 const addOneFavorite = async (favorite) => {
   try {
     const newFavorite = await db.one(
@@ -44,7 +43,7 @@ const deleteOneFavorite = async (userId, productId) => {
 
     const deleteFavorite = await db.one(
       "DELETE FROM favorite WHERE shopper_firebase_uid = $1 AND product_id = $2 RETURNING *",
-      [userId, productId]
+      [userId, parsedProductId]
     );
     return deleteFavorite;
   } catch (error) {

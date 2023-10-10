@@ -91,7 +91,7 @@ const getfourFruits = async () => {
 const getfourGreens = async () => {
   try {
     const fourGreens = await db.any(
-      "select * from product where product_name = 'Lays American style cream and onion flavor' or product_name = 'Del Monte Mandarin Oranges Fruit Cup' or product_name = 'Food to Live Raw Almonds' or product_name = 'Chobani Whole Milk Greek Yogurt Orange Cream Blended' ORDER BY product_id"
+      "select * from product where product_name = 'Del Monte Mandarin Oranges Fruit Cup' or product_name = 'Lays American style cream and onion flavor' or product_name = 'Blue Diamond Almonds' or product_name = 'Chobani Whole Milk Greek Yogurt Orange Cream Blended' ORDER BY product_id"
     );
     return fourGreens;
   } catch (error) {
