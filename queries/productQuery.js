@@ -258,7 +258,7 @@ const getAllBakery = async (page) => {
   }
 };
 
-// get all Meat and seafood and poultry
+// get all Meat
 const getAllMeat = async (page) => {
   try {
     const pageSize = 15; // Set the page size to 15
@@ -267,7 +267,7 @@ const getAllMeat = async (page) => {
     const offset = (page - 1) * pageSize;
 
     const allMeat = await db.any(
-      "select * from product where product_category = 'Meat' or product_category = 'Poultry' or product_category = 'Seafood' ORDER BY product_id LIMIT $1 OFFSET $2",
+      "select * from product where product_category = 'Meat' ORDER BY product_id LIMIT $1 OFFSET $2",
       [pageSize, offset]
     );
     return allMeat;
