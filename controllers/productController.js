@@ -47,7 +47,7 @@ product.get("/categories", async (req, res) => {
   }
 });
 
-// INDEX - show all meat, seafood, poultry
+// INDEX - show all meat
 
 product.get("/meat", async (req, res) => {
   const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
