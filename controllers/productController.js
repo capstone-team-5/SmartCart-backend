@@ -23,6 +23,7 @@ const {
   getAllFrozen,
   getAllFallFood,
   getAllSeafood,
+  getAllPoultry,
   // getFilteredProducts,
 } = require("../queries/productQuery.js");
 
@@ -220,6 +221,19 @@ product.get("/seafood", async (req, res) => {
   try {
     const allSeafood = await getAllSeafood(page);
     res.status(200).json(allSeafood);
+  } catch (error) {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+
+// Index - show all poultry
+
+product.get("/poultry", async (req, res) => {
+  const page = parseInt(req.query.page) || 1; // Extract page from query parameters or default to 1
+  try {
+    const allPoultry = await getAllPoultry(page);
+    res.status(200).json(allPoultry);
   } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }

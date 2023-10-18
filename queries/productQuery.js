@@ -355,6 +355,25 @@ const getAllSeafood = async (page) => {
   }
 };
 
+// get all poultry
+const getAllPoultry = async (page) => {
+  try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
+    const allPoultry = await db.any(
+      "select * from product where product_category = 'Poultry' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
+    );
+    return allPoultry;
+  } catch (error) {
+    throw error;
+  }
+};
+
+
 // // filter
 
 // const getFilteredProducts = async (filters) => {
@@ -403,5 +422,6 @@ module.exports = {
   getAllFrozen,
   getAllFallFood,
   getAllSeafood,
+  getAllPoultry,
   // getFilteredProducts,
 };
