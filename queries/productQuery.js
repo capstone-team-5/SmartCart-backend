@@ -336,6 +336,25 @@ const getAllFallFood = async () => {
     throw error;
   }
 };
+
+// get all seafood
+const getAllSeafood = async (page) => {
+  try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
+    const allSeafood = await db.any(
+      "select * from product where product_category = 'Seafood' ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset]
+    );
+    return allSeafood;
+  } catch (error) {
+    throw error;
+  }
+};
+
 // // filter
 
 // const getFilteredProducts = async (filters) => {
@@ -383,5 +402,6 @@ module.exports = {
   getAllInternational,
   getAllFrozen,
   getAllFallFood,
+  getAllSeafood,
   // getFilteredProducts,
 };
