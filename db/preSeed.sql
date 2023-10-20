@@ -4,20 +4,11 @@ INSERT INTO product (product_name, product_image, product_description, product_c
 VALUES
 
 ('Rani Ghee', 'https://m.media-amazon.com/images/I/71GIQW73Z-L._AC_UL640_FMwebp_QL65_.jpg', 'Ghee for cooking and flavoring', 'Dairy', 250, 'grams', 'Rani', true, true, true, false, true, true, true, true, true, true, false, false, true, false, false, true, true, true, true, true, true, true),
-
-            
 ('Indian Head Yellow Cornmeal', 'https://m.media-amazon.com/images/I/91-lkSyPbVL._AC_UL640_FMwebp_QL65_.jpg', 'Yellow cornmeal for cooking and baking', 'Grains', 500, 'grams', 'Indian Head', true, true, true, false, true, true, true, false, true, true, false, false, false, true),
 ('Okra', 'https://m.media-amazon.com/images/I/51wPo-4ITgL._AC_UL640_FMwebp_QL65_.jpg', 'Fresh okra', 'Vegetables', 300, 'grams', 'Generic', true, true, true, false, true, true, true, true, true, true, false, false, true, false),
 ('Tidal Flying Fish', 'https://www.shopmassystoresbb.com/wp-content/uploads/2021/03/0075568100551.jpg', 'Flying fish, a seafood product', 'Seafood', 400, 'grams', 'Tidal', true, true, true, false, true, true, true, false, true, true, true, false, true, true, false),
 ('Barilla Macaroni Elbows', 'https://m.media-amazon.com/images/I/613m71B10sL._AC_UL640_FMwebp_QL65_.jpg', 'Macaroni elbows for pasta dishes', 'Pasta & Noodles', 500, 'grams', 'Barilla', true, true, true, false, true, true, true, false, true, true, false, false, false, true),
-('Goya Black Beans', 'https://m.media-amazon.com/images/I/81S7qCera6L._AC_UL640_FMwebp_QL65_.jpg', 'Canned black beans', 'Canned Goods', 400, 'grams', 'Goya', true, true, true, false, true, true, true, false, true, true, false, false, false, true);
-
-
-
-
-
-
-
+('Goya Black Beans', 'https://m.media-amazon.com/images/I/81S7qCera6L._AC_UL640_FMwebp_QL65_.jpg', 'Canned black beans', 'Canned Goods', 400, 'grams', 'Goya', true, true, true, false, true, true, true, false, true, true, false, false, false, true),
 ('Del Monte Diced Tomaotes & Green Chillis', 'https://m.media-amazon.com/images/I/81HyVTBNO6L._AC_UL640_FMwebp_QL65_.jpg', 'Canned tomatoes with green chilies', 'Canned Goods', 400, 'grams', 'Del Monte', true, true, true, false, true, true, true, true, true, true, false, false, false, true, false, true, false, true, false, false, false),
 ('Applegate Ground Pork', 'https://m.media-amazon.com/images/I/81Z4bvm0CKL._AC_UL640_FMwebp_QL65_.jpg', 'Ground pork for cooking', 'Meat & Poultry', 500, 'grams', 'Applegate', true, true, false, true, true, true, true, false, false, false, false, false, false, true, false, true, false, false, false, false),
 ('Progresso Breadcrumbs', 'https://m.media-amazon.com/images/I/8166bkyP2rL._AC_UL640_FMwebp_QL65_.jpg', 'Breadcrumbs for cooking and baking', 'Baking', 250, 'grams', 'Progresso', true, true, true, false, true, true, true, false, true, true, false, false, false, true, false, true, true, false, false, false, false),
