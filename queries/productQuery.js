@@ -337,9 +337,9 @@ const getAllFallFood = async () => {
   }
 };
 
-// Trial
+// get One Category
 
-const getAllTrial = async (page, productType) => {
+const getOneCategory = async (page, categoryType) => {
   // product is what we pass from front end category
   try {
     const pageSize = 15; // Set the page size to 15
@@ -349,7 +349,7 @@ const getAllTrial = async (page, productType) => {
 
     const allTrial = await db.any(
       "select * from product where product_category = $3 ORDER BY product_id LIMIT $1 OFFSET $2",
-      [pageSize, offset, productType]
+      [pageSize, offset, categoryType]
     );
     return allTrial;
   } catch (error) {
@@ -357,7 +357,7 @@ const getAllTrial = async (page, productType) => {
   }
 };
 
-// // filter
+// filter
 
 // const getFilteredProducts = async (filters) => {
 //   const queryParams = [];
@@ -405,5 +405,5 @@ module.exports = {
   getAllFrozen,
   getAllFallFood,
   // getFilteredProducts,
-  getAllTrial,
+  getOneCategory,
 };

@@ -23,7 +23,7 @@ const {
   getAllFrozen,
   getAllFallFood,
   // getFilteredProducts,
-  getAllTrial,
+  getOneCategory,
 } = require("../queries/productQuery.js");
 
 // INDEX - show all products
@@ -48,19 +48,27 @@ product.get("/categories", async (req, res) => {
   }
 });
 
-// show all trial
 
-product.get("/trial", async (req, res) => {
+// show all products for one selected category based on request from front end 
+
+product.get("/categories/:category", async (req, res) => {
   const page = parseInt(req.query.page) || 1;
-  const productType = req.query.category || 'Dairy'
+  const categoryType = req.params.category;
   try {
-    const all = await getAllTrial(page, productType);
-    res.status(200).json(all);
+    const allProductsOneCategory = await getOneCategory(page, categoryType);
+    if (allProductsOneCategory.length > 0) {
+      res.status(200).json(allProductsOneCategory);
+    } else {
+      res
+        .status(404)
+        .json({ error: "No products found for the given category" });
+    }
   } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });
 
+/* above one category will handle all categories with pagination 
 // INDEX - show all meat
 
 product.get("/meat", async (req, res) => {
@@ -168,28 +176,6 @@ product.get("/international", async (req, res) => {
   }
 });
 
-// INDEX - show all Frozen - without pagination
-
-product.get("/frozen", async (req, res) => {
-  const allFrozen = await getAllFrozen();
-  if (allFrozen[0]) {
-    res.status(200).json(allFrozen);
-  } else {
-    res.status(500).json({ error: "Server Error" });
-  }
-});
-
-// INDEX - show all Fall Food - without pagination
-
-product.get("/fall", async (req, res) => {
-  const allFallFood = await getAllFallFood();
-  if (allFallFood[0]) {
-    res.status(200).json(allFallFood);
-  } else {
-    res.status(500).json({ error: "Server Error" });
-  }
-});
-
 // INDEX - show all fruits
 
 product.get("/fruits", async (req, res) => {
@@ -222,6 +208,29 @@ product.get("/dairy", async (req, res) => {
     const allDairy = await getAllDairy(page);
     res.status(200).json(allDairy);
   } catch (error) {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+*/
+// INDEX - show all Frozen - without pagination
+
+product.get("/frozen", async (req, res) => {
+  const allFrozen = await getAllFrozen();
+  if (allFrozen[0]) {
+    res.status(200).json(allFrozen);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all Fall Food - without pagination
+
+product.get("/fall", async (req, res) => {
+  const allFallFood = await getAllFallFood();
+  if (allFallFood[0]) {
+    res.status(200).json(allFallFood);
+  } else {
     res.status(500).json({ error: "Server Error" });
   }
 });
@@ -270,24 +279,6 @@ product.get("/fourGreens", async (req, res) => {
   }
 });
 
-// INDEX - show all products for one selected category
-
-product.get("/categories/:category", async (req, res) => {
-  const category = req.params.category;
-
-  try {
-    const allProductsOneCategory = await getAllProductsOneCategory(category);
-    if (allProductsOneCategory.length > 0) {
-      res.status(200).json(allProductsOneCategory);
-    } else {
-      res
-        .status(404)
-        .json({ error: "No products found for the given category" });
-    }
-  } catch (error) {
-    res.status(500).json({ error: "Server Error" });
-  }
-});
 
 // Show one product by id
 
