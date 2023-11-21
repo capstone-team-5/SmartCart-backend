@@ -52,8 +52,9 @@ product.get("/categories", async (req, res) => {
 
 product.get("/trial", async (req, res) => {
   const page = parseInt(req.query.page) || 1;
+  const productType = req.query.category || 'Dairy'
   try {
-    const all = await getAllTrial(page, "Dairy");
+    const all = await getAllTrial(page, productType);
     res.status(200).json(all);
   } catch (error) {
     res.status(500).json({ error: "Server Error" });
