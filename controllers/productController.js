@@ -23,6 +23,7 @@ const {
   getAllFrozen,
   getAllFallFood,
   // getFilteredProducts,
+  getAllTrial,
 } = require("../queries/productQuery.js");
 
 // INDEX - show all products
@@ -43,6 +44,18 @@ product.get("/categories", async (req, res) => {
   if (allCategories[0]) {
     res.status(200).json(allCategories);
   } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// show all trial
+
+product.get("/trial", async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  try {
+    const all = await getAllTrial(page, "Dairy");
+    res.status(200).json(all);
+  } catch (error) {
     res.status(500).json({ error: "Server Error" });
   }
 });

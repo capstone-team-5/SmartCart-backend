@@ -336,6 +336,27 @@ const getAllFallFood = async () => {
     throw error;
   }
 };
+
+// Trial
+
+const getAllTrial = async (page, productType) => {
+  // product is what we pass from front end category
+  try {
+    const pageSize = 15; // Set the page size to 15
+
+    // Calculate the offset based on the page number
+    const offset = (page - 1) * pageSize;
+
+    const allTrial = await db.any(
+      "select * from product where product_category = $3 ORDER BY product_id LIMIT $1 OFFSET $2",
+      [pageSize, offset, productType]
+    );
+    return allTrial;
+  } catch (error) {
+    throw error;
+  }
+};
+
 // // filter
 
 // const getFilteredProducts = async (filters) => {
@@ -384,4 +405,5 @@ module.exports = {
   getAllFrozen,
   getAllFallFood,
   // getFilteredProducts,
+  getAllTrial,
 };
